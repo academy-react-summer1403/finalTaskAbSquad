@@ -4,7 +4,11 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <div>Amir is not good at coding</div>
+    </>
+  );
 }
 
 export default App;
