@@ -9,6 +9,9 @@ export default {
         primaryViolet: "#DE59FF",
         primaryGray: "#E4E4E4",
       },
+      fontFamily: {
+        IRANYekan: ["IRANYekan"],
+      },
     },
   },
   plugins: [],
