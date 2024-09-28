@@ -12,6 +12,10 @@ export default {
       fontFamily: {
         IRANYekan: ["IRANYekan"],
       },
+      borderRadius: {
+        main: "32px",
+        secondary: "24px",
+      },
     },
   },
   plugins: [],
