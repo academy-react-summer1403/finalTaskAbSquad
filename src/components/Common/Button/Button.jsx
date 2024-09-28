@@ -3,7 +3,7 @@
 const Button = ({ text }) => {
   return (
     <>
-      <button className=" rounded-[64px] h-full px-6  flex  justify-center bg-primaryBlue text-primaryWhite leading-[48px]">
+      <button className=" rounded-[64px] h-full px-6  flex items-center justify-center bg-primaryBlue text-primaryWhite ">
         {text}
       </button>
     </>
