@@ -1,15 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  direction: rtl;
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  background-color: #242424;
+  background-color: #fefdff;
+  color: #272727;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body {
+  height: 100%;
 }

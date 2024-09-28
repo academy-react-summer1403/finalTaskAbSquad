@@ -7,6 +7,7 @@ export default {
         primaryBlue: "#3772FF",
         primaryWhite: "#FEFDFF",
         primaryViolet: "#DE59FF",
+        primaryGray: "#E4E4E4",
       },
     },
   },
