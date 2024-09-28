@@ -13,6 +13,7 @@ export default {
         IRANYekan: ["IRANYekan"],
       },
       borderRadius: {
+        blueButton: "64px",
         main: "32px",
         secondary: "24px",
       },
