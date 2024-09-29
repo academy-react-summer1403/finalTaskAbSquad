@@ -9,6 +9,7 @@ export default {
         primaryViolet: "#DE59FF",
         primaryGray: "#E4E4E4",
         secondaryGray: "#F4F3F4",
+        descGray: "#787878",
       },
       fontFamily: {
         IRANYekan: ["IRANYekan"],
