@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       {/* The Footer Div */}
-      <div className="flex flex-row  rounded-main h-[345px] bg-secondaryGray pt-10 px-3 gap-20 relative after:content-[' '] after:border after:border-solid after:border-primaryGray after:absolute  after:w-11/12 after:right-12 after:bottom-10 max-lg:h-auto max-lg:flex-wrap max-lg:gap-0 max-lg:justify-between max-lg:after:border-none max-lg:pb-5">
+      <div className="flex flex-row  rounded-main h-[345px] bg-secondaryGray pt-10 px-3 gap-20 relative after:content-[' '] after:border after:border-solid after:border-primaryGray after:absolute  after:w-11/12 after:right-12 after:bottom-10 max-lg:h-auto max-lg:flex-wrap max-lg:gap-0 max-lg:justify-between max-lg:after:border-none max-lg:pb-5 dark:bg-[#272727] dark:text-primaryWhite">
         {/* Social Media Routes */}
         <div className=" flex flex-col justify-start items-start text-base gap-4 pr-4 relative top-[-15px] max-lg:order-1 max-lg:w-2 max-lg:basis-5/12 max-lg:top-0 ">
           {/* Bahr Logo */}

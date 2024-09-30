@@ -2,11 +2,14 @@
 import NavLinks from "../Config/index.jsx";
 import BahrLogo from "../../../assets/Svgs//Header/bahrLogo/Logo.png";
 import BahrLogoText from "../../../assets/Svgs//Header/bahrLogo/LogoText.png";
+import InstaIcon from "../../../assets/Svgs/Footer/instagram.svg";
+import TelegramIcon from "../../../assets/Svgs/Footer/telegram.svg";
+import { NavLink } from "react-router-dom";
 const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
   return (
     <>
       <ul
-        className={` m-0 p-0 flex flex-row justify-center items-center gap-20 col-span-2 font-semibold group-hover:text-primaryBlue  ${mainStyle} ${phoneStyle} max-lg:flex-col max-lg:gap-6 max-lg:items-start max-lg:p-5`}
+        className={` m-0 p-0 flex flex-row justify-center items-center gap-20 col-span-2 font-semibold group-hover:text-primaryBlue  ${mainStyle} ${phoneStyle} max-lg:flex-col max-lg:gap-6 max-lg:items-start max-lg:p-5 max-lg:pb-0 `}
       >
         {NavLinks.map((items, index) => {
           return (
@@ -30,14 +33,20 @@ const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
         })}
         {/* Bottom Part Of The Menu */}
         {navOpen == "open" && (
-          <div className="border border-t-1 border-primaryGray w-full flex flex-row">
-            <div className=" flex flex-row justify-start items-center max-lg:grow">
-              <img className="w-[50px] pl-1 " src={BahrLogo} alt="Logo" />
-              <img
-                className="h-[40px] max-lg:hidden"
-                src={BahrLogoText}
-                alt="LogoText"
-              />
+          <div className=" border-t border-primaryGray w-full flex flex-row py-4">
+            <div className=" flex flex-row justify-start items-center grow">
+              <div className=" flex flex-row justify-start items-center grow">
+                {" "}
+                <img className="w-8 pl-1 " src={BahrLogo} alt="Logo" />
+                <img className="w-40 " src={BahrLogoText} alt="LogoText" />
+              </div>
+
+              <NavLink>
+                <img className="w-8 ml-5" src={TelegramIcon} alt="" />
+              </NavLink>
+              <NavLink>
+                <img className="w-8" src={InstaIcon} alt="" />
+              </NavLink>
             </div>
           </div>
         )}
