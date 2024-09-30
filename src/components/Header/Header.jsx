@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <>
       {/* Header Container */}
-      <div className="w-full h-[56px] grid grid-cols-4 mt-5 text-xl max-lg:h-10 max-lg:flex max-lg:flex-row dark:bg-[#272727] dark:text-primaryWhite">
+      <div className="w-full h-[56px] grid grid-cols-4 mt-5 text-xl max-lg:h-10 max-lg:flex max-lg:flex-row dark:bg-primaryBlack dark:text-primaryWhite">
         {/* Logo Container */}
         <div className=" flex flex-row justify-start items-center max-lg:grow ">
           <img className="w-[50px] pl-1 " src={BahrLogo} alt="Logo" />
@@ -54,10 +54,10 @@ const Header = () => {
           <Button phoneStyle="max-lg:text-base" text="ورود یا ثبت نام" />
           {/* Menu Phone  */}
           <div
-            className="lg:hidden  h-3/5  w-10 relative after:content-[' '] after:w-4  after:border  after:border-solid after:border-[#272727] after:absolute after:top-0 after:left-0 after:rounded-t-lg before:content-[' '] before:w-3  before:border  before:border-solid before:border-[#272727] before:absolute before:bottom-0 before:left-0 before:rounded-t-lg"
+            className="lg:hidden  h-3/5  w-10 relative after:content-[' '] after:w-4  after:border  after:border-solid after:border-primaryBlack after:absolute after:top-0 after:left-0 after:rounded-t-lg before:content-[' '] before:w-3  before:border  before:border-solid before:border-primaryBlack before:absolute before:bottom-0 before:left-0 before:rounded-t-lg dark:after:border-primaryWhite dark:before:border-primaryWhite"
             onClick={openNavModal}
           >
-            <span className="border-t-2 border-solid border-[#272727] rounded-t-lg w-5 absolute top-[48%] left-0"></span>
+            <span className="border-t-2 border-solid border-primaryBlack rounded-t-lg w-5 absolute top-[48%] left-0 dark:border-primaryWhite"></span>
           </div>
         </div>
       </div>
