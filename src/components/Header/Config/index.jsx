@@ -1,9 +1,11 @@
 ﻿const NavLinks = [
   {
+    img: "",
     title: "خانه",
+    desc: "",
   },
-  { title: "دوره ها" },
-  { title: "اخبار و مقالات" },
-  { title: "ارتباط با ما" },
+  { img: "", title: "دوره ها", desc: "" },
+  { img: "", title: "اخبار و مقالات", desc: "" },
+  { img: "", title: "ارتباط با ما", desc: "" },
 ];
 export default NavLinks;

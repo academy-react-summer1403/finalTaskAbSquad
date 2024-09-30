@@ -1,12 +1,18 @@
-﻿import React, { useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import BahrLogo from "../../assets/Svgs/Header/bahrLogo/Logo.png";
 import BahrLogoText from "../../assets/Svgs/Header/bahrLogo/LogoText.png";
 import Button from "../Common/Button/Button";
 import MoonIcon from "../../assets/Svgs/Header/moonDarkMode/moon.svg";
-import NavLinks from "./Config";
+import NavLinkComp from "./NavLinks/NavLinksComp";
+import HambMenu from "./HambMenu/HambMenu";
 const Header = () => {
   const [navOpen, setNavOpen] = useState("close");
   const [mode, setMode] = useState("laptop");
+  const openNavModal = () => {
+    setNavOpen("open");
+  };
+  useEffect(() => {}, [navOpen]);
+  console.log(navOpen);
   return (
     <>
       {/* Header Container */}
@@ -21,19 +27,7 @@ const Header = () => {
           />
         </div>
         {/* Route Links */}
-
-        <ul className=" m-0 p-0 flex flex-row justify-center items-center gap-20 col-span-2 font-semibold group-hover:text-primaryBlue max-lg:hidden">
-          {NavLinks.map((items, index) => {
-            return (
-              <li
-                key={index}
-                className="hover:text-primaryBlue cursor-pointer transition-colors duration-200"
-              >
-                {items.title}
-              </li>
-            );
-          })}
-        </ul>
+        {navOpen == "close" && <NavLinkComp mainStyle="max-lg:hidden" />}
         {/* Night Mode And Sign Up Button */}
         <div className=" flex justify-center items-center gap-8 box box-border max-lg:flex-end max-lg:gap-0">
           {/* Night Mode Button */}
@@ -46,11 +40,16 @@ const Header = () => {
           </span>
           {/*  */}
           <Button phoneStyle="max-lg:text-base" text="ورود یا ثبت نام" />
-          <div className="lg:hidden  h-3/5  w-10 relative after:content-[' '] after:w-4  after:border  after:border-solid after:border-[#272727] after:absolute after:top-0 after:left-0 after:rounded-t-lg before:content-[' '] before:w-3  before:border  before:border-solid before:border-[#272727] before:absolute before:bottom-0 before:left-0 before:rounded-t-lg  ">
-            <span className="border-t-2 border-solid border-[#272727] rounded-t-lg w-5 absolute top-1/2 left-0"></span>
+          {/* Menu Phone  */}
+          <div
+            className="lg:hidden  h-3/5  w-10 relative after:content-[' '] after:w-4  after:border  after:border-solid after:border-[#272727] after:absolute after:top-0 after:left-0 after:rounded-t-lg before:content-[' '] before:w-3  before:border  before:border-solid before:border-[#272727] before:absolute before:bottom-0 before:left-0 before:rounded-t-lg"
+            onClick={openNavModal}
+          >
+            <span className="border-t-2 border-solid border-[#272727] rounded-t-lg w-5 absolute top-[48%] left-0"></span>
           </div>
         </div>
       </div>
+      {navOpen == "open" && <HambMenu />}
     </>
   );
 };
