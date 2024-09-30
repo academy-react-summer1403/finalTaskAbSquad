@@ -19,9 +19,9 @@ const Header = () => {
   return (
     <>
       {/* Header Container */}
-      <div className="w-full h-[56px] grid grid-cols-4 mt-5 text-xl max-lg:h-10 max-lg:flex max-lg:flex-row dark:bg-black">
+      <div className="w-full h-[56px] grid grid-cols-4 mt-5 text-xl max-lg:h-10 max-lg:flex max-lg:flex-row dark:bg-[#272727] dark:text-primaryWhite">
         {/* Logo Container */}
-        <div className=" flex flex-row justify-start items-center max-lg:grow">
+        <div className=" flex flex-row justify-start items-center max-lg:grow ">
           <img className="w-[50px] pl-1 " src={BahrLogo} alt="Logo" />
           <img
             className="h-[40px] max-lg:hidden"
@@ -36,7 +36,6 @@ const Header = () => {
           {/* Night Mode Button */}
           <span
             onClick={() => {
-              console.log(darkMode);
               if (darkMode == "on") {
                 setDarkMode("off");
               } else if (darkMode == "off") {
@@ -46,7 +45,7 @@ const Header = () => {
             className="border border-solid border-primaryGray w-[56px] h-full rounded-full flex justify-center items-center  cursor-pointer max-lg:hidden"
           >
             <img
-              className="w-6 rotate-[-20deg] "
+              className="w-6 rotate-[-20deg]  "
               src={MoonIcon}
               alt="Dark Mode"
             />
