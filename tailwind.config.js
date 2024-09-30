@@ -12,6 +12,7 @@ export default {
         secondaryGray: "#F4F3F4",
         instaRed: "#FF4242",
         fontGray: "#787878",
+        primaryBlack: "#272727",
       },
       fontFamily: {
         IRANYekan: ["IRANYekan"],
