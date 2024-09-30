@@ -3,7 +3,7 @@
 const LandingPage = () => {
   return (
     <>
-      <p className="border">I'm Landing</p>
+      <p className="border h-2/5 my-10">I'm Landing</p>
     </>
   );
 };
