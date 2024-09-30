@@ -42,7 +42,7 @@ const Header = () => {
                 setDarkMode("on");
               }
             }}
-            className="border border-solid border-primaryGray w-[56px] h-full rounded-full flex justify-center items-center  cursor-pointer max-lg:hidden"
+            className="border border-solid border-primaryGray w-[56px] h-full rounded-full flex justify-center items-center  cursor-pointer max-lg:ml-4"
           >
             <img
               className="w-6 rotate-[-20deg]  "
