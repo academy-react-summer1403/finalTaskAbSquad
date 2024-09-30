@@ -1,5 +1,7 @@
 ﻿import React from "react";
 import FullBahrLogo from "../../assets/Svgs/Header/bahrLogo/FullBahrLogo.png";
+import InstaIcon from "../../assets/Svgs/Footer/instagram.svg";
+import TelegramIcon from "../../assets/Svgs/Footer/telegram.svg";
 import EnamadLogo from "../../assets/Svgs/Footer/Enamad.png";
 const Footer = () => {
   return (
@@ -15,13 +17,13 @@ const Footer = () => {
             alt="Bahr Logo"
           />
           {/* Instagram Div */}
-          <div className="flex flex-row justify-center items-center gap-4 px-4 border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed mt-4 max-lg:hidden">
-            <img className="w-10" src={FullBahrLogo} alt="Insta Icon" />
+          <div className="flex flex-row justify-center items-center gap-2 px-5 py-2 text-instaRed border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed mt-4 max-lg:hidden">
+            <img className="w-6" src={InstaIcon} alt="Insta Icon" />
             <span>اینستاگرام</span>
           </div>
           {/* Telegram Div */}
-          <div className="flex flex-row justify-center items-center gap-4 px-4 border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed max-lg:hidden ">
-            <img className="w-10" src={FullBahrLogo} alt="Insta Icon" />
+          <div className="flex flex-row justify-center items-center gap-2 px-4 py-2 text-primaryBlue  border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed max-lg:hidden ">
+            <img className="w-6" src={TelegramIcon} alt="Insta Icon" />
             <span>تلگرام</span>
           </div>
         </div>
@@ -37,13 +39,13 @@ const Footer = () => {
           </h3>
           {/* Phone Size Social Media Routes */}
           {/* Instagram Div */}
-          <div className="hidden  flex-row justify-center items-center gap-4 px-4 border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed mt-4  max-lg:flex max-lg:mt-0 ">
-            <img className="w-10" src={FullBahrLogo} alt="Insta Icon" />
+          <div className="hidden  flex-row justify-center items-center gap-2 px-4 py-2 text-instaRed border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed mt-4  max-lg:flex max-lg:mt-0 ">
+            <img className="w-6" src={InstaIcon} alt="Insta Icon" />
             <span>اینستاگرام</span>
           </div>
           {/* Telegram Div */}
-          <div className="hidden flex-row justify-center items-center gap-4 px-4 border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed max-lg:flex">
-            <img className="w-10" src={FullBahrLogo} alt="Insta Icon" />
+          <div className="hidden flex-row justify-center items-center gap-2 px-4 py-2 text-primaryBlue border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed max-lg:flex">
+            <img className="w-6" src={TelegramIcon} alt="Insta Icon" />
             <span>تلگرام</span>
           </div>
         </div>

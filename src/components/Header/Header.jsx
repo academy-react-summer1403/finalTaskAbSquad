@@ -49,7 +49,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {navOpen == "open" && <HambMenu />}
+      {navOpen == "open" && <HambMenu navOpen={navOpen} />}
     </>
   );
 };
