@@ -9,7 +9,7 @@ const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
   return (
     <>
       <ul
-        className={` m-0 p-0 flex flex-row justify-center items-center gap-20 col-span-2 font-semibold group-hover:text-primaryBlue  ${mainStyle} ${phoneStyle} max-lg:flex-col max-lg:gap-6 max-lg:items-start max-lg:p-5 max-lg:pb-0 `}
+        className={` m-0 p-0 flex flex-row justify-center items-center gap-20 col-span-2 font-semibold group-hover:text-primaryBlue  ${mainStyle} ${phoneStyle} max-lg:flex-col max-lg:gap-6 max-lg:items-start max-lg:p-5 max-lg:pb-0 dark:bg-primaryBlack dark:text-primaryWhite`}
       >
         {NavLinks.map((items, index) => {
           return (
@@ -24,7 +24,7 @@ const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
                 {items.title}
               </span>
               {navOpen == "open" && (
-                <span className=" overflow-hidden basis-40 text-nowrap text-ellipsis bg-primaryWhite text-fontGray text-left ">
+                <span className=" overflow-hidden basis-40 text-nowrap text-ellipsis  text-fontGray text-left  ">
                   {items.desc}
                 </span>
               )}

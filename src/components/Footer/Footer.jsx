@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       {/* The Footer Div */}
-      <div className="flex flex-row  rounded-main h-[345px] bg-secondaryGray pt-10 px-3 gap-20 relative after:content-[' '] after:border after:border-solid after:border-primaryGray after:absolute  after:w-11/12 after:right-12 after:bottom-10 max-lg:h-auto max-lg:flex-wrap max-lg:gap-0 max-lg:justify-between max-lg:after:border-none max-lg:pb-5 dark:bg-[#272727] dark:text-primaryWhite">
+      <div className="flex flex-row  rounded-main h-[345px] bg-secondaryGray pt-10 px-3 gap-20 relative after:content-[' '] after:border after:border-solid after:border-primaryGray after:absolute  after:w-11/12 after:right-12 after:bottom-10 max-lg:h-auto max-lg:flex-wrap max-lg:gap-0 max-lg:justify-between max-lg:after:border-none max-lg:pb-5 dark:bg-primaryBlack dark:text-primaryWhite dark:border dark:border-primaryGray">
         {/* Social Media Routes */}
         <div className=" flex flex-col justify-start items-start text-base gap-4 pr-4 relative top-[-15px] max-lg:order-1 max-lg:w-2 max-lg:basis-5/12 max-lg:top-0 ">
           {/* Bahr Logo */}
@@ -17,12 +17,12 @@ const Footer = () => {
             alt="Bahr Logo"
           />
           {/* Instagram Div */}
-          <div className="flex flex-row justify-center items-center gap-2 px-5 py-2 text-instaRed border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed mt-4 max-lg:hidden">
+          <div className="flex flex-row justify-center items-center gap-2 px-5 py-2 text-instaRed border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed mt-4 max-lg:hidden dark:bg-primaryBlack">
             <img className="w-6" src={InstaIcon} alt="Insta Icon" />
             <span>اینستاگرام</span>
           </div>
           {/* Telegram Div */}
-          <div className="flex flex-row justify-center items-center gap-2 px-4 py-2 text-primaryBlue  border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed max-lg:hidden ">
+          <div className="flex flex-row justify-center items-center gap-2 px-4 py-2 text-primaryBlue  border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed max-lg:hidden dark:bg-primaryBlack">
             <img className="w-6" src={TelegramIcon} alt="Insta Icon" />
             <span>تلگرام</span>
           </div>
@@ -39,12 +39,12 @@ const Footer = () => {
           </h3>
           {/* Phone Size Social Media Routes */}
           {/* Instagram Div */}
-          <div className="hidden  flex-row justify-center items-center gap-2 px-4 py-2 text-instaRed border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed mt-4  max-lg:flex max-lg:mt-0 ">
+          <div className="hidden  flex-row justify-center items-center gap-2 px-4 py-2 text-instaRed border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed mt-4  max-lg:flex max-lg:mt-0 dark:bg-primaryBlack">
             <img className="w-6" src={InstaIcon} alt="Insta Icon" />
             <span>اینستاگرام</span>
           </div>
           {/* Telegram Div */}
-          <div className="hidden flex-row justify-center items-center gap-2 px-4 py-2 text-primaryBlue border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed max-lg:flex">
+          <div className="hidden flex-row justify-center items-center gap-2 px-4 py-2 text-primaryBlue border border-solid border-primaryGray  rounded-blueButton bg-primaryWhite text-primaryRed max-lg:flex dark:bg-primaryBlack">
             <img className="w-6" src={TelegramIcon} alt="Insta Icon" />
             <span>تلگرام</span>
           </div>
