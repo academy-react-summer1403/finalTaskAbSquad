@@ -4,7 +4,7 @@ import BahrLogoText from "../../../assets/Svgs/Header/bahrLogo/LogoText.png";
 import Button from "../Button/Button";
 import MoonIcon from "../../../assets/Svgs/Header/moonDarkMode/moon.svg";
 import NavLinkComp from "./NavLinks/NavLinksComp";
-import HambMenu from "./HambMenu/HambMenu";
+import HambMenu from "../HambMenu/HambMenu";
 import { HandleDarkMode } from "../../../JS/DarkMode/DarkMode";
 const Header = () => {
   const [navOpen, setNavOpen] = useState("close");

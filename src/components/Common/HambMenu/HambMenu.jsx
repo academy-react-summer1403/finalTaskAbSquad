@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import NavLinkComp from "../NavLinks/NavLinksComp";
+import NavLinkComp from "../Header/NavLinks/NavLinksComp";
 const HambMenu = ({ navOpen, setNavOpen }) => {
   return (
     <>
