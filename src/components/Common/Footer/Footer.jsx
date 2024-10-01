@@ -1,8 +1,8 @@
 ﻿import React from "react";
-import FullBahrLogo from "../../assets/Svgs/Header/bahrLogo/FullBahrLogo.png";
-import InstaIcon from "../../assets/Svgs/Footer/instagram.svg";
-import TelegramIcon from "../../assets/Svgs/Footer/telegram.svg";
-import EnamadLogo from "../../assets/Svgs/Footer/Enamad.png";
+import FullBahrLogo from "../../../assets/Svgs/Header/bahrLogo/FullBahrLogo.png";
+import InstaIcon from "../../../assets/Svgs/Footer/instagram.svg";
+import TelegramIcon from "../../../assets/Svgs/Footer/telegram.svg";
+import EnamadLogo from "../../../assets/Svgs/Footer/Enamad.png";
 const Footer = () => {
   return (
     <>

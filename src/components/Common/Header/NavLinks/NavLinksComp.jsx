@@ -1,9 +1,9 @@
 ﻿import React from "react";
 import NavLinks from "../Config/index.jsx";
-import BahrLogo from "../../../assets/Svgs//Header/bahrLogo/Logo.png";
-import BahrLogoText from "../../../assets/Svgs//Header/bahrLogo/LogoText.png";
-import InstaIcon from "../../../assets/Svgs/Footer/instagram.svg";
-import TelegramIcon from "../../../assets/Svgs/Footer/telegram.svg";
+import BahrLogo from "../../../../assets/Svgs//Header/bahrLogo/Logo.png";
+import BahrLogoText from "../../../../assets/Svgs//Header/bahrLogo/LogoText.png";
+import InstaIcon from "../../../../assets/Svgs/Footer/instagram.svg";
+import TelegramIcon from "../../../../assets/Svgs/Footer/telegram.svg";
 import { NavLink } from "react-router-dom";
 const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
   return (
