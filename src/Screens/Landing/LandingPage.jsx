@@ -1,4 +1,4 @@
-﻿import React from "react";
+﻿import React, { useEffect, useState } from "react";
 import Introduction from "../../components/Landing/Introduction";
 import Button from "../../components/Common/Button/Button";
 import QuickAccess from "../../components/Landing/QuickAccess";
@@ -6,7 +6,21 @@ import BlueStrap from "../../components/Landing/BlueStrap";
 import Licences from "../../components/Landing/Licences";
 import LandingMainTitle from "../../components/Common/LandingMainTitle";
 import MainBox from "../../components/Common/MainCourseBox";
+import { GetPopularCourses } from "../../core/Services/Api/course.api.js";
+import ImageContainer from "../../components/Common/MainCourseBox/ImageContainer.jsx";
+import Info from "../../components/Common/MainCourseBox/Info.jsx";
+import http from "../../core/Services/Interceptor";
 const LandingPage = () => {
+  //Courses states for landing Popular Ones
+  const [popularCourses, setPopularCourses] = useState([]);
+  // Calling Courses for landing Popular Ones
+  const GetPopularCourses = async () => {
+    const res = await http.get("/Home/GetCoursesTop?Count=4");
+    setPopularCourses(res);
+  };
+  useEffect(() => {
+    GetPopularCourses();
+  }, []);
   return (
     <div className="my-10">
       <Introduction />
@@ -17,13 +31,24 @@ const LandingPage = () => {
       <QuickAccess />
       <BlueStrap />
       <Licences />
-      <div className="flex flex-col justify-center items-center my-28">
+      <div className="flex flex-col gap-5 justify-center items-center mt-40 mb-10">
         <LandingMainTitle
           title="محبوب ترین دوره ها"
           desc="دوره هایی که بین دانشجو های ما محبوبیت بالایی داشتند"
         />
       </div>
-      <MainBox />
+      <div className="grid grid-cols-1 gap-8  sm:grid-cols-4">
+        {popularCourses.map((it, index) => {
+          return (
+            <MainBox
+              ImageContainer={ImageContainer}
+              Info={Info}
+              key={index}
+              course={it}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

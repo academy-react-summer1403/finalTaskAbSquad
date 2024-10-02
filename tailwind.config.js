@@ -13,6 +13,7 @@ export default {
         instaRed: "#FF4242",
         fontGray: "#787878",
         primaryBlack: "#272727",
+        mainBoxGray: "#f6f5f7",
       },
       fontFamily: {
         IRANYekan: ["IRANYekan"],
