@@ -14,7 +14,7 @@ const LandingPage = () => {
       />
       <QuickAccess />
       <BlueStrap />
-      {/* <Licences /> */}
+      <Licences />
     </div>
   );
 };
