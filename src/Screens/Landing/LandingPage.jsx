@@ -6,7 +6,6 @@ import BlueStrap from "../../components/Landing/BlueStrap";
 import Licences from "../../components/Landing/Licences";
 import LandingMainTitle from "../../components/Common/LandingMainTitle";
 import MainBox from "../../components/Common/MainCourseBox";
-import { GetPopularCourses } from "../../core/Services/Api/course.api.js";
 import CourseImgCon from "../../components/Common/MainCourseBox/ImageContainer.jsx";
 import CourseInfo from "../../components/Common/MainCourseBox/Info";
 import http from "../../core/Services/Interceptor";
