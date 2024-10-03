@@ -9,6 +9,7 @@ import MainBox from "../../components/Common/MainCourseBox";
 import CourseImgCon from "../../components/Common/MainCourseBox/ImageContainer.jsx";
 import CourseInfo from "../../components/Common/MainCourseBox/Info";
 import http from "../../core/Services/Interceptor";
+import TeacherSection from "../../components/Landing/TeacherSection/index.jsx";
 // Start Of Landing Page
 const LandingPage = () => {
   //Courses states for landing Popular Ones
@@ -50,12 +51,18 @@ const LandingPage = () => {
           );
         })}
       </div>
-      {/* Best Teachers */}
+      {/* Best Teachers Title */}
       <div className="flex flex-col gap-5 justify-center items-center mt-40 mb-10">
         <LandingMainTitle
           title="برترین اساتید هفته"
           desc="اساتیدی که با نظرسنجی در دوره ها به انها بیشترین رای مثبت را دادند"
         />
+      </div>
+      {/* Best Teachers Section */}
+      <div className="grid grid-cols-1  my-20 sm:flex gap-15 sm:flex-row sm:justify-center sm:items-center">
+        <TeacherSection rank="🥈" score="4.1" />
+        <TeacherSection rank="🥇" score="4.2" />
+        <TeacherSection rank="🥉" score="4.0" />
       </div>
       {/* New And Articles Title */}
       <div className="flex flex-col gap-5 justify-center items-center mt-40 mb-10">

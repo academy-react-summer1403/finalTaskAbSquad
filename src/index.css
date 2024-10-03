@@ -8,6 +8,7 @@
 * {
   direction: rtl;
   font-family: IRANYekan;
+  transition: 0.5s;
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
