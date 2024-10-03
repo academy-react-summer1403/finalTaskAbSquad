@@ -1,7 +1,7 @@
-﻿import HouseIcon from "../../../../assets/Svgs/Header/HamMenu/house.svg";
-import BookIcon from "../../../../assets/Svgs/Header/HamMenu/book.svg";
-import CellIcon from "../../../../assets/Svgs/Header/HamMenu/cellphone.svg";
-import NewsIcon from "../../../../assets/Svgs/Header/HamMenu/news.svg";
+﻿import HouseIcon from "../../../assets/Svgs/Header/HamMenu/house.svg";
+import BookIcon from "../../../assets/Svgs/Header/HamMenu/book.svg";
+import CellIcon from "../../../assets/Svgs/Header/HamMenu/cellphone.svg";
+import NewsIcon from "../../../assets/Svgs/Header/HamMenu/news.svg";
 const NavLinks = [
   {
     img: HouseIcon,

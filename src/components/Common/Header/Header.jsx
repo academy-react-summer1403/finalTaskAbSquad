@@ -1,11 +1,11 @@
 ﻿import React, { useEffect, useState } from "react";
-import BahrLogo from "../../../assets/Svgs/Header/bahrLogo/Logo.png";
-import BahrLogoText from "../../../assets/Svgs/Header/bahrLogo/LogoText.png";
 import Button from "../Button/Button";
 import MoonIcon from "../../../assets/Svgs/Header/moonDarkMode/moon.svg";
 import NavLinkComp from "./NavLinks/NavLinksComp";
-import HambMenu from "./HambMenu/HambMenu";
+import HambMenu from "../HambMenu/HambMenu";
 import { HandleDarkMode } from "../../../JS/DarkMode/DarkMode";
+import BahrLogoComp from "../BahrLogoComp";
+import { IoMoonOutline } from "react-icons/io5";
 const Header = () => {
   const [navOpen, setNavOpen] = useState("close");
   const [darkMode, setDarkMode] = useState("off");
@@ -19,15 +19,10 @@ const Header = () => {
   return (
     <>
       {/* Header Container */}
-      <div className="w-full h-[56px] grid grid-cols-4 mt-5 text-xl max-lg:h-10 max-lg:flex max-lg:flex-row dark:bg-primaryBlack dark:text-primaryWhite">
+      <div className="w-full h-[56px] grid grid-cols-4 text-xl max-lg:h-10 max-lg:flex max-lg:flex-row dark:bg-primaryBlack dark:text-primaryWhite">
         {/* Logo Container */}
         <div className=" flex flex-row justify-start items-center max-lg:grow ">
-          <img className="w-[50px] pl-1 " src={BahrLogo} alt="Logo" />
-          <img
-            className="h-[40px] max-lg:hidden"
-            src={BahrLogoText}
-            alt="LogoText"
-          />
+          <BahrLogoComp />
         </div>
         {/* Route Links */}
         {<NavLinkComp mainStyle="max-lg:hidden" />}
@@ -42,13 +37,9 @@ const Header = () => {
                 setDarkMode("on");
               }
             }}
-            className="border border-solid border-primaryGray w-[56px] h-full rounded-full flex justify-center items-center  cursor-pointer max-lg:ml-4"
+            className="border border-solid border-primaryGray w-[56px] h-full rounded-full flex justify-center items-center  cursor-pointer pl-1 pb-[1px] max-lg:ml-4"
           >
-            <img
-              className="w-6 rotate-[-20deg]  "
-              src={MoonIcon}
-              alt="Dark Mode"
-            />
+            <IoMoonOutline size="25px" />
           </span>
           {/*  */}
           <Button phoneStyle="max-lg:text-base" text="ورود یا ثبت نام" />
@@ -62,7 +53,11 @@ const Header = () => {
         </div>
       </div>
       {navOpen == "open" && (
-        <HambMenu navOpen={navOpen} setNavOpen={setNavOpen} />
+        <HambMenu
+          Component={NavLinkComp}
+          navOpen={navOpen}
+          setNavOpen={setNavOpen}
+        />
       )}
     </>
   );

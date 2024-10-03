@@ -3,6 +3,7 @@ import FullBahrLogo from "../../../assets/Svgs/Header/bahrLogo/FullBahrLogo.png"
 import InstaIcon from "../../../assets/Svgs/Footer/instagram.svg";
 import TelegramIcon from "../../../assets/Svgs/Footer/telegram.svg";
 import EnamadLogo from "../../../assets/Svgs/Footer/Enamad.png";
+import FooterList from "./FooterList";
 const Footer = () => {
   return (
     <>
@@ -52,19 +53,19 @@ const Footer = () => {
         {/* Footer Links */}
         <div className="basis-1/4 flex flex-row   text-xl justify-around text-extrabold max-lg:order-3 max-lg:basis-full max-lg:mt-12 max-lg:text-base">
           {/* Pages Ul */}
-          <ul className="flex flex-col justify-start items-start gap-4">
-            <li className="text-fontGray mb-7 max-lg:text-sm">صفحات</li>
-            <li>خانه</li>
-            <li>دوره ها</li>
-            <li>اخبار و مقالات</li>
-          </ul>
+          <FooterList
+            title="صفحات"
+            it1="خانه"
+            it2="دوره ها"
+            it3="اخبار و مقالات"
+          />
           {/* About Us */}
-          <ul className="flex flex-col justify-start items-start gap-4">
-            <li className="text-fontGray mb-7 max-lg:text-sm">ما</li>
-            <li>اساتید</li>
-            <li>درباره ما</li>
-            <li>ارتباط باما</li>
-          </ul>
+          <FooterList
+            title="ما"
+            it1="اساتید"
+            it2="درباره ما"
+            it3="ارتباط با ما"
+          />
         </div>
         {/* Electronic Issue */}
         <div className="lg:grow max-lg:order-2 max-lg:basis-5/12 ">
