@@ -73,7 +73,7 @@ const LandingPage = () => {
               Info={CourseInfo}
               key={index}
               course={it}
-              type="news"
+              type="LandingNews"
             />
           );
         })}

@@ -10,7 +10,7 @@ const ImageContainer = ({ course, type }) => {
         <RoundedDiv text={course.levelName} />
       </div>
       {/* Bottom Container */}
-      {type !== "news" && <CourseStatus course={course} />}
+      {type !== "LandingNews" && <CourseStatus course={course} />}
     </div>
   );
 };

@@ -4,7 +4,7 @@ const Button = ({ text, phoneStyle }) => {
   return (
     <>
       <button
-        className={`text-xl rounded-[64px] h-full px-6  flex items-center justify-center bg-primaryBlue   text-primaryWhite text-nowrap ${phoneStyle}`}
+        className={`sm:text-xl rounded-[64px] h-full px-6  flex items-center justify-center bg-primaryBlue   text-primaryWhite text-nowrap ${phoneStyle}`}
       >
         {text}
       </button>
