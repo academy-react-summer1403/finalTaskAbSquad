@@ -16,7 +16,7 @@ const SummerCourse = () => {
           شروع دوره های جدید مبتدی و پیشرفته برای همین تابستان
         </h3>
         {/* Arrow Icon */}
-        <ArrowIcon style="bg-primaryWhite " />
+        <ArrowIcon style="bg-primaryWhite " arrowColor="#272727" />
         {/* Image Box */}
         <div className="absolute left-0 -bottom-6  w-56 h-56">
           <img

@@ -7,8 +7,8 @@ import Licences from "../../components/Landing/Licences";
 import LandingMainTitle from "../../components/Common/LandingMainTitle";
 import MainBox from "../../components/Common/MainCourseBox";
 import { GetPopularCourses } from "../../core/Services/Api/course.api.js";
-import ImageContainer from "../../components/Common/MainCourseBox/ImageContainer.jsx";
-import Info from "../../components/Common/MainCourseBox/Info";
+import CourseImgCon from "../../components/Common/MainCourseBox/ImageContainer.jsx";
+import CourseInfo from "../../components/Common/MainCourseBox/CourseInfo.jsx";
 import http from "../../core/Services/Interceptor";
 const LandingPage = () => {
   //Courses states for landing Popular Ones
@@ -41,8 +41,8 @@ const LandingPage = () => {
         {popularCourses.map((it, index) => {
           return (
             <MainBox
-              ImageContainer={ImageContainer}
-              Info={Info}
+              ImageContainer={CourseImgCon}
+              Info={CourseInfo}
               key={index}
               course={it}
             />

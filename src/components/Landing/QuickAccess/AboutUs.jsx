@@ -20,7 +20,7 @@ const AboutUs = () => {
           <CountUp isCounting end={13} easing="easeOutCubic" duration={5} />
           <span className="block text-base">سال سابقه آموزش تخصصی</span>
         </span>
-        <ArrowIcon style="bg-primaryBlue" />
+        <ArrowIcon style="bg-primaryBlue" arrowColor="#FEFDFF" />
       </div>
     </>
   );
