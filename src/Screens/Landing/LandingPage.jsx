@@ -7,20 +7,20 @@ import Licences from "../../components/Landing/Licences";
 import LandingMainTitle from "../../components/Common/LandingMainTitle";
 import MainBox from "../../components/Common/MainCourseBox";
 import CourseImgCon from "../../components/Common/MainCourseBox/ImageContainer.jsx";
+import { GetPopularCourse } from "../../core/Services/Api/course.api.js";
 import CourseInfo from "../../components/Common/MainCourseBox/Info";
-import http from "../../core/Services/Interceptor";
 import TeacherSection from "../../components/Landing/TeacherSection/index.jsx";
 // Start Of Landing Page
 const LandingPage = () => {
   //Courses states for landing Popular Ones
   const [popularCourses, setPopularCourses] = useState([]);
   // Calling Courses for landing Popular Ones
-  const GetPopularCourses = async () => {
-    const res = await http.get("/Home/GetCoursesTop?Count=4");
+  const GetCourse = async () => {
+    const res = await GetPopularCourse();
     setPopularCourses(res);
   };
   useEffect(() => {
-    GetPopularCourses();
+    GetCourse();
   }, []);
   // ********************************************************* RENDER *********************************************************
   return (
