@@ -16,9 +16,9 @@
   color-scheme: light dark;
   background-color: #fefdff;
   color: #272727;
+  position: relative;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,10 +1,9 @@
-﻿import App from "../App";
+﻿import Root from "../components/Root";
 import LandingPage from "../Screens/Landing/LandingPage";
-
 export const PageRoutes = [
   {
     path: "/",
-    element: <App />,
+    element: <Root />,
     children: [
       {
         path: "/",

@@ -10,7 +10,7 @@ const HambMenu = ({ navOpen, setNavOpen }) => {
         </div>
         {/* Black Screen Tap */}
         <div
-          className="h-full"
+          className="h-full dark:bg-primaryWhite opacity-20"
           onClick={() => {
             setNavOpen("close");
           }}
