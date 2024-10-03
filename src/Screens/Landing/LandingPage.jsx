@@ -59,7 +59,7 @@ const LandingPage = () => {
         />
       </div>
       {/* Best Teachers Section */}
-      <div className="grid grid-cols-1  my-20 sm:flex gap-15 sm:flex-row sm:justify-center sm:items-center">
+      <div className="grid grid-cols-1  my-20 sm:flex gap-15 sm:flex-row sm:justify-center sm:items-center sm:gap-16">
         <TeacherSection rank="🥈" score="4.1" />
         <TeacherSection rank="🥇" score="4.2" />
         <TeacherSection rank="🥉" score="4.0" />

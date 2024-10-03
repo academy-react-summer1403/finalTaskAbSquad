@@ -11,7 +11,7 @@ const TeacherSection = ({ rank, score }) => {
         className={
           rank == "🥇"
             ? "flex flex-col border-4 rounded-main border-solid border-primaryBlue w-full relative px-6 pb-4 gap-5 sm:w-[427px] "
-            : "flex flex-col grayBox w-full relative px-6 pb-4 gap-5 sm:transform sm:scale-75 sm:w-[427px] "
+            : "flex flex-col grayBox w-full relative px-6 pb-4 gap-5 sm:transform sm:scale-[85%] sm:w-[427px] "
         }
       >
         {/* Profile Pic */}
