@@ -1,6 +1,7 @@
 ﻿import React from "react";
-import RoundedDiv from "./RoundedDiv";
-const ImageContainer = ({ course }) => {
+import RoundedDiv from "./Info/RoundedDiv.jsx";
+import CourseStatus from "./CourseStatus";
+const ImageContainer = ({ course, type }) => {
   return (
     <div className="flex flex-col justify-between basis-2/5 bg-[#FF9090] rounded-3xl">
       {/* Top Container */}
@@ -9,9 +10,7 @@ const ImageContainer = ({ course }) => {
         <RoundedDiv text={course.levelName} />
       </div>
       {/* Bottom Container */}
-      <div className="text-xs rounded-xl text-instaRed bg-[#FFD1CB] w-max mr-3 mb-3 px-3 py-1 sm:text-sm">
-        {course.statusName}
-      </div>
+      {type !== "news" && <CourseStatus course={course} />}
     </div>
   );
 };

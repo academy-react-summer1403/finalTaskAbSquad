@@ -1,28 +1,28 @@
 ﻿import React from "react";
-import LittleRect from "../MainCourseLittleRect";
+import LittleRect from "../../MainCourseLittleRect";
 import { LiaChalkboardTeacherSolid } from "react-icons/lia";
 import { CgCalendarDates } from "react-icons/cg";
 import { PiStudentBold } from "react-icons/pi";
 import PriceTag from "./PriceTag";
 import LikeDisLike from "./LikeDisLike";
+import Title from "./Title";
+import Description from "./Description";
 const Info = ({ course }) => {
   return (
     <>
       <div className="flex flex-col grow gap-4 pr-4 pl-4">
         {/* Title */}
-        <div className="my-5">
-          <h1 className="text-xl">ری‌اکت جی‌اس</h1>
-        </div>
+        <Title />
         {/* Description */}
-        <h3 className="text-fontGray text-sm">
-          آموزش صفر تا صد کتابخانه پرطرفدار جی‌اس یعنی ری‌اکت همراه تسک های م...
-        </h3>
+        <Description />
         {/* LittleRects */}
+
         <LittleRect
           title={course.teacherName}
           Icon={LiaChalkboardTeacherSolid}
           iconSize="25px"
         />
+
         <LittleRect
           title="20 اردیبهشت 1403"
           Icon={CgCalendarDates}

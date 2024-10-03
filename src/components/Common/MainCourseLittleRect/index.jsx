@@ -5,7 +5,7 @@ const LittleRect = ({ title, Icon, iconSize }) => {
     <>
       <div className="flex flex-row justify-start items-center text-sm sm:text-base">
         <Icon size={iconSize} />
-        <span className="text-sm font-bold pr-3">{title}</span>
+        <span className="text-sm font-bold pr-3  sm:text-base">{title}</span>
       </div>
     </>
   );

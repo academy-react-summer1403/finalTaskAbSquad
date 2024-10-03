@@ -8,8 +8,9 @@ import LandingMainTitle from "../../components/Common/LandingMainTitle";
 import MainBox from "../../components/Common/MainCourseBox";
 import { GetPopularCourses } from "../../core/Services/Api/course.api.js";
 import CourseImgCon from "../../components/Common/MainCourseBox/ImageContainer.jsx";
-import CourseInfo from "../../components/Common/MainCourseBox/CourseInfo.jsx";
+import CourseInfo from "../../components/Common/MainCourseBox/Info";
 import http from "../../core/Services/Interceptor";
+// Start Of Landing Page
 const LandingPage = () => {
   //Courses states for landing Popular Ones
   const [popularCourses, setPopularCourses] = useState([]);
@@ -21,6 +22,7 @@ const LandingPage = () => {
   useEffect(() => {
     GetPopularCourses();
   }, []);
+  // ********************************************************* RENDER *********************************************************
   return (
     <div className="my-10">
       <Introduction />
@@ -45,6 +47,34 @@ const LandingPage = () => {
               Info={CourseInfo}
               key={index}
               course={it}
+            />
+          );
+        })}
+      </div>
+      {/* Best Teachers */}
+      <div className="flex flex-col gap-5 justify-center items-center mt-40 mb-10">
+        <LandingMainTitle
+          title="برترین اساتید هفته"
+          desc="اساتیدی که با نظرسنجی در دوره ها به انها بیشترین رای مثبت را دادند"
+        />
+      </div>
+      {/* New And Articles Title */}
+      <div className="flex flex-col gap-5 justify-center items-center mt-40 mb-10">
+        <LandingMainTitle
+          title="اخبار و مقالات هفته"
+          desc="خبر ها و مقاله هایی که در این هفته منتشر شدند"
+        />
+      </div>
+      {/* News Components */}
+      <div className="grid grid-cols-1 gap-8  sm:grid-cols-4">
+        {popularCourses.map((it, index) => {
+          return (
+            <MainBox
+              ImageContainer={CourseImgCon}
+              Info={CourseInfo}
+              key={index}
+              course={it}
+              type="news"
             />
           );
         })}
