@@ -8,7 +8,7 @@ const Rank = ({ rank, score }) => {
           className={
             rank == "🥇"
               ? "text-3xl text-primaryBlue sm:text-4xl"
-              : "text-3xl sm:text-4xl"
+              : "text-3xl sm:text-4xl dark:text-primaryWhite"
           }
         >
           {score}
