@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import { LicencesVal } from "../../utilities/Licences/licences.utils.js";
+import { LicencesVal } from "../../../core/utilities/Licences/licences.utils.js";
 const Licences = () => {
   return (
     <>

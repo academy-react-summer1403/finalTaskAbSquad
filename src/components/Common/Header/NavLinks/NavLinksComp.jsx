@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import NavLinks from "../../../utilities/HeaderLinks/header.links.utils.js";
+import NavLinks from "../../../../core/utilities/HeaderLinks/header.links.utils.js";
 import BahrLogo from "../../../../assets/Svgs//Header/bahrLogo/Logo.png";
 import BahrLogoText from "../../../../assets/Svgs//Header/bahrLogo/LogoText.png";
 import InstaIcon from "../../../../assets/Svgs/Footer/instagram.svg";
