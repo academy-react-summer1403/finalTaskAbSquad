@@ -9,7 +9,7 @@ const Licences = () => {
           return (
             <div
               key={index}
-              className="flex flex-col grayBox h-80 px-6 pt-4 gap-8 dark:text-primaryWhite"
+              className="flex flex-col grayBox h-80 px-6 pt-4 gap-8 dark:text-primaryWhite cursor-pointer"
             >
               <h1 className="text-4xl relative pb-3 after:content-[' '] after:border after:border-solid after:border-primaryGray after:absolute after:right-0 after:bottom-0  after:w-full sm:text-4xl">
                 {it.number}

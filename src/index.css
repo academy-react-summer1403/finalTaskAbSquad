@@ -18,6 +18,7 @@
   background-color: #fefdff;
   color: #272727;
   position: relative;
+  overflow-x: hidden;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

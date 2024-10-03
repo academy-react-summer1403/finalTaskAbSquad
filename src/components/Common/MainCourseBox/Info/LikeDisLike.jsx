@@ -5,11 +5,11 @@ const LikeDisLike = ({ course }) => {
   return (
     <>
       <div className="w-4/12 flex flex-row justify-evenly items-center">
-        <div className="flex flex-row basis-1/2 justify-start gap-2 items-center">
+        <div className="flex flex-row basis-1/2 justify-start gap-2 items-center cursor-pointer">
           <AiOutlineLike size="24px" />
           <span>24</span>
         </div>
-        <div className="flex flex-row basis-1/2 justify-start gap-2 items-center">
+        <div className="flex flex-row basis-1/2 justify-start gap-2 items-center cursor-pointer">
           <AiOutlineDislike size="24px" />
           <span>23</span>
         </div>

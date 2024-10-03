@@ -4,7 +4,7 @@ import ArrowIcon from "./ArrowIcon";
 const AboutUs = () => {
   return (
     <>
-      <div className=" flex flex-col justify-start items-start gap-10 grayBox py-4 pr-6 relative sm:grow dark:text-primaryWhite">
+      <div className=" flex flex-col justify-start items-start gap-10 grayBox py-4 pr-6 relative sm:grow dark:text-primaryWhite cursor-pointer">
         <h1 className="text-2xl sm:text-3xl">
           درباره ما
           <br />

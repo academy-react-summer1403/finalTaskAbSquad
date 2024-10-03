@@ -8,7 +8,7 @@ import ArrowIcon from "./ArrowIcon";
 const SummerCourse = () => {
   return (
     <>
-      <div className=" flex flex-col gap-3 pt-4 pr-6 h-[332px] rounded-main bg-primaryBlue text-primaryWhite relative sm:basis-4/12">
+      <div className=" flex flex-col gap-3 pt-4 pr-6 h-[332px] rounded-main bg-primaryBlue text-primaryWhite relative sm:basis-4/12 cursor-pointer">
         <h1 className="text-xl font-extrabold sm:text-3xl">
           دوره‌های جدید تابستانه!
         </h1>

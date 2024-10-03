@@ -47,6 +47,7 @@ const LandingPage = () => {
               Info={CourseInfo}
               key={index}
               course={it}
+              style={"cursor-pointer"}
             />
           );
         })}
