@@ -27,7 +27,7 @@ const LandingPage = () => {
       <Introduction />
       <Button
         text="شروع یادگیری"
-        phoneStyle="py-2 m-auto mt-5 max-lg:text-base"
+        phoneStyle="py-2 m-auto mt-5 text-base sm:text-lg"
       />
       <QuickAccess />
       <BlueStrap />

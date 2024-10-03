@@ -65,7 +65,7 @@ const Info = ({ course, type }) => {
           {type !== "LandingNews" && <PriceTag />}
           <LikeDisLike />
           {type == "LandingNews" && (
-            <Button text="بیشتر بخوانید" phoneStyle="text-sm" />
+            <Button text="بیشتر بخوانید" phoneStyle="sm:text-base" />
           )}
         </div>
       </div>
