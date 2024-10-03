@@ -1,6 +1,4 @@
 ﻿import React from "react";
-import Button from "../Button/Button";
-
 const RoundedDiv = ({ text }) => {
   return (
     <>

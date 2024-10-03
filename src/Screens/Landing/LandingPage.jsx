@@ -8,7 +8,7 @@ import LandingMainTitle from "../../components/Common/LandingMainTitle";
 import MainBox from "../../components/Common/MainCourseBox";
 import { GetPopularCourses } from "../../core/Services/Api/course.api.js";
 import ImageContainer from "../../components/Common/MainCourseBox/ImageContainer.jsx";
-import Info from "../../components/Common/MainCourseBox/Info.jsx";
+import Info from "../../components/Common/MainCourseBox/Info";
 import http from "../../core/Services/Interceptor";
 const LandingPage = () => {
   //Courses states for landing Popular Ones
