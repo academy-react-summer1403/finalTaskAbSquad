@@ -1,12 +1,13 @@
 import Button from "../Common/Button/Button";
 import React from "react";
 
-const LeftSection = () => {
+const LeftSection = ({ text, desc }) => {
   return (
     <div>
-      <h2>hi</h2>
-      <p></p>
-      <Button phoneStyle="h-9 w-" text="ورود یا ثبت نام" />
+      <h2>{text}</h2>
+      <p>{desc}</p>
+      <div>main</div>
+      <Button phoneStyle="h-[40px] w-[538px]" text="ورود یا ثبت نام" />
       <span></span>
     </div>
   );
