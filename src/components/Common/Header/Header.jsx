@@ -42,7 +42,7 @@ const Header = () => {
             <IoMoonOutline size="25px" />
           </span>
           {/* SignUp/Login Button  */}
-          <Button phoneStyle="max-lg:text-base" text="ورود یا ثبت نام" />
+          <Button phoneStyle="max-lg:text-base h-full" text="ورود یا ثبت نام" />
           {/* Menu Phone  */}
           <div
             className="lg:hidden  h-3/5  w-10 relative after:content-[' '] after:w-4  after:border  after:border-solid after:border-primaryBlack after:absolute after:top-0 after:left-0 after:rounded-t-lg before:content-[' '] before:w-3  before:border  before:border-solid before:border-primaryBlack before:absolute before:bottom-0 before:left-0 before:rounded-t-lg dark:after:border-primaryWhite dark:before:border-primaryWhite"
