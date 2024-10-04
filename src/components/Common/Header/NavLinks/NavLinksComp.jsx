@@ -10,7 +10,7 @@ const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
   return (
     <>
       <ul
-        className={` m-0 p-0 flex flex-row justify-center items-center gap-20 col-span-2 font-semibold group-hover:text-primaryBlue  ${mainStyle} ${phoneStyle} max-lg:flex-col max-lg:gap-6 max-lg:items-start max-lg:p-5 max-lg:pb-0 dark:bg-primaryBlack dark:text-primaryWhite`}
+        className={` m-0 p-0 flex flex-row justify-center items-center gap-20 col-span-2 font-semibold group-hover:text-primaryBlue  ${mainStyle} ${phoneStyle} lg:max-xl:gap-10 max-lg:flex-col max-lg:gap-6 max-lg:items-start max-lg:p-5 max-lg:pb-0 dark:bg-primaryBlack dark:text-primaryWhite`}
       >
         {NavLinks.map((items, index) => {
           return (
@@ -37,7 +37,6 @@ const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
           <div className=" border-t border-primaryGray w-full flex flex-row py-4">
             <div className=" flex flex-row justify-start items-center grow">
               <div className=" flex flex-row justify-start items-center grow">
-                {" "}
                 <BahrLogoComp />
               </div>
 

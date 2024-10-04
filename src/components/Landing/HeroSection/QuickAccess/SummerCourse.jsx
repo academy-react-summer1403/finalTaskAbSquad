@@ -8,7 +8,7 @@ import ArrowIcon from "./ArrowIcon";
 const SummerCourse = () => {
   return (
     <>
-      <div className=" flex flex-col gap-3 pt-4 pr-6 h-[332px] rounded-main bg-primaryBlue text-primaryWhite relative sm:basis-4/12 cursor-pointer">
+      <div className=" flex flex-col gap-3 pt-4 pr-6 h-[332px] rounded-main bg-primaryBlue text-primaryWhite relative  cursor-pointer lg:basis-4/12 sm:basis-1/2">
         <h1 className="text-xl font-extrabold sm:text-3xl">
           دوره‌های جدید تابستانه!
         </h1>
@@ -16,7 +16,10 @@ const SummerCourse = () => {
           شروع دوره های جدید مبتدی و پیشرفته برای همین تابستان
         </h3>
         {/* Arrow Icon */}
-        <ArrowIcon style="bg-primaryWhite " arrowColor="#272727" />
+        <ArrowIcon
+          style="bg-primaryWhite max-lg:hidden "
+          arrowColor="#272727"
+        />
         {/* Image Box */}
         <div className="absolute left-0 -bottom-6  w-56 h-56">
           <img

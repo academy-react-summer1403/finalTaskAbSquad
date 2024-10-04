@@ -22,7 +22,7 @@ const TeacherSection = () => {
         />
       </div>
       {/* Best Teachers Section */}
-      <div className="grid grid-cols-1  my-20 sm:flex gap-16 sm:flex-row sm:justify-center sm:items-center sm:gap-16">
+      <div className="grid grid-cols-1 my-40 sm:flex gap-16 sm:flex-row sm:justify-center sm:items-center sm:gap-16 sm:my-0">
         {popularTeachers.map((it, index) => {
           return (
             index < 3 && (
