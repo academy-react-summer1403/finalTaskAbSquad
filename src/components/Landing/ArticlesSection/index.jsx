@@ -36,6 +36,7 @@ const ArticlesSection = () => {
                 key={index}
                 course={it}
                 type="LandingNews"
+                style={"cursor-pointer"}
               />
             )
           );

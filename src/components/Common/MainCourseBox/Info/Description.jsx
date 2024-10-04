@@ -10,8 +10,8 @@ const Description = ({ desc, type }) => {
       rows={3}
       className={
         type !== "LandingNews"
-          ? "text-fontGray text-sm sm:text-base bg-mainBoxGray overflow-hidden resize-none text-ellipsis "
-          : "text-fontGray text-sm sm:text-base bg-mainBoxGray overflow-hidden resize-none text-ellipsis "
+          ? "text-fontGray text-sm sm:text-base bg-mainBoxGray dark:bg-primaryBlack overflow-hidden resize-none text-ellipsis "
+          : "text-fontGray text-sm sm:text-base bg-mainBoxGray dark:bg-primaryBlack overflow-hidden resize-none text-ellipsis dark:text-primaryWhite"
       }
     >
       {desc}
