@@ -5,6 +5,7 @@ import BahrLogoText from "../../../../assets/Svgs//Header/bahrLogo/LogoText.png"
 import InstaIcon from "../../../../assets/Svgs/Footer/instagram.svg";
 import TelegramIcon from "../../../../assets/Svgs/Footer/telegram.svg";
 import { NavLink } from "react-router-dom";
+import BahrLogoComp from "../../BahrLogoComp/index.jsx";
 const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
   return (
     <>
@@ -37,8 +38,7 @@ const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
             <div className=" flex flex-row justify-start items-center grow">
               <div className=" flex flex-row justify-start items-center grow">
                 {" "}
-                <img className="w-8 pl-1 " src={BahrLogo} alt="Logo" />
-                <img className="w-40 " src={BahrLogoText} alt="LogoText" />
+                <BahrLogoComp />
               </div>
 
               <NavLink>
