@@ -26,6 +26,7 @@ export default {
       boxShadow: {
         darkButtonShadow: "0 0px 10px 1px rgba(222, 89, 255 , 1)",
         buttonShadow: "0px 3px 10px 1px #272727",
+        darkMainBoxShadow: "0 10px 10px 1px rgba(222, 89, 255 , 1)",
       },
     },
   },
