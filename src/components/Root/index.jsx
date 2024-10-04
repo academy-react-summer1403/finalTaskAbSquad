@@ -7,11 +7,9 @@ import RightSection from "../AuthPage/RightSection";
 const Root = () => {
   return (
     <>
-      {/* <BahrLogoComp /> */}
-      {/* <Header />
+      <Header />
       <Outlet />
-      <Footer /> */}
-      <RightSection />
+      <Footer />
     </>
   );
 };

@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <>
       {/* Header Container */}
-      <div className="w-full h-[56px] grid grid-cols-4 text-xl max-lg:h-10 max-lg:flex max-lg:flex-row dark:bg-primaryBlack dark:text-primaryWhite">
+      <div className="w-full h-[56px] grid grid-cols-4 text-xl max-lg:h-10 max-lg:flex max-lg:flex-row dark:bg-primaryBlack dark:text-primaryWhite pt-5 box-content">
         {/* Logo Container */}
         <div className=" flex flex-row justify-start items-center max-lg:grow ">
           <BahrLogoComp />

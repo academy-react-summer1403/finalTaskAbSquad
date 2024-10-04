@@ -1,9 +1,9 @@
 ﻿import React from "react";
-import CssIcon from "../../../assets/Svgs/Landing/css3.png";
-import HtmlIcon from "../../../assets/Svgs/Landing/Html5.png";
-import UxIcon from "../../../assets/Svgs/Landing/Ux.png";
-import FigmaIcon from "../../../assets/Svgs/Landing/Figma.png";
-import ReactIcon from "../../../assets/Svgs/Landing/react.png";
+import CssIcon from "../../../../assets/Svgs/Landing/css3.png";
+import HtmlIcon from "../../../../assets/Svgs/Landing/Html5.png";
+import UxIcon from "../../../../assets/Svgs/Landing/Ux.png";
+import FigmaIcon from "../../../../assets/Svgs/Landing/Figma.png";
+import ReactIcon from "../../../../assets/Svgs/Landing/react.png";
 import ArrowIcon from "./ArrowIcon";
 const SummerCourse = () => {
   return (
