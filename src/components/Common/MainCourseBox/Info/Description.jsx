@@ -2,15 +2,20 @@
 
 const Description = ({ desc, type }) => {
   return (
-    <h3
+    <textarea
+      disabled
+      readOnly
+      maxLength={50}
+      cols={50}
+      rows={3}
       className={
         type !== "LandingNews"
-          ? "text-fontGray text-sm sm:text-base"
-          : "text-fontGray text-sm sm:text-base h-20"
+          ? "text-fontGray text-sm sm:text-base bg-mainBoxGray overflow-hidden resize-none text-ellipsis "
+          : "text-fontGray text-sm sm:text-base bg-mainBoxGray overflow-hidden resize-none text-ellipsis "
       }
     >
-      آموزش صفر تا صد کتابخانه پرطرفدار جی‌اس یعنی ری‌اکت همراه تسک های م...
-    </h3>
+      {desc}
+    </textarea>
   );
 };
 

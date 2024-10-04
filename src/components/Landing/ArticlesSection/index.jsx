@@ -1,9 +1,21 @@
-﻿import React from "react";
+﻿import React, { useEffect, useState } from "react";
 import LandingMainTitle from "../../Common/LandingMainTitle";
 import MainBox from "../../Common/MainCourseBox";
 import CourseImgCon from "../../../components/Common/MainCourseBox/ImageContainer.jsx";
 import CourseInfo from "../../../components/Common/MainCourseBox/Info";
-const ArticlesSection = ({ popularCourses }) => {
+import { GetNewsPagination } from "../../../core/Services/Api/News/news.pagination.api.js";
+
+const ArticlesSection = () => {
+  const [popularArticles, setPopularArticles] = useState([]);
+  const GetTeacher = async () => {
+    const res = await GetNewsPagination();
+    setPopularArticles(res);
+  };
+
+  // Get API AND SET SEARCH WHEN MOUNTED
+  useEffect(() => {
+    GetTeacher();
+  }, []);
   return (
     <>
       {/* New And Articles Title */}
@@ -15,15 +27,17 @@ const ArticlesSection = ({ popularCourses }) => {
       </div>
       {/* News Components */}
       <div className="grid grid-cols-1 gap-8  sm:grid-cols-4">
-        {popularCourses.map((it, index) => {
+        {popularArticles.map((it, index) => {
           return (
-            <MainBox
-              ImageContainer={CourseImgCon}
-              Info={CourseInfo}
-              key={index}
-              course={it}
-              type="LandingNews"
-            />
+            index < 4 && (
+              <MainBox
+                ImageContainer={CourseImgCon}
+                Info={CourseInfo}
+                key={index}
+                course={it}
+                type="LandingNews"
+              />
+            )
           );
         })}
       </div>

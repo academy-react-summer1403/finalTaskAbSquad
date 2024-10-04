@@ -1,5 +1,5 @@
 ﻿import React from "react";
-const Rank = ({ rank, score }) => {
+const Rank = ({ rank, courseCount, index }) => {
   // "text-3xl text-primaryBlue sm:text-4xl"
   return (
     <>
@@ -11,9 +11,9 @@ const Rank = ({ rank, score }) => {
               : "text-3xl sm:text-4xl dark:text-primaryWhite"
           }
         >
-          {score}
+          {courseCount}
         </span>
-        <span className="text-4xl sm:text-5xl">{rank}</span>
+        <span className="text-4xl sm:text-5xl">{rank[index]}</span>
       </div>
     </>
   );

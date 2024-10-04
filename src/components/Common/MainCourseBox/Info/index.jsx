@@ -10,14 +10,18 @@ import LikeDisLike from "./LikeDisLike";
 import Title from "./Title";
 import Description from "./Description";
 import Button from "../../Button/Button";
+
 const Info = ({ course, type }) => {
   return (
     <>
       <div className="flex flex-col grow gap-4 pr-4 pl-4">
         {/* Title */}
-        <Title />
+        <Title title={course.title} />
         {/* Description */}
-        <Description type="LandingNews" />
+        <Description
+          desc={type == "LandingNews" ? course.miniDescribe : course.describe}
+          type="LandingNews"
+        />
         {/* LittleRects */}
         {/* Landing Courses Only */}
         {type !== "LandingNews" && (
@@ -30,7 +34,7 @@ const Info = ({ course, type }) => {
 
         {type !== "LandingNews" && (
           <LittleRect
-            title="20 اردیبهشت 1403"
+            title={course.classRoomName}
             Icon={CgCalendarDates}
             iconSize="25px"
           />
@@ -46,14 +50,14 @@ const Info = ({ course, type }) => {
         {/* Landing News Only */}
         {type == "LandingNews" && (
           <LittleRect
-            title={course.likeCount}
+            title={course.addUserFullName}
             Icon={RiQuillPenLine}
             iconSize="25px"
           />
         )}
         {type == "LandingNews" && (
           <LittleRect
-            title={course.likeCount}
+            title={course.currentView}
             Icon={IoEyeOutline}
             iconSize="25px"
           />
@@ -62,8 +66,8 @@ const Info = ({ course, type }) => {
         {/* Like And Price Div */}
 
         <div className="h-10 w-full flex flex-row justify-between items-center">
-          {type !== "LandingNews" && <PriceTag />}
-          <LikeDisLike />
+          {type !== "LandingNews" && <PriceTag price={course.cost} />}
+          <LikeDisLike course={course} type={type} />
           {type == "LandingNews" && (
             <Button text="بیشتر بخوانید" phoneStyle="sm:text-base" />
           )}
