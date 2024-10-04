@@ -14,7 +14,7 @@ export const PageRoutes = [
       },
     ],
   },
-  { path: "/register", element: <Register /> },
+  { path: "/Register", element: <Register /> },
   { path: "/Login", element: <Login /> },
   {
     path: "*",
