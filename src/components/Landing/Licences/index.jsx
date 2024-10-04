@@ -4,7 +4,7 @@ const Licences = () => {
   return (
     <>
       {/* Container */}
-      <div className="grid grid-cols-1 mt-16 gap-8 sm:grid-cols-4">
+      <div className="grid grid-cols-1 mt-16 gap-8 sm:grid-cols-4 md:grid-cols-2 xl:grid-cols-4">
         {LicencesVal.map((it, index) => {
           return (
             <div
