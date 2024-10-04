@@ -7,9 +7,10 @@ import RightSection from "../AuthPage/RightSection";
 const Root = () => {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Outlet />
-      <Footer />
+      <Footer /> */}
+      <RightSection />
     </>
   );
 };
