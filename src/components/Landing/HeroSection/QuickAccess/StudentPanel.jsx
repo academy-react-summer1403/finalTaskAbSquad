@@ -3,7 +3,7 @@
 const StudentPanel = () => {
   return (
     <>
-      <div className="flex flex-col gap-3 pt-4 pr-6 h-80 grayBox sm:basis-5/12 dark:text-primaryWhite cursor-pointer">
+      <div className="flex flex-col gap-3 pt-4 pr-6 h-[332px] grayBox sm:basis-5/12 dark:text-primaryWhite cursor-pointer">
         <h1 className="text-2xl font-extrabold sm:text-3xl">
           پنل اختصاصی دانشجو
         </h1>
