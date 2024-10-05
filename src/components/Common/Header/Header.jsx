@@ -6,6 +6,7 @@ import HambMenu from "../HambMenu/HambMenu";
 import { HandleDarkMode } from "../../../JS/DarkMode/DarkMode";
 import BahrLogoComp from "../BahrLogoComp";
 import { IoMoonOutline } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 const Header = () => {
   const [navOpen, setNavOpen] = useState("close");
   const [darkMode, setDarkMode] = useState("off");
@@ -42,7 +43,12 @@ const Header = () => {
             <IoMoonOutline size="25px" />
           </span>
           {/* SignUp/Login Button  */}
-          <Button phoneStyle="max-lg:text-base h-full" text="ورود یا ثبت نام" />
+          <NavLink to="/Register" className="h-full">
+            <Button
+              phoneStyle="max-lg:text-base h-full"
+              text="ورود یا ثبت نام"
+            />
+          </NavLink>
           {/* Menu Phone  */}
           <div
             className="lg:hidden  h-3/5  w-10 relative after:content-[' '] after:w-4  after:border  after:border-solid after:border-primaryBlack after:absolute after:top-0 after:left-0 after:rounded-t-lg before:content-[' '] before:w-3  before:border  before:border-solid before:border-primaryBlack before:absolute before:bottom-0 before:left-0 before:rounded-t-lg dark:after:border-primaryWhite dark:before:border-primaryWhite"
