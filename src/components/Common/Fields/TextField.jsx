@@ -4,12 +4,7 @@ import { Form } from "react-router-dom";
 const TextField = ({ name, placeholder, type, ...reset }) => {
   return (
     <Formik>
-      <Field
-        className="w-0"
-        name={name}
-        type={type}
-        placeholder={placeholder}
-      />
+      <Field name={name} type={type} placeholder={placeholder} />
     </Formik>
   );
 };

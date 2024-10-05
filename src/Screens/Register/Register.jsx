@@ -4,6 +4,7 @@ import LeftSection from "../../components/AuthPage/LeftSection";
 import { FaCocktail } from "react-icons/fa";
 import { FaHouse } from "react-icons/fa6";
 import Test from "../../components/AuthPage/Test";
+import PhoneInput from "../../components/AuthPage/PhoneInput";
 const Register = () => {
   return (
     <div className="flex">
@@ -20,7 +21,7 @@ const Register = () => {
         text="ارسال کد تایید"
         RightData="حساب کاربری دارید؟"
         LeftData="ورود به حساب کاربری"
-        Main={Test}
+        Main={PhoneInput}
         destination="/login"
       />
     </div>
