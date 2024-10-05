@@ -6,7 +6,7 @@ import { GoStarFill } from "react-icons/go";
 const PageMainTitleSection = () => {
   return (
     <>
-      <div className="my-20 flex flex-col justify-center items-center relative">
+      <div className="mt-20 mb-10 flex flex-col justify-center items-center relative">
         <PageMainTitle
           title="دوره های متنوع!"
           desc="ما به شما تنوعی از دوره‌های آموزشی تخصصی را ارائه می‌دهیم که به شما کمک می‌کند تا مهارت‌های برنامه‌نویسی و کدنویسی خود را به سطح بالاتری برسانید."
