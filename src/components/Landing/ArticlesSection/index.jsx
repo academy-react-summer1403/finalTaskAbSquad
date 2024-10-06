@@ -36,7 +36,7 @@ const ArticlesSection = () => {
                 key={index}
                 course={it}
                 type="LandingNews"
-                style={"cursor-pointer"}
+                style={"cursor-pointer flex-col h-[528px]"}
               />
             )
           );

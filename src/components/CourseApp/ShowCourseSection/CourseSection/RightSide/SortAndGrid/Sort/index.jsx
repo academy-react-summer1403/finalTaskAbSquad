@@ -7,7 +7,7 @@ const Sort = () => {
   const [popUpDelete, setPopUpDelete] = useState("notPop");
   return (
     <>
-      <div className="grow flex flex-row justify-start items-center gap-3 pr-10 py-1  h-full">
+      <div className="grow flex flex-row justify-start items-center gap-3 pr-10  h-full">
         <span className="text-fontGray text-[18px]">ترتیب</span>
         <SortButtons
           deleteActive={deleteActive}

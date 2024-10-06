@@ -5,7 +5,7 @@ import CourseSection from "./CourseSection";
 const ShowCourseSection = () => {
   return (
     <>
-      <div className="h-screen">
+      <div className="h-full">
         <TextAboveCourse />
         <CourseSection />
       </div>

@@ -30,7 +30,7 @@ const PopularCoursesSection = () => {
                 Info={CourseInfo}
                 key={index}
                 course={it}
-                style={"cursor-pointer"}
+                style={"cursor-pointer flex-col h-[528px]"}
               />
             )
           );

@@ -11,10 +11,10 @@ import Title from "./Title";
 import Description from "./Description";
 import Button from "../../Button/Button";
 
-const Info = ({ course, type }) => {
+const Info = ({ course, type, tableInfoStyle }) => {
   return (
     <>
-      <div className="flex flex-col grow gap-4 pr-4 pl-4">
+      <div className={`flex flex-col grow gap-4 pr-4 pl-4 ${tableInfoStyle}`}>
         {/* Title */}
         <Title title={course.title} />
         {/* Description */}
