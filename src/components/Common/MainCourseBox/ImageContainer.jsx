@@ -10,7 +10,11 @@ const ImageContainer = ({ course, type, tableImgConStyle }) => {
       <div className="flex flex-row gap-2 px-2 pt-2 z-10">
         <RoundedDiv
           text={
-            type == "LandingNews" ? course.newsCatregoryName : course.typeName
+            type == "LandingNews"
+              ? course.newsCatregoryName
+              : type == "course"
+              ? course.typeName
+              : course.technologyList
           }
         />
         <RoundedDiv
