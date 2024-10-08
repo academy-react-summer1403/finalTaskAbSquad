@@ -8,7 +8,7 @@ import { SlArrowLeft } from "react-icons/sl";
 import ReactPaginate from "react-paginate";
 import { useSearchParams } from "react-router-dom";
 
-const CourseList = ({ setShowType, showType }) => {
+const CourseList = ({ showType }) => {
   const [courseList, setCourseList] = useState([]);
   // Number Of Pages
   const [totalCourses, setTotalCourses] = useState("");
@@ -24,7 +24,12 @@ const CourseList = ({ setShowType, showType }) => {
   };
   const handlePagination = (info) => {
     const page = info + 1;
+    setSearchParams((op) => {
+      op.set("PageNumber", page);
+      return op;
+    });
   };
+  const setCourseParameters = () => {};
   // Use Effect For Fecthing the course api
   useEffect(() => {
     fetchCoursePagination();
