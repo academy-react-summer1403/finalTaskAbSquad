@@ -6,11 +6,14 @@ import CourseInfo from "../../../../../../components/Common/MainCourseBox/Info";
 import { SlArrowRight } from "react-icons/sl";
 import { SlArrowLeft } from "react-icons/sl";
 import ReactPaginate from "react-paginate";
+import { useSearchParams } from "react-router-dom";
 
 const CourseList = ({ setShowType, showType }) => {
   const [courseList, setCourseList] = useState([]);
   // Number Of Pages
   const [totalCourses, setTotalCourses] = useState("");
+  // Use search Params
+  const [searchParams, setSearchParams] = useSearchParams();
   //   Function For Fetching The Pagination API
   const fetchCoursePagination = async () => {
     const result = await GetCourseList();
@@ -18,6 +21,9 @@ const CourseList = ({ setShowType, showType }) => {
     setTotalCourses(result.totalCount);
     // passing the courses API
     setCourseList(result.courseFilterDtos);
+  };
+  const handlePagination = (info) => {
+    const page = info + 1;
   };
   // Use Effect For Fecthing the course api
   useEffect(() => {
@@ -48,7 +54,7 @@ const CourseList = ({ setShowType, showType }) => {
         );
       })}
       <ReactPaginate
-        containerClassName="flex flex-row-reverse gap-2 bg-primaryGray h-[48px] items-center rounded-2xl absolute -bottom-16 "
+        containerClassName="flex flex-row-reverse bg-primaryGray h-[48px] justify-between items-center rounded-2xl absolute -bottom-16 overflow-hidden"
         pageLinkClassName="hover:bg-primaryBlue flex justify-center items-center rounded-lg block w-[48px] h-full"
         pageClassName="h-full"
         breakLabel="..."
@@ -57,10 +63,17 @@ const CourseList = ({ setShowType, showType }) => {
         pageCount={10}
         pageRangeDisplayed={1}
         activeLinkClassName="bg-primaryBlue"
-        previousLinkClassName={
-          "flex justify-center items-center block w-[48px]"
+        nextLinkClassName={
+          "flex justify-center items-center block w-[48px] active:bg-primaryBlue h-full"
         }
-        nextLinkClassName={"flex justify-center items-center block w-[48px]"}
+        nextClassName="h-full"
+        previousClassName="h-full"
+        previousLinkClassName={
+          "flex justify-center items-center block w-[48px] active:bg-primaryBlue h-full"
+        }
+        onClick={(e) => {
+          handlePagination(e.nextSelectedPage);
+        }}
       />
     </div>
   );
