@@ -16,7 +16,7 @@ export const PageRoutes = [
         element: <LandingPage />,
       },
       {
-        path: "/CoursePage",
+        path: "/CoursePage/:PageNumber?/:RowsOfPage?/:SortingCol?/:SortType?",
         element: <CoursePage />,
       },
     ],

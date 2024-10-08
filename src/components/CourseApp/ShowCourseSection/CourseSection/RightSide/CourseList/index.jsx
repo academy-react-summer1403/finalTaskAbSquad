@@ -3,20 +3,26 @@ import { GetCourseList } from "../../../../../../core/Services/Api/CoursePage/co
 import MainBox from "../../../../../Common/MainCourseBox";
 import CourseImgCon from "../../../../../../components/Common/MainCourseBox/ImageContainer.jsx";
 import CourseInfo from "../../../../../../components/Common/MainCourseBox/Info";
-import PaginationButtons from "./PaginationButtons";
+import { SlArrowRight } from "react-icons/sl";
+import { SlArrowLeft } from "react-icons/sl";
+import ReactPaginate from "react-paginate";
+
 const CourseList = ({ setShowType, showType }) => {
   const [courseList, setCourseList] = useState([]);
+  // Number Of Pages
+  const [totalCourses, setTotalCourses] = useState("");
   //   Function For Fetching The Pagination API
   const fetchCoursePagination = async () => {
     const result = await GetCourseList();
-    setCourseList(result);
+    // passing it for the future calculations for page number
+    setTotalCourses(result.totalCount);
+    // passing the courses API
+    setCourseList(result.courseFilterDtos);
   };
   // Use Effect For Fecthing the course api
   useEffect(() => {
     fetchCoursePagination();
   }, []);
-  // For the time when the page navigator is pressed
-  useEffect(() => {}, []);
 
   return (
     <div
@@ -41,7 +47,18 @@ const CourseList = ({ setShowType, showType }) => {
           )
         );
       })}
-      <PaginationButtons courseList={courseList} />
+      <ReactPaginate
+        className="bg-primaryGray flex flex-row-reverse justify-center items-center gap-2 rounded-2xl  h-[48px]"
+        pageLinkClassName="hover:bg-primaryBlue flex justify-center items-center rounded-lg block w-[48px] h-full"
+        containerClassName="w-full"
+        pageClassName="h-full"
+        breakLabel="..."
+        nextLabel={<SlArrowRight />}
+        previousLabel={<SlArrowLeft />}
+        pageRangeDisplayed={4}
+        pageCount={10}
+        activeLinkClassName="bg-primaryBlue"
+      />
     </div>
   );
 };
