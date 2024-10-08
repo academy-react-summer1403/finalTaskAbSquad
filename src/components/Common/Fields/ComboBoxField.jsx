@@ -10,7 +10,7 @@ const ComboBoxField = () => {
     <Autocomplete
       disablePortal
       options={options}
-      className="w-96 rounded-none"
+      className="CourseField"
       renderInput={(params) => <TextField {...params} label="انتخاب کنید" />}
     />
   );
