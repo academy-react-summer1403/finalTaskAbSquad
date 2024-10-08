@@ -48,16 +48,19 @@ const CourseList = ({ setShowType, showType }) => {
         );
       })}
       <ReactPaginate
-        className="bg-primaryGray flex flex-row-reverse justify-center items-center gap-2 rounded-2xl  h-[48px]"
+        containerClassName="flex flex-row-reverse gap-2 bg-primaryGray h-[48px] items-center rounded-2xl absolute -bottom-16 "
         pageLinkClassName="hover:bg-primaryBlue flex justify-center items-center rounded-lg block w-[48px] h-full"
-        containerClassName="w-full"
         pageClassName="h-full"
         breakLabel="..."
         nextLabel={<SlArrowRight />}
         previousLabel={<SlArrowLeft />}
-        pageRangeDisplayed={4}
         pageCount={10}
+        pageRangeDisplayed={1}
         activeLinkClassName="bg-primaryBlue"
+        previousLinkClassName={
+          "flex justify-center items-center block w-[48px]"
+        }
+        nextLinkClassName={"flex justify-center items-center block w-[48px]"}
       />
     </div>
   );
