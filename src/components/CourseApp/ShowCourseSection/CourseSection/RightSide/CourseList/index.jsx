@@ -28,8 +28,9 @@ const CourseList = ({ showType }) => {
     });
   };
   // Use Effect For Fecthing the course API depending on the SearchParams
+
   useEffect(() => {
-    fetchCoursePagination(location.search);
+    if (location.search) fetchCoursePagination(location.search);
   }, [searchParams]);
   useEffect(() => {
     setSearchParams((op) => {
