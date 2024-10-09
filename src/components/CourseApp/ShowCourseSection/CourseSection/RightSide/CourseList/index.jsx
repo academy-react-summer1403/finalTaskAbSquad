@@ -13,6 +13,9 @@ const CourseList = ({ showType }) => {
   const [courseList, setCourseList] = useState([]); // The Actual Data Of The Api
   const [totalCourses, setTotalCourses] = useState(""); // Number Of Total Pages in API
   const [searchParams, setSearchParams] = useSearchParams(); // Use search Params
+  const [windowWidth, setWindowWidth] = useState({
+    width: window.innerWidth,
+  }); // Width of the screen
   const location = useLocation(); // Use Location
   //   Function For Fetching The Pagination API
   const fetchCoursePagination = async (sParam) => {
@@ -38,10 +41,37 @@ const CourseList = ({ showType }) => {
       return op;
     });
   }, [showType]);
+  // For Handling The Width of the Window
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWindowWidth({
+  //       width: window.innerWidth,
+  //     });
+  //   };
+  //   const handleRows = () => {
+  //     if (windowWidth.width < "350") {
+  //       setSearchParams((op) => {
+  //         op.set("RowsOfPage", "3");
+  //         return op;
+  //       });
+  //     }
+  //   };
+  //   window.addEventListener("resize", () => {
+  //     handleResize();
+  //     handleRows();
+  //   });
+  //   console.log(windowWidth);
+
+  //   return () =>
+  //     window.removeEventListener("resize", () => {
+  //       handleResize();
+  //       handleRows();
+  //     });
+  // }, [windowWidth]);
 
   return (
     <div
-      className={` grid  gap-6 basis-full w-full my-8 mb-20 relative pr-7 ${
+      className={`grid gap-6 justify-center items-center lg:justify-stretch lg:items-start basis-full w-full my-8 mb-20 relative lg:pr-7 px-3 ${
         showType == "Grid" ? "lg:grid-cols-3" : "lg:grid-col-1"
       } `}
     >
