@@ -91,10 +91,12 @@ const CourseList = ({ showType }) => {
         );
       })}
       <ReactPaginate
-        containerClassName="flex flex-row-reverse bg-primaryGray h-[48px] justify-between items-center rounded-2xl absolute -bottom-16 overflow-hidden"
+        containerClassName="flex flex-row-reverse bg-primaryGray h-[48px] justify-between items-center rounded-2xl absolute right-3 -bottom-16 max-sm:right-[26.5px] "
         pageLinkClassName="hover:bg-primaryBlue flex justify-center items-center rounded-lg block w-[48px] h-full"
         pageClassName="h-full"
         breakLabel="..."
+        marginPagesDisplayed={1}
+        pageRangeDisplayed={0}
         nextLabel={<SlArrowRight />}
         previousLabel={<SlArrowLeft />}
         pageCount={
@@ -102,15 +104,14 @@ const CourseList = ({ showType }) => {
             ? Math.ceil(totalCourses / 9)
             : Math.ceil(totalCourses / 8)
         }
-        pageRangeDisplayed={1}
         activeLinkClassName="bg-primaryBlue"
         nextLinkClassName={
-          "flex justify-center items-center block w-[48px] active:text-primaryBlue h-full"
+          "flex justify-center items-center block w-[48px] active:text-primaryBlue h-full active:border active:border-primaryBlue rounded-r-2xl"
         }
         nextClassName="h-full"
-        previousClassName="h-full"
+        previousClassName="h-full "
         previousLinkClassName={
-          "flex justify-center items-center block w-[48px] active:text-primaryBlue h-full"
+          "flex justify-center items-center block w-[48px] active:text-primaryBlue active:border active:border-primaryBlue h-full rounded-l-2xl"
         }
         onClick={(e) => {
           if (e.nextSelectedPage == undefined) {
