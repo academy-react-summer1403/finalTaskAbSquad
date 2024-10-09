@@ -7,17 +7,20 @@ const NavLinks = [
     img: HouseIcon,
     title: "خانه",
     desc: "صفحه اصلی",
+    navRoute: "/",
   },
   {
     img: BookIcon,
     title: "دوره ها",
     desc: "تمامی دوره های برگزار شده یا درحال برگزاری",
+    navRoute: "/CoursePage",
   },
   {
     img: CellIcon,
     title: "اخبار و مقالات",
     desc: "خبر های پژوهشگاه و مقالاتی مرتبط با برنامه نویسی و ...",
+    navRoute: "/",
   },
-  { img: NewsIcon, title: "ارتباط با ما", desc: "" },
+  { img: NewsIcon, title: "ارتباط با ما", desc: "", navRoute: "/" },
 ];
 export default NavLinks;

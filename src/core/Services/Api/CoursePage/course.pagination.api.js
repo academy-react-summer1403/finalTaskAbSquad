@@ -1,7 +1,7 @@
 ﻿import http from "../../Interceptor";
-export const GetCourseList = async () => {
+export const GetCourseList = async (searchParams = "") => {
   try {
-    const res = await http.get("/Home/GetCoursesWithPagination");
+    const res = await http.get("/Home/GetCoursesWithPagination" + searchParams);
     return res;
   } catch (error) {
     console.log(error);

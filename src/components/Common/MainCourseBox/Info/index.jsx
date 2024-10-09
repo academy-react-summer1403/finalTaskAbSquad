@@ -11,7 +11,7 @@ import Title from "./Title";
 import Description from "./Description";
 import Button from "../../Button/Button";
 
-const Info = ({ course, type, tableInfoStyle }) => {
+const Info = ({ course, type, tableInfoStyle, showType }) => {
   return (
     <>
       <div className={`flex flex-col grow gap-4 pr-4 pl-4 ${tableInfoStyle}`}>
@@ -66,8 +66,10 @@ const Info = ({ course, type, tableInfoStyle }) => {
         {/* Like And Price Div */}
 
         <div className="h-10 w-full flex flex-row justify-between items-center">
-          {type !== "LandingNews" && <PriceTag price={course.cost} />}
-          <LikeDisLike course={course} type={type} />
+          {type !== "LandingNews" && (
+            <PriceTag price={course.cost} type={type} showType={showType} />
+          )}
+          <LikeDisLike course={course} type={type} showType={showType} />
           {type == "LandingNews" && (
             <Button text="بیشتر بخوانید" phoneStyle="sm:text-base h-full" />
           )}

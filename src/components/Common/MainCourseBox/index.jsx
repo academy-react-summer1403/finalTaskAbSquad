@@ -4,6 +4,7 @@ const MainBox = ({
   ImageContainer,
   Info,
   type = "course",
+  showType = "Grid",
   style,
   tableImgConStyle = "",
   tableInfoStyle = "",
@@ -11,14 +12,19 @@ const MainBox = ({
   return (
     <>
       <div
-        className={`flex shadow-lg hover:shadow-2xl  dark:hover:shadow-darkMainBoxShadow rounded-3xl  overflow-hidden bg-mainBoxGray dark:bg-primaryBlack ${style}`}
+        className={`flex shadow-lg hover:shadow-2xl  dark:border dark:border-fontGray dark:hover:shadow-darkMainBoxShadow rounded-3xl  overflow-hidden bg-mainBoxGray dark:bg-primaryBlack ${style}`}
       >
         <ImageContainer
           course={course}
           type={type}
           tableImgConStyle={tableImgConStyle}
         />
-        <Info course={course} type={type} tableInfoStyle={tableInfoStyle} />
+        <Info
+          course={course}
+          type={type}
+          showType={showType}
+          shotableInfoStyle={tableInfoStyle}
+        />
       </div>
     </>
   );
