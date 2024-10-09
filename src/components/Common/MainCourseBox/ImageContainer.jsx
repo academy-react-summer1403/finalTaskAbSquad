@@ -26,7 +26,7 @@ const ImageContainer = ({ course, type, tableImgConStyle }) => {
       {/* Bottom Container */}
       {type !== "LandingNews" && <CourseStatus course={course} />}
       <img
-        className="absolute -top-2  left-9 w-[350px] scale-x-[1.3] "
+        className="absolute -top-2  left-9 w-full object-fill "
         src={course.tumbImageAddress}
         alt="course Image"
       />

@@ -16,6 +16,7 @@ const CourseList = ({ showType }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Width of the screen
   const [widthBool, setWidthBool] = useState("false");
   const location = useLocation(); // Use Location
+
   //   Function For Fetching The Pagination API
   const fetchCoursePagination = async (sParam) => {
     const result = await GetCourseList(sParam);
@@ -34,6 +35,7 @@ const CourseList = ({ showType }) => {
   useEffect(() => {
     if (location.search) fetchCoursePagination(location.search);
   }, [searchParams]);
+
   useEffect(() => {
     setSearchParams((op) => {
       op.set("RowsOfPage", showType == "Grid" ? "9" : "8");
@@ -107,7 +109,7 @@ const CourseList = ({ showType }) => {
           "flex justify-center items-center block w-[48px] active:text-primaryBlue h-full active:border active:border-primaryBlue rounded-r-2xl"
         }
         nextClassName="h-full"
-        previousClassName="h-full "
+        previousClassName="h-full"
         previousLinkClassName={
           "flex justify-center items-center block w-[48px] active:text-primaryBlue active:border active:border-primaryBlue h-full rounded-l-2xl"
         }
