@@ -41,7 +41,7 @@ const Info = ({ course, type, tableInfoStyle, showType }) => {
         )}
         {type !== "LandingNews" && (
           <LittleRect
-            title={course.likeCount}
+            title={course.currentRegistrants}
             Icon={PiStudentBold}
             iconSize="25px"
           />
