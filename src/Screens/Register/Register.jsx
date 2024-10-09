@@ -1,19 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import RightSection from "../../components/AuthPage/RightSection";
 import LeftSection from "../../components/AuthPage/LeftSection";
 import { FaCocktail } from "react-icons/fa";
 import { FaHouse } from "react-icons/fa6";
-import Test from "../../components/AuthPage/Test";
 import PhoneInput from "../../components/AuthPage/PhoneInput";
-const Register = () => {
+
+const Register = ({ desc, Icon }) => {
+  const initialRightSecData = [
+    {
+      Icon: FaHouse,
+      desc: "تماس بگیر",
+    },
+    {
+      desc: "تماس بsgasgasگیر",
+      Icon: FaCocktail,
+    },
+  ];
+
+  const [currentRightSecData, setCurrentRightSecData] =
+    useState(initialRightSecData);
+
+  console.log("Current Right Section Data:", currentRightSecData);
+
   return (
     <div className="flex">
       <RightSection
-        Icon={FaHouse}
-        desc="تماس بگیر"
-        show={true}
-        show2={true}
-        Icon2={FaCocktail}
+        rightSecData={currentRightSecData}
+        desc={desc}
+        Icon={Icon}
       />
       <LeftSection
         desc="لطفا برای ثبت نام شماره همراه خود را وارد کنید تا برای شما کد تایید ارسال شود"
@@ -23,6 +37,7 @@ const Register = () => {
         LeftData="ورود به حساب کاربری"
         Main={PhoneInput}
         destination="/login"
+        setCurrentRightSecData={setCurrentRightSecData}
       />
     </div>
   );
