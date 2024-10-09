@@ -13,9 +13,8 @@ const CourseList = ({ showType }) => {
   const [courseList, setCourseList] = useState([]); // The Actual Data Of The Api
   const [totalCourses, setTotalCourses] = useState(""); // Number Of Total Pages in API
   const [searchParams, setSearchParams] = useSearchParams(); // Use search Params
-  const [windowWidth, setWindowWidth] = useState({
-    width: window.innerWidth,
-  }); // Width of the screen
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Width of the screen
+  const [widthBool, setWidthBool] = useState("false");
   const location = useLocation(); // Use Location
   //   Function For Fetching The Pagination API
   const fetchCoursePagination = async (sParam) => {
@@ -23,6 +22,7 @@ const CourseList = ({ showType }) => {
     setTotalCourses(result.totalCount); // passing it for the future calculations for page number
     setCourseList(result.courseFilterDtos); // passing the Whole courses API
   };
+
   const handlePagination = (info) => {
     const page = info + 1;
     setSearchParams((op) => {
@@ -31,7 +31,6 @@ const CourseList = ({ showType }) => {
     });
   };
   // Use Effect For Fecthing the course API depending on the SearchParams
-
   useEffect(() => {
     if (location.search) fetchCoursePagination(location.search);
   }, [searchParams]);
@@ -41,38 +40,33 @@ const CourseList = ({ showType }) => {
       return op;
     });
   }, [showType]);
-  // For Handling The Width of the Window
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setWindowWidth({
-  //       width: window.innerWidth,
-  //     });
-  //   };
-  //   const handleRows = () => {
-  //     if (windowWidth.width < "350") {
-  //       setSearchParams((op) => {
-  //         op.set("RowsOfPage", "3");
-  //         return op;
-  //       });
-  //     }
-  //   };
-  //   window.addEventListener("resize", () => {
-  //     handleResize();
-  //     handleRows();
-  //   });
-  //   console.log(windowWidth);
+  // A Use Effect For Resizing
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    if (windowWidth < "1024") {
+      setSearchParams((op) => {
+        op.set("RowsOfPage", "3");
+        return op;
+      });
+      setWidthBool("true");
+    } else {
+      setSearchParams((op) => {
+        op.set("RowsOfPage", showType == "Grid" ? "9" : "8");
+        return op;
+      });
+      setWidthBool("false");
+    }
+    return () => window.removeEventListener("resize", handleResize);
+  }, [windowWidth]);
 
-  //   return () =>
-  //     window.removeEventListener("resize", () => {
-  //       handleResize();
-  //       handleRows();
-  //     });
-  // }, [windowWidth]);
-
+  // Render
   return (
     <div
-      className={`grid gap-6 justify-center items-center lg:justify-stretch lg:items-start basis-full w-full my-8 mb-20 relative lg:pr-7 px-3 ${
-        showType == "Grid" ? "lg:grid-cols-3" : "lg:grid-col-1"
+      className={`grid gap-6 justify-center items-center lg:justify-stretch lg:items-start basis-full w-full my-8 mb-20 relative xl:pr-7 ${
+        showType == "Grid" ? "lg:grid-cols-3 lg:px-3" : "lg:grid-col-1"
       } `}
     >
       {courseList.map((it, index) => {
@@ -82,10 +76,12 @@ const CourseList = ({ showType }) => {
             ImageContainer={CourseImgCon}
             Info={CourseInfo}
             type="courseList"
-            showType={showType}
+            showType={widthBool == "true" ? "Grid" : showType}
             course={it}
             style={`cursor-pointer ${
-              showType == "Grid" ? "flex-col h-[528px]" : "flex-row h-[288px]"
+              widthBool == "true" || showType == "Grid"
+                ? "flex-col h-[528px]"
+                : "flex-row h-[288px]"
             }`}
           />
         );
@@ -100,7 +96,9 @@ const CourseList = ({ showType }) => {
         nextLabel={<SlArrowRight />}
         previousLabel={<SlArrowLeft />}
         pageCount={
-          showType == "Grid"
+          widthBool == "true"
+            ? Math.ceil(totalCourses / 3)
+            : showType == "Grid"
             ? Math.ceil(totalCourses / 9)
             : Math.ceil(totalCourses / 8)
         }

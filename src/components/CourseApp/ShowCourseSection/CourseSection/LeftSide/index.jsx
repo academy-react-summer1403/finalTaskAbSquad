@@ -3,7 +3,7 @@
 const LeftSide = () => {
   return (
     <>
-      <div className="border basis-12 w-full order-1 lg:order-2 lg:basis-1/4"></div>
+      <div className="border basis-12 w-full  xl:order-2 order-1  xl:basis-1/4"></div>
     </>
   );
 };
