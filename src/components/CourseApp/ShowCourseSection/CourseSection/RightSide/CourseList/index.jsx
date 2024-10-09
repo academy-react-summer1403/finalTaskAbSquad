@@ -65,8 +65,8 @@ const CourseList = ({ showType }) => {
   // Render
   return (
     <div
-      className={`grid gap-6 justify-center items-center lg:justify-stretch lg:items-start basis-full w-full my-8 mb-20 relative xl:pr-7 ${
-        showType == "Grid" ? "lg:grid-cols-3 lg:px-3" : "lg:grid-col-1"
+      className={`grid gap-6 justify-center items-center px-7 lg:justify-stretch lg:items-start basis-full w-full my-8 mb-20 relative  ${
+        showType == "Grid" ? "lg:grid-cols-3" : "lg:grid-col-1"
       } `}
     >
       {courseList.map((it, index) => {
