@@ -2,6 +2,7 @@
 import { FilterOptions } from "../../../../../core/utilities/FilterOptions/filter.utils.js";
 import SelectField from "../../../../Common/NewFields/SelectField";
 import SearchField from "../../../../Common/NewFields/SearchField";
+import RangeSliderField from "../../../../Common/Fields/RangeSliderField.jsx";
 
 const LeftSide = () => {
   return (
@@ -18,6 +19,7 @@ const LeftSide = () => {
             />
           );
         })}
+        <RangeSliderField />
       </div>
     </>
   );
