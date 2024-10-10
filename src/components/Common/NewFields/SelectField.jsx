@@ -5,16 +5,18 @@ const SelectField = ({ options, filterTitle, Icon }) => {
   const [deleteOption, setDeleteOption] = useState("keep");
   return (
     <>
-      <div className="flex flex-col justify-start items-center  ">
+      <div className="flex flex-col justify-start items-center">
         <TitleSpan title={filterTitle} Icon={Icon} />
         <select
           onInput={() => {
             setDeleteOption("delete");
           }}
-          className="bg-primaryGray  w-full h-12 rounded-2xl pr-5"
+          className="filterStyle"
         >
           {deleteOption == "keep" && (
-            <option defaultValue="انتخاب کنید...">انتخاب کنید...</option>
+            <option className="hidden" defaultValue="انتخاب کنید...">
+              انتخاب کنید...
+            </option>
           )}
           {options.map((it, index) => {
             return (

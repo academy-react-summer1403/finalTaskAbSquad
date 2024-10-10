@@ -41,7 +41,11 @@ const Info = ({ course, type, tableInfoStyle, showType }) => {
         )}
         {type !== "LandingNews" && (
           <LittleRect
-            title={course.currentRegistrants}
+            title={
+              course.currentRegistrants !== undefined
+                ? course.currentRegistrants
+                : course.typeName
+            }
             Icon={PiStudentBold}
             iconSize="25px"
           />
