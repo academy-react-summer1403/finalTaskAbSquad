@@ -19,7 +19,7 @@ const HambMenu = ({
         <div className={compBg}>
           {/* Component Wrapper */}
           <div
-            className={`justify-center items-center  dark:bg-primaryBlack ${compWrapperStyle}`}
+            className={`justify-center dark:bg-primaryBlack rounded-2xl overflow-hidden ${compWrapperStyle}`}
           >
             {closeExist == "yes" && (
               <TitleAndClose title={title} setNavOpen={setNavOpen} />

@@ -1,11 +1,11 @@
 ﻿import React, { useState } from "react";
 import TitleSpan from "./TitleSpan";
 
-const SelectField = ({ options, filterTitle, Icon }) => {
+const SelectField = ({ options, filterTitle, Icon, style = "" }) => {
   const [deleteOption, setDeleteOption] = useState("keep");
   return (
     <>
-      <div className="flex flex-col justify-start items-center">
+      <div className={`flex flex-col justify-start items-center ${style}`}>
         <TitleSpan title={filterTitle} Icon={Icon} />
         <select
           onInput={() => {

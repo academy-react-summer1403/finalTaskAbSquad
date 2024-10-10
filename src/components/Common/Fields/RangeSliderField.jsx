@@ -18,7 +18,7 @@ const RangeSliderField = () => {
   return (
     <>
       {/* Whole Container */}
-      <div className="flex flex-col gap-0 items-center">
+      <div className="flex flex-col gap-0 items-center ">
         {/* Title Container */}
         <div className="flex flex-row justify-between items-center w-full">
           <div className="flex flex-row justify-start items-center">
@@ -28,7 +28,7 @@ const RangeSliderField = () => {
           <span className="text-left">تا {value[1]}</span>
         </div>
 
-        <Box sx={{ width: 290 }}>
+        <Box sx={{ width: 1 }}>
           <Slider
             sx={{ height: 5, p: 0, m: 0 }}
             step={10000}
