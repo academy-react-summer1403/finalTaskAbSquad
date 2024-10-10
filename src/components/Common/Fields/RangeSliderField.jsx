@@ -21,8 +21,8 @@ const RangeSliderField = () => {
       <div className="flex flex-col gap-0 items-center">
         {/* Title Container */}
         <div className="flex flex-row justify-between items-center w-full">
-          <div className="flex flex-row justify-start items-center ">
-            <TitleSpan title="قیمت" Icon={LiaMoneyBillWaveSolid} />
+          <div className="flex flex-row justify-start items-center">
+            <TitleSpan title="قیمت" Icon={LiaMoneyBillWaveSolid} style="mb-0" />
           </div>
           <span className="text-center text-bold">از {value[0]}</span>
           <span className="text-left">تا {value[1]}</span>
