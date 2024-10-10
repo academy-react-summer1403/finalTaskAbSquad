@@ -11,7 +11,7 @@ const SelectField = ({ options, filterTitle, Icon }) => {
           onInput={() => {
             setDeleteOption("delete");
           }}
-          className="filterStyle"
+          className="filterStyle dark:bg-primaryBlack dark:border"
         >
           {deleteOption == "keep" && (
             <option className="hidden" defaultValue="انتخاب کنید...">

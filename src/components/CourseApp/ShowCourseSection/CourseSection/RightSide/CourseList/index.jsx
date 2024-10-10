@@ -89,7 +89,7 @@ const CourseList = ({ showType }) => {
         );
       })}
       <ReactPaginate
-        containerClassName="flex flex-row-reverse bg-primaryGray h-[48px] justify-between items-center rounded-2xl absolute right-3 -bottom-16 max-sm:right-[26.5px] "
+        containerClassName="flex flex-row-reverse bg-primaryGray h-[48px] justify-between items-center rounded-2xl absolute right-3 -bottom-16 max-sm:right-[26.5px] dark:bg-primaryBlack dark:text-primaryWhite dark:border"
         pageLinkClassName="hover:bg-primaryBlue flex justify-center items-center rounded-lg block w-[48px] h-full"
         pageClassName="h-full"
         breakLabel="..."

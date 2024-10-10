@@ -1,26 +1,33 @@
-﻿import React from "react";
-import { FilterOptions } from "../../../../../core/utilities/FilterOptions/filter.utils.js";
-import SelectField from "../../../../Common/NewFields/SelectField";
-import SearchField from "../../../../Common/NewFields/SearchField";
-import RangeSliderField from "../../../../Common/Fields/RangeSliderField.jsx";
-import CalField from "../../../../Common/Fields/CalField.jsx";
+﻿import React, { useEffect, useState } from "react";
+import FieldsSection from "./FieldsSection.jsx";
+import Button from "../../../../Common/Button/Button.jsx";
+import HambMenu from "../../../../Common/HambMenu/index.jsx";
 const LeftSide = () => {
+  const [filterOpen, setFilterOpen] = useState("close");
+  const handleFilterOpen = () => {
+    setFilterOpen("open");
+  };
   return (
     <>
-      <div className="flex gap-5 border basis-12 w-full bg-mainBoxGray rounded-3xl p-4 order-1 lg:max-xl:hidden xl:order-2 xl:basis-1/4 xl:flex-col mt-7 ml-3">
-        <SearchField />
-        {FilterOptions.map((it, index) => {
-          return (
-            <SelectField
-              key={index}
-              options={it.label}
-              filterTitle={it.filterTitle}
-              Icon={it.icon}
-            />
-          );
-        })}
-        <RangeSliderField />
-        <CalField />
+      <div className="basis-12 w-full px-4 order-1 my-5 xl:order-2 xl:basis-1/4 xl:flex-col  dark:bg-primaryBlack dark:text-primaryWhite">
+        <Button
+          text={"ترتیب و فیلتر"}
+          phoneStyle="xl:hidden h-full float-left"
+          onClick={handleFilterOpen}
+        />
+        {<FieldsSection style={"hidden"} />}
+
+        {filterOpen == "open" && (
+          <HambMenu
+            navOpen={filterOpen}
+            setNavOpen={setFilterOpen}
+            Component={FieldsSection}
+            compWrapperStyle="sm:mx-auto sm:w-[600px] sm: rounded-2xl"
+            compBg="bg-transparent"
+            title="ترتیب و فیلتر"
+            hambMenuStyle="xl:hidden "
+          />
+        )}
       </div>
     </>
   );

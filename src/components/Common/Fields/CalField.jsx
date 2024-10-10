@@ -8,7 +8,8 @@ const CalField = () => {
       <div className="flex flex-col w-full text-align">
         <TitleSpan title="تاریخ برگذاری" Icon={LuCalendarRange} />
         <DatePicker
-          inputClass="filterStyle text-left"
+          className="relative z-[60]"
+          inputClass="filterStyle text-left dark:bg-primaryBlack dark:border relative z-[60]"
           round="x4"
           onChange={(e) => console.log(e.from, e.to)}
           range
