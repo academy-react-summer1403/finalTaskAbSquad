@@ -1,10 +1,11 @@
 ﻿import React from "react";
-
-const TitleAndClose = ({ title, CloseComp, closeState, setCloseState }) => {
+import CloseBtn from "./CloseBtn";
+const TitleAndClose = ({ title, setNavOpen }) => {
   return (
     <>
-      <div className="flex flex-row space-between w-full">
-        <h2 className="m-0 p-0">{title}</h2>
+      <div className="flex flex-row justify-between px-10 pt-5 items-center rounded-t-2xl bg-mainBoxGray w-full">
+        <h2 className="m-0 p-0 text-xl">{title}</h2>
+        <CloseBtn setNavOpen={setNavOpen} />
       </div>
     </>
   );

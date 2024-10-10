@@ -65,6 +65,7 @@ const Header = () => {
           setNavOpen={setNavOpen}
           compBg="bg-primaryWhite"
           hambMenuStyle="lg:hidden"
+          closeExist="no"
         />
       )}
     </>

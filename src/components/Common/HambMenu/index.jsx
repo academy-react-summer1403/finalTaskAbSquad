@@ -7,9 +7,7 @@ const HambMenu = ({
   compWrapperStyle = "",
   compBg = "",
   title = "",
-  CloseComp = "",
-  closeState = "",
-  setCloseState = "",
+  closeExist = "yes",
   hambMenuStyle = "",
 }) => {
   return (
@@ -21,14 +19,11 @@ const HambMenu = ({
         <div className={compBg}>
           {/* Component Wrapper */}
           <div
-            className={`justify-center items-center bg-primaryWhite dark:bg-primaryBlack ${compWrapperStyle}`}
+            className={`justify-center items-center  dark:bg-primaryBlack ${compWrapperStyle}`}
           >
-            <TitleAndClose
-              title={title}
-              CloseComp={CloseComp}
-              closeState={closeState}
-              setCloseState={setCloseState}
-            />
+            {closeExist == "yes" && (
+              <TitleAndClose title={title} setNavOpen={setNavOpen} />
+            )}
             <Component navOpen={navOpen} compWrapperStyle={compWrapperStyle} />
           </div>
           {/* End Of Component Wrapper */}
