@@ -1,10 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @font-face {
   font-family: "IRANYekan";
   src: url("./assets/fontFamily/IRANYekanWeb.ttf");
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 * {
   direction: rtl;
   font-family: IRANYekan;
@@ -31,4 +31,12 @@ body {
 .grayBox {
   border: 4px solid #e4e4e4;
   border-radius: 32px;
+}
+/* Filter Field Style */
+.filterStyle {
+  background-color: #e4e4e4;
+  width: 100%;
+  height: 48px;
+  border-radius: 16px;
+  padding-right: 20px;
 }

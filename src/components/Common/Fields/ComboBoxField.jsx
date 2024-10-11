@@ -2,14 +2,11 @@ import * as React from "react";
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-const options = ["Option 1", "Option 2"];
-const ComboBoxField = () => {
-  //   const [value, setValue] = useState(options[0]);
-  //   const [inputValue, setInputValue] = useState("");
+const ComboBoxField = ({ items }) => {
   return (
     <Autocomplete
       disablePortal
-      options={options}
+      options={items}
       className="CourseField"
       renderInput={(params) => <TextField {...params} label="انتخاب کنید" />}
     />

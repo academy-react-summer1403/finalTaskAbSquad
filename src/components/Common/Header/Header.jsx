@@ -2,7 +2,7 @@
 import Button from "../Button/Button";
 import MoonIcon from "../../../assets/Svgs/Header/moonDarkMode/moon.svg";
 import NavLinkComp from "./NavLinks/NavLinksComp";
-import HambMenu from "../HambMenu/HambMenu";
+import HambMenu from "../HambMenu";
 import { HandleDarkMode } from "../../../JS/DarkMode/DarkMode";
 import BahrLogoComp from "../BahrLogoComp";
 import { IoMoonOutline } from "react-icons/io5";
@@ -63,6 +63,9 @@ const Header = () => {
           Component={NavLinkComp}
           navOpen={navOpen}
           setNavOpen={setNavOpen}
+          compBg="bg-primaryWhite"
+          hambMenuStyle="lg:hidden"
+          closeExist="no"
         />
       )}
     </>

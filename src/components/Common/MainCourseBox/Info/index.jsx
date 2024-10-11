@@ -11,10 +11,10 @@ import Title from "./Title";
 import Description from "./Description";
 import Button from "../../Button/Button";
 
-const Info = ({ course, type }) => {
+const Info = ({ course, type, tableInfoStyle, showType }) => {
   return (
     <>
-      <div className="flex flex-col grow gap-4 pr-4 pl-4">
+      <div className={`flex flex-col grow gap-4 pr-4 pl-4 ${tableInfoStyle}`}>
         {/* Title */}
         <Title title={course.title} />
         {/* Description */}
@@ -41,7 +41,11 @@ const Info = ({ course, type }) => {
         )}
         {type !== "LandingNews" && (
           <LittleRect
-            title={course.likeCount}
+            title={
+              course.currentRegistrants !== undefined
+                ? course.currentRegistrants
+                : course.typeName
+            }
             Icon={PiStudentBold}
             iconSize="25px"
           />
@@ -66,8 +70,15 @@ const Info = ({ course, type }) => {
         {/* Like And Price Div */}
 
         <div className="h-10 w-full flex flex-row justify-between items-center">
-          {type !== "LandingNews" && <PriceTag price={course.cost} />}
-          <LikeDisLike course={course} type={type} />
+          {type !== "LandingNews" && (
+            <PriceTag
+              price={course.cost.toLocaleString("en-US")}
+              type={type}
+              showType={showType}
+              priceSize="text-xl sm:text-2xl"
+            />
+          )}
+          <LikeDisLike course={course} type={type} showType={showType} />
           {type == "LandingNews" && (
             <Button text="بیشتر بخوانید" phoneStyle="sm:text-base h-full" />
           )}

@@ -4,9 +4,11 @@ import BahrLogo from "../../../../assets/Svgs//Header/bahrLogo/Logo.png";
 import BahrLogoText from "../../../../assets/Svgs//Header/bahrLogo/LogoText.png";
 import InstaIcon from "../../../../assets/Svgs/Footer/instagram.svg";
 import TelegramIcon from "../../../../assets/Svgs/Footer/telegram.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import BahrLogoComp from "../../BahrLogoComp/index.jsx";
+
 const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
+  const navigate = useNavigate();
   return (
     <>
       <ul
@@ -15,6 +17,7 @@ const NavLinkComp = ({ mainStyle, phoneStyle, navOpen }) => {
         {NavLinks.map((items, index) => {
           return (
             <li
+              onClick={() => navigate(items.navRoute)}
               key={index}
               className="hover:text-primaryBlue cursor-pointer transition-colors duration-200 active:text-primaryBlue max-lg:flex max-lg:flex-row max-lg:justify-start max-lg:items-center max-lg:w-full"
             >

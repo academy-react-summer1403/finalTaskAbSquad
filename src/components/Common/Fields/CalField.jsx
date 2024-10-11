@@ -1,14 +1,16 @@
 import React from "react";
-import { DatePicker, CalendarProvider } from "zaman";
-
+import { DatePicker } from "zaman";
+import TitleSpan from "../NewFields/TitleSpan";
+import { LuCalendarRange } from "react-icons/lu";
 const CalField = () => {
   return (
     <>
-      <div className="w-96 bg-white text-red-600 text-align">
+      <div className="flex flex-col w-full text-align">
+        <TitleSpan title="تاریخ برگذاری" Icon={LuCalendarRange} />
         <DatePicker
-          inputClass="w-96 bg-slate-300 text-center italic"
+          className="relative z-[60]"
+          inputClass="filterStyle text-left dark:bg-primaryBlack dark:border relative z-[60]"
           round="x4"
-          onChange={(e) => console.log(e.from, e.to)}
           range
         />
       </div>

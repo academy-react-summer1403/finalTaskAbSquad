@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   darkMode: "class",
+
   theme: {
     extend: {
       colors: {
@@ -15,6 +20,7 @@ export default {
         primaryBlack: "#272727",
         mainBoxGray: "#f6f5f7",
         LightBlueCustom: "#3772FF3B",
+        starYel: "#E5EA19",
       },
       fontFamily: {
         IRANYekan: ["IRANYekan"],
@@ -28,6 +34,9 @@ export default {
         darkButtonShadow: "0 0px 10px 1px rgba(222, 89, 255 , 1)",
         buttonShadow: "0px 3px 10px 1px #272727",
         darkMainBoxShadow: "0 10px 10px 1px rgba(222, 89, 255 , 1)",
+      },
+      screens: {
+        monitor: "1920px",
       },
     },
   },
