@@ -3,3 +3,6 @@
   border-radius: 20px;
   line-height: 16px;
 }
+fieldset {
+  display: none;
+}

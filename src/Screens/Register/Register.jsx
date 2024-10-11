@@ -3,36 +3,40 @@ import RightSection from "../../components/AuthPage/RightSection";
 import LeftSection from "../../components/AuthPage/LeftSection";
 import { FaCocktail } from "react-icons/fa";
 import { FaHouse } from "react-icons/fa6";
+import { LuClipboardEdit } from "react-icons/lu";
 import PhoneInput from "../../components/AuthPage/PhoneInput";
-
+import { TbPasswordMobilePhone } from "react-icons/tb";
+import { ImProfile } from "react-icons/im";
 const stepperData = [
   {
     left: {
-      step: 0,
       title: "به آکادمی بحر خوش اومدی!😍",
+      titleF: "به آکادمی بحر خوش اومدی!😍",
       descL:
         "لطفا برای ثبت نام شماره همراه خود را وارد کنید تا برای شما کد تایید ارسال شود",
       text: "ارسال کد تایید",
       RightData: "حساب کاربری دارید؟",
-      textN: "ثبت اطلاعات",
-      textB: "dhds اطلاعات",
+      textN: "ارسال کد تایید",
+      textB: "",
       LeftData: "ورود به حساب کاربری",
       Main: PhoneInput,
       destination: "/login",
     },
     right: [
-      { Icon: FaHouse, desc: "وارد کردن شماره همراه" },
-      { Icon: FaCocktail, desc: "تایید کد ارسال شده به شماره همراه" },
-      { Icon: FaCocktail, desc: "وارد کردن اطلاعات حساب کاربری" },
+      { Icon: LuClipboardEdit, desc: "وارد کردن شماره همراه" },
+      {
+        Icon: TbPasswordMobilePhone,
+        desc: "تایید کد ارسال شده به شماره همراه",
+      },
+      { Icon: ImProfile, desc: "وارد کردن اطلاعات حساب کاربری" },
     ],
   },
   {
     left: {
-      step: 1,
       title: "به آکادمی بحر خوش اومدی!😍",
       descL: "لطفا کد ارسال شده به شماره ؟؟؟؟؟؟؟؟09 وارد کنید",
-      textN: "ثبت اطلاعات",
-      textB: "dhds اطلاعات",
+      textN: "تایید",
+      textB: "تغییر شماره همراه",
       text: "تایید",
       RightData: "حساب کاربری دارید؟",
       LeftData: "ورود به حساب کاربری",
@@ -47,11 +51,9 @@ const stepperData = [
   },
   {
     left: {
-      step: 2,
       title: "به آکادمی بحر خوش اومدی!😍",
       descL: "لطفا اطلاعات شخصی حساب کاربری خود را وارد کنید ",
       textN: "ثبت اطلاعات",
-      textB: "dhds اطلاعات",
       RightData: "حساب کاربری دارید؟",
       LeftData: "ورود به حساب کاربری",
       Main: PhoneInput,
@@ -83,8 +85,8 @@ const Register = () => {
     <div className="flex">
       <RightSection rightSecData={stepperData[step].right} />
       <LeftSection
-        step={stepperData[step].left.step}
         title={stepperData[step].left.title}
+        titleF={stepperData[step].left.titleF}
         descL={stepperData[step].left.descL}
         textN={stepperData[step].left.textN}
         textB={stepperData[step].left.textB}
@@ -97,6 +99,7 @@ const Register = () => {
         handleBack={handleBack}
         disableNext={step === stepperData.length - 1}
         disableBack={step === 0}
+        step={step}
       />
     </div>
   );
