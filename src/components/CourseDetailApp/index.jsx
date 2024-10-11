@@ -17,7 +17,7 @@ const CourseDetailApp = () => {
 
   return (
     <>
-      <div className="flex xl:flex-row xl:gap-16 h-screen">
+      <div className="flex xl:flex-row xl:gap-16 h-screen my-10">
         <RightSide courseDetail={courseDetail} />
         <LeftSide courseDetail={courseDetail} />
       </div>
