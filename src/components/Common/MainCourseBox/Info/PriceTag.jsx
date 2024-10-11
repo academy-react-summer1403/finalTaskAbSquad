@@ -1,5 +1,5 @@
 ﻿import React from "react";
-const PriceTag = ({ price, showType }) => {
+const PriceTag = ({ price, showType, priceSize = "" }) => {
   return (
     <>
       <div
@@ -7,7 +7,7 @@ const PriceTag = ({ price, showType }) => {
           showType !== "Grid" ? " order-2 text-left pl-2 pb-2" : " order-0"
         }`}
       >
-        <span className="text-xl sm:text-2xl">{price.toLocaleString()}</span>
+        <span className={`${priceSize}`}>{price.toLocaleString()}</span>
         <span className="text-primaryBlue text-sm pr-1 sm:text-base">
           تومان
         </span>

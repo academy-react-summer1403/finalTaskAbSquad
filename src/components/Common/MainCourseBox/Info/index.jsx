@@ -71,7 +71,12 @@ const Info = ({ course, type, tableInfoStyle, showType }) => {
 
         <div className="h-10 w-full flex flex-row justify-between items-center">
           {type !== "LandingNews" && (
-            <PriceTag price={course.cost} type={type} showType={showType} />
+            <PriceTag
+              price={course.cost}
+              type={type}
+              showType={showType}
+              priceSize="text-xl sm:text-2xl"
+            />
           )}
           <LikeDisLike course={course} type={type} showType={showType} />
           {type == "LandingNews" && (

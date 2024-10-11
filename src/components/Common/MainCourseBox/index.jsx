@@ -1,17 +1,27 @@
 ﻿import React from "react";
+import { useNavigate } from "react-router-dom";
 const MainBox = ({
   course,
   ImageContainer,
   Info,
-  type = "course",
+  type = "courseList",
   showType = "Grid",
   style,
   tableImgConStyle = "",
   tableInfoStyle = "",
+  courseId = "",
 }) => {
+  const navigate = useNavigate(); // Use Navigation
   return (
     <>
       <div
+        onClick={() => {
+          if (type == "courseList") {
+            navigate("/CourseDetail/" + courseId);
+          } else {
+            navigate("/News");
+          }
+        }}
         className={`flex shadow-lg hover:shadow-2xl  dark:border dark:border-fontGray dark:hover:shadow-darkMainBoxShadow rounded-3xl  overflow-hidden bg-mainBoxGray dark:bg-primaryBlack ${style}`}
       >
         <ImageContainer

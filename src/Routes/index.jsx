@@ -5,6 +5,7 @@
   Register,
   Login,
   CoursePage,
+  CourseDetail,
 } from "../core/utilities/Routes/routes.utils.js";
 export const PageRoutes = [
   {
@@ -18,6 +19,10 @@ export const PageRoutes = [
       {
         path: "/CoursePage/:PageNumber?/:RowsOfPage?/:SortingCol?/:SortType?",
         element: <CoursePage />,
+      },
+      {
+        path: "/CourseDetail/:courseId?",
+        element: <CourseDetail />,
       },
     ],
   },

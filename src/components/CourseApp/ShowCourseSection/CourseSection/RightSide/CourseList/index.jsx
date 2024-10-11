@@ -8,7 +8,6 @@ import { SlArrowLeft } from "react-icons/sl";
 import ReactPaginate from "react-paginate";
 import { useSearchParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
 const CourseList = ({ showType }) => {
   const [courseList, setCourseList] = useState([]); // The Actual Data Of The Api
   const [totalCourses, setTotalCourses] = useState(""); // Number Of Total Pages in API
