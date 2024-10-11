@@ -1,10 +1,12 @@
 ﻿import React from "react";
 import FontGraySmallText from "../FontGraySmallText";
 
-const ProfileComp = ({ name, skill }) => {
+const ProfileComp = ({ name, skill, style }) => {
   return (
     <>
-      <div className="flex flex-row justify-start items-center gap-3 h-14">
+      <div
+        className={`flex flex-row justify-start items-center gap-3 h-14 ${style}`}
+      >
         {/* Profile Container*/}
         <div className="h-14 w-14">
           <div className="border rounded-full bg-primaryGray w-full h-full">

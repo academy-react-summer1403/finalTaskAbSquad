@@ -26,6 +26,7 @@ const LeftSide = ({ courseDetail }) => {
           />
         </div>
         <RateSection />
+
         <CommentSection />
       </div>
     </>
