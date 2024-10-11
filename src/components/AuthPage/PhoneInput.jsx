@@ -9,10 +9,10 @@ const PhoneInput = ({ titleF, PlaceholderF }) => {
       <TextField
         label={PlaceholderF}
         InputProps={{
-          className: "hitest", // Tailwind classes for the input
+          className: "hitest",
         }}
         InputLabelProps={{
-          className: "", // Tailwind classes for the label
+          className: "",
         }}
       />
     </div>
