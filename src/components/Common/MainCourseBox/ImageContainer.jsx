@@ -12,7 +12,7 @@ const ImageContainer = ({ course, type, tableImgConStyle }) => {
           text={
             type == "LandingNews"
               ? course.newsCatregoryName
-              : type == "course"
+              : type == "courseList" && course.typeName !== undefined
               ? course.typeName
               : course.technologyList
           }

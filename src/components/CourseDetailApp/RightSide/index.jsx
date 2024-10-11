@@ -12,34 +12,42 @@ import LikeDislikeCircle from "../../Common/LikeDislikeCircle";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 
-const RightSide = () => {
+const RightSide = ({ courseDetail }) => {
   return (
     // Right Side Container
-    <div className="xl:border xl:basis-2/5">
+    <div className=" xl:basis-2/5">
       {/* Gray Box */}
-      <div className="grayBox flex flex-col gap-0 pr-5 py-3">
-        <CourseStatus course={{ statusName: "mamad" }} style="mr-0" />
-        <Title title={"ری اکت "} />
+      <div className="grayBox flex flex-col gap-0 px-5 py-3 sticky">
+        <CourseStatus course={courseDetail} style="mr-0" />
+        <Title title={courseDetail.title} />
         <div className="flex flex-row items-center justify-start">
-          <RoundedDiv text={"mamadi"} />
-          <RoundedDiv text={"asghari"} />
+          <RoundedDiv text={courseDetail.techs} />
+          <RoundedDiv text={courseDetail.courseLevelName} />
         </div>
         <div className="flex flex-col gap-3 my-5">
           <LittleRect
-            title={"80 دانشجو"}
+            title={courseDetail.currentRegistrants + " دانشجو"}
             iconSize={"24px"}
             Icon={PiStudentBold}
           />
-          <LittleRect title={"س"} Icon={CgCalendarDates} iconSize="24px" />
-          <LittleRect title={"س"} Icon={CgCalendarDates} iconSize="24px" />
+          <LittleRect
+            title={courseDetail.startTime}
+            Icon={CgCalendarDates}
+            iconSize="24px"
+          />
+          <LittleRect
+            title={courseDetail.endTime}
+            Icon={CgCalendarDates}
+            iconSize="24px"
+          />
         </div>
         <PriceTag
-          price={"1,800,000"}
+          price={courseDetail.cost}
           showType={"Grid"}
           priceSize="text-2xl sm:text-3xl"
         />
         <div className="flex flex-row gap-10">
-          <Button text={"رزرو دوره"} phoneStyle={"h-14 basis-2/5 text-xl"} />
+          <Button text={"رزرو دوره"} phoneStyle={"h-14 basis-1/2 text-xl"} />
           <LikeDislikeCircle Icon={MdOutlineBookmarkAdd} iconSize={"24px"} />
           <LikeDislikeCircle Icon={AiOutlineLike} iconSize={"24px"} />
           <LikeDislikeCircle Icon={AiOutlineDislike} iconSize={"24px"} />

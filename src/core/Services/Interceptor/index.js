@@ -4,9 +4,11 @@ const instance = axios.create({
   baseURL: baseUrl,
 });
 const onSuccess = (response) => {
-  return response.data;
+  if (response.data) {
+    return response.data;
+  }
 };
-const onError = (err) => {};
+const onError = (error) => {};
 instance.interceptors.response.use(onSuccess, onError);
 
 export default instance;

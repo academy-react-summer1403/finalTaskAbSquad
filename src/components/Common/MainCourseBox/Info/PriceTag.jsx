@@ -7,7 +7,7 @@ const PriceTag = ({ price, showType, priceSize = "" }) => {
           showType !== "Grid" ? " order-2 text-left pl-2 pb-2" : " order-0"
         }`}
       >
-        <span className={`${priceSize}`}>{price.toLocaleString()}</span>
+        <span className={`${priceSize}`}>{price}</span>
         <span className="text-primaryBlue text-sm pr-1 sm:text-base">
           تومان
         </span>

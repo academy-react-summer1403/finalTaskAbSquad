@@ -9,7 +9,6 @@ const MainBox = ({
   style,
   tableImgConStyle = "",
   tableInfoStyle = "",
-  courseId = "",
 }) => {
   const navigate = useNavigate(); // Use Navigation
   return (
@@ -17,7 +16,7 @@ const MainBox = ({
       <div
         onClick={() => {
           if (type == "courseList") {
-            navigate("/CourseDetail/" + courseId);
+            navigate("/CourseDetail/CourseId=" + course.courseId);
           } else {
             navigate("/News");
           }

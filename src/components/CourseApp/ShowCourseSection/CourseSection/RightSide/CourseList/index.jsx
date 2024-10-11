@@ -6,7 +6,7 @@ import CourseInfo from "../../../../../../components/Common/MainCourseBox/Info";
 import { SlArrowRight } from "react-icons/sl";
 import { SlArrowLeft } from "react-icons/sl";
 import ReactPaginate from "react-paginate";
-import { useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 const CourseList = ({ showType }) => {
   const [courseList, setCourseList] = useState([]); // The Actual Data Of The Api
@@ -15,7 +15,6 @@ const CourseList = ({ showType }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Width of the screen
   const [widthBool, setWidthBool] = useState("false");
   const location = useLocation(); // Use Location
-
   //   Function For Fetching The Pagination API
   const fetchCoursePagination = async (sParam) => {
     const result = await GetCourseList(sParam);
