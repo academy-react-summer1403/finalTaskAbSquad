@@ -3,27 +3,43 @@ import RightSection from "../../components/AuthPage/RightSection";
 import LeftSection from "../../components/AuthPage/LeftSection";
 import { FaCocktail } from "react-icons/fa";
 import { FaHouse } from "react-icons/fa6";
+import { useState } from "react";
 import Test from "../../components/AuthPage/Test";
 import PhoneInput from "../../components/AuthPage/PhoneInput";
-const Login = () => {
+const Login = (desc, Icon) => {
+  const initialRightSecData = [
+    {
+      Icon: FaHouse,
+      desc: "تماس بگیر",
+    },
+    {
+      desc: "تماس بsgasgasگیر",
+      Icon: FaCocktail,
+    },
+  ];
+
+  const [currentRightSecData, setCurrentRightSecData] =
+    useState(initialRightSecData);
+
+  console.log("Current Right Section Data:", currentRightSecData);
+
   return (
     <>
       <div className="flex">
         <RightSection
-          Icon={FaHouse}
-          desc="تماس بگیر"
-          show={true}
-          show2={true}
-          Icon2={FaCocktail}
+          rightSecData={currentRightSecData}
+          desc={desc}
+          Icon={Icon}
         />
         <LeftSection
-          desc="لطفا برای ورود به پنل خود ایمیل یا شماره همراه و رمزعبور خود را وارد کنید"
-          title="خوش برگشتی!👋"
+          descL="لطفا برای ثبت نام شماره همراه خود را وارد کنید تا برای شما کد تایید ارسال شود"
+          title="به آکادمی بحر خوش اومدی!😍"
           text="ارسال کد تایید"
-          RightData="حساب کاربری ندارید؟"
-          LeftData="ایجاد به حساب کاربری"
+          RightData="حساب کاربری دارید؟"
+          LeftData="ورود به حساب کاربری"
           Main={PhoneInput}
           destination="/register"
+          setCurrentRightSecData={setCurrentRightSecData}
         />
       </div>
     </>
@@ -31,3 +47,10 @@ const Login = () => {
 };
 
 export default Login;
+// desc="لطفا برای ورود به پنل خود ایمیل یا شماره همراه و رمزعبور خود را وارد کنید"
+//           title="خوش برگشتی!👋"
+//           text="ارسال کد تایید"
+//           RightData="حساب کاربری ندارید؟"
+//           LeftData="ایجاد به حساب کاربری"
+//           Main={PhoneInput}
+//           destination="/register"
