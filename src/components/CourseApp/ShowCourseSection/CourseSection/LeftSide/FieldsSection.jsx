@@ -37,7 +37,7 @@ const FieldsSection = ({ style = "", filterOpen }) => {
             />
           );
         })}
-        <Button text={"اعمال"} phoneStyle={"h-14 text-base"} />
+        <Button text={"اعمال"} phoneStyle={"h-14 text-base xl:hidden"} />
       </div>
     </>
   );

@@ -24,8 +24,10 @@ const RangeSliderField = () => {
           <div className="flex flex-row justify-start items-center">
             <TitleSpan title="قیمت" Icon={LiaMoneyBillWaveSolid} style="mb-0" />
           </div>
-          <span className="text-center text-bold">از {value[0]}</span>
-          <span className="text-left">تا {value[1]}</span>
+          <span className="text-center text-bold">
+            از {value[0].toLocaleString()}
+          </span>
+          <span className="text-left">تا {value[1].toLocaleString()}</span>
         </div>
 
         <Box sx={{ width: 1 }}>

@@ -21,7 +21,7 @@ const SortButtons = ({ deleteActive, setDeleteActive, setPopUpDelete }) => {
 
   return (
     <>
-      {SortOptions.map((it, index) => {
+      {SortOptions[0].label.map((it, index) => {
         return (
           <div
             onClick={() => {
@@ -35,7 +35,7 @@ const SortButtons = ({ deleteActive, setDeleteActive, setPopUpDelete }) => {
                 : "dark:hover:text-primaryBlue hover:text-primaryBlue shadow-[0_0_0px_1px_#e4e4e4]"
             }`}
           >
-            {it.option}
+            {it.name}
           </div>
         );
       })}

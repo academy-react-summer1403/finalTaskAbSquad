@@ -11,7 +11,6 @@ const CalField = () => {
           className="relative z-[60]"
           inputClass="filterStyle text-left dark:bg-primaryBlack dark:border relative z-[60]"
           round="x4"
-          onChange={(e) => console.log(e.from, e.to)}
           range
         />
       </div>
