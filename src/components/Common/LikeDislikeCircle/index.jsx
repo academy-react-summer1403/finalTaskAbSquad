@@ -3,8 +3,8 @@
 const LikeDislikeCircle = ({ Icon, iconSize }) => {
   return (
     <>
-      <div className="w-14 h-14 rounded-full border border-primaryGray flex justify-center items-center">
-        <Icon className={`text-[${iconSize}]`} />
+      <div className="p-4 rounded-full border border-primaryGray flex justify-center items-center">
+        <Icon size={`${iconSize}`} className={`dark:text-primaryWhite`} />
       </div>
     </>
   );

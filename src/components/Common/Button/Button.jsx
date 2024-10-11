@@ -1,12 +1,13 @@
 ﻿import React from "react";
 
-const Button = ({ text, phoneStyle, onClick }) => {
+const Button = ({ text, phoneStyle, onClick, Icon, iconSize = "" }) => {
   return (
     <>
       <button
         onClick={onClick}
         className={`rounded-[64px] px-6  flex items-center justify-center bg-primaryBlue text-primaryWhite text-nowrap hover:shadow-buttonShadow  dark:hover:shadow-darkButtonShadow ${phoneStyle}`}
       >
+        {Icon !== undefined ? <Icon iconSize={iconSize} /> : ""}
         {text}
       </button>
     </>

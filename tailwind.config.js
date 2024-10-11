@@ -19,6 +19,7 @@ export default {
         fontGray: "#787878",
         primaryBlack: "#272727",
         mainBoxGray: "#f6f5f7",
+        starYel: "#E5EA19",
       },
       fontFamily: {
         IRANYekan: ["IRANYekan"],

@@ -48,9 +48,11 @@ const RightSide = ({ courseDetail }) => {
         />
         <div className="flex flex-row gap-10">
           <Button text={"رزرو دوره"} phoneStyle={"h-14 basis-1/2 text-xl"} />
-          <LikeDislikeCircle Icon={MdOutlineBookmarkAdd} iconSize={"24px"} />
-          <LikeDislikeCircle Icon={AiOutlineLike} iconSize={"24px"} />
-          <LikeDislikeCircle Icon={AiOutlineDislike} iconSize={"24px"} />
+          <div className="flex flex-row justify-evenly basis-1/2">
+            <LikeDislikeCircle Icon={MdOutlineBookmarkAdd} iconSize={"24px"} />
+            <LikeDislikeCircle Icon={AiOutlineLike} iconSize={"24px"} />
+            <LikeDislikeCircle Icon={AiOutlineDislike} iconSize={"24px"} />
+          </div>
         </div>
       </div>
       {/* End OF Gray Box */}
