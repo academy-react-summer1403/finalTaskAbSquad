@@ -8,11 +8,11 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 const CommentBox = ({ name, skill, style, reply = "no", repliedTo = "no" }) => {
   return (
     <div
-      className={` border-2  bg-primaryWhite border-l-0 border-t-0  w-11/12 h-[276px] relative ${
+      className={` border-2  bg-primaryWhite dark:bg-primaryBlack dark:text-primaryWhite border-l-0 border-t-0  w-11/12 h-[276px] relative ${
         reply == "no" && repliedTo == "yes"
           ? "border-fontGray rounded-br-3xl"
           : reply == "yes" && repliedTo == "no"
-          ? "-top-[30px] w-4/5 right-20 border-r-0 border-b-0 after:content-[' '] after:absolute after:-right-20 after:bottom-0 after:border after:border-solid after:border-primaryGray after:w-full  "
+          ? "-top-[30px] w-5/6 right-[5%] border-r-0 border-b-0 after:content-[' '] after:absolute after:-right-[8%] after:bottom-0 after:border after:border-solid after:border-primaryGray after:w-full  "
           : reply == "no" && repliedTo == "no"
           ? "border-none"
           : ""
@@ -25,6 +25,7 @@ const CommentBox = ({ name, skill, style, reply = "no", repliedTo = "no" }) => {
         <Button
           text={"جواب دادن"}
           Icon={TbMessageReply}
+          iconStyle="ml-2"
           phoneStyle={"bg-secondaryBlue !text-primaryBlue h-10"}
         />
         <LikeDisLikeComment />

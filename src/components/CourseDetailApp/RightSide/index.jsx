@@ -14,9 +14,9 @@ import { AiOutlineDislike } from "react-icons/ai";
 const RightSide = ({ courseDetail }) => {
   return (
     // Right Side Container
-    <div className=" xl:basis-2/5">
+    <div className=" xl:basis-2/5 ">
       {/* Gray Box */}
-      <div className="grayBox flex flex-col gap-0 px-5 py-3 sticky">
+      <div className="grayBox flex flex-col gap-0 px-5 py-3 sticky top-0">
         <CourseStatus course={courseDetail} style="mr-0" />
         <Title title={courseDetail.title} />
         <div className="flex flex-row items-center justify-start">

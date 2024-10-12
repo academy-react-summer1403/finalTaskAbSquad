@@ -1,8 +1,8 @@
-﻿import React from "react";
+﻿import React, { useState } from "react";
 import Button from "../../../Common/Button/Button";
 import { BsChatLeftText } from "react-icons/bs";
 import CommentBox from "../../../Common/CommentBox";
-const CommentSection = () => {
+const CommentSection = ({ setCommentModalOpen }) => {
   return (
     <>
       <div className="flex flex-col my-20 w-full">
@@ -14,6 +14,7 @@ const CommentSection = () => {
             phoneStyle={"w-full text-xl h-10 gap-3 mb-10"}
             Icon={BsChatLeftText}
             iconSize={"20px"}
+            onClick={() => setCommentModalOpen("open")}
           />
           <CommentBox
             name={"ممدعلی"}

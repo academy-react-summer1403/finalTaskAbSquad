@@ -7,7 +7,7 @@ import DetailDesc from "./DetailDesc";
 import RateSection from "./RateSection";
 import CommentSection from "./CommentSection";
 
-const LeftSide = ({ courseDetail }) => {
+const LeftSide = ({ courseDetail, setCommentModalOpen }) => {
   return (
     <>
       <div className="basis-3/5 flex flex-col items-start justify-start gap-5">
@@ -20,14 +20,12 @@ const LeftSide = ({ courseDetail }) => {
         <div className="w-full">
           <DetailDesc
             title={courseDetail.miniDescribe}
-            desc={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, laboriosam numquam nihil facere est vel asperiores dolore culpa cupiditate. Maiores tempore molestias tenetur voluptates! Natus officia eius ipsam nesciunt, pariatur commodi nostrum incidunt excepturi enim odio ea repellat nulla non, sed rerum maxime in vero nihil ex, sint totam! Ratione consequuntur, officiis numquam ullam quaerat obcaecati, et repellendus nisi quas consectetur distinctio molestiae tenetur saepe. Eum, corrupti unde officia distinctio eligendi mollitia et minus voluptates explicabo dolore asperiores rerum numquam nostrum blanditiis delectus, error ipsam sequi debitis sapiente molestiae magnam natus fugiat iste expedita. Illum asperiores voluptatum sequi sed modi?"
-            }
+            desc={courseDetail.describe}
           />
         </div>
         <RateSection />
 
-        <CommentSection />
+        <CommentSection setCommentModalOpen={setCommentModalOpen} />
       </div>
     </>
   );
