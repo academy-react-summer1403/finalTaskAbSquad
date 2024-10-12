@@ -72,7 +72,7 @@ const Info = ({ course, type, tableInfoStyle, showType }) => {
         <div className="h-10 w-full flex flex-row justify-between items-center">
           {type !== "LandingNews" && (
             <PriceTag
-              price={course.cost.toLocaleString("en-US")}
+              price={parseInt(course.cost)}
               type={type}
               showType={showType}
               priceSize="text-xl sm:text-2xl"

@@ -42,7 +42,7 @@ const RightSide = ({ courseDetail }) => {
           />
         </div>
         <PriceTag
-          price={courseDetail.cost}
+          price={parseInt(courseDetail.cost)}
           showType={"Grid"}
           priceSize="text-2xl sm:text-3xl"
         />
