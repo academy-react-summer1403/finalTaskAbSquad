@@ -29,6 +29,13 @@ const CommentSection = () => {
             reply="yes"
             repliedTo="no"
           />
+          <CommentBox
+            name={"ممدعلی"}
+            skill={"هیچی"}
+            style={" absolute -right-[30px]"}
+            reply="no"
+            repliedTo="no"
+          />
         </div>
       </div>
     </>
