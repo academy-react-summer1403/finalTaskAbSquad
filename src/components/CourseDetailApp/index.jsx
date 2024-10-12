@@ -20,7 +20,12 @@ const CourseDetailApp = () => {
       <div className="flex xl:flex-row xl:gap-16 my-10">
         <RightSide courseDetail={courseDetail} />
         <LeftSide courseDetail={courseDetail} />
+        {/* Other Courses */}
       </div>
+      <div className="">
+        <h1 className="text-[48px]">دوره های دیگر</h1>
+      </div>
+      <div className="w-full"></div>
     </>
   );
 };
