@@ -3,7 +3,7 @@ import ProfileComp from "../ProfileComp";
 const CommentBox = ({ name, skill, style, reply = "no", repliedTo = "no" }) => {
   return (
     <div
-      className={`border-4 bg-primaryWhite border-l-0 border-t-0 rounded-br-3xl w-11/12 h-[276px] relative ${
+      className={`border-2 border-fontGray bg-primaryWhite border-l-0 border-t-0 rounded-br-3xl w-11/12 h-[276px] relative ${
         reply == "yes" && repliedTo == "no"
           ? "-top-[30px] right-20 border-r-0 border-b-0"
           : ""
