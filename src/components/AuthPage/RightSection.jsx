@@ -1,7 +1,7 @@
 import React from "react";
 import BahrLogoComp from "../Common/BahrLogoComp";
 import RightSecRow from "./RightSecRow";
-
+import "./RightSec.css";
 const RightSection = ({ rightSecData }) => {
   return (
     <div className="bg-primaryGray w-1/3 p-24 h-screen text-primaryWhite">
@@ -12,6 +12,8 @@ const RightSection = ({ rightSecData }) => {
         <RightSecRow
           key={`${item.desc}-${index}`}
           desc={item.desc}
+          classNameButton={item.classNameButton}
+          classNameDesc={item.classNameDesc}
           Icon={item.Icon}
         />
       ))}

@@ -4,7 +4,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Countdown from "react-countdown";
 import Timer from "./Timer";
+
+import { PiShieldStarBold } from "react-icons/pi";
+import { PiArrowBendUpLeftLight } from "react-icons/pi";
 const LeftSection = ({
+  stepLogin,
   textB,
   textN,
   descL,
@@ -25,7 +29,28 @@ const LeftSection = ({
       <h2 className="text-4xl -indent-14 mb-10">{title}</h2>
       <p className="text-xl w-[538px] mb-16">{descL}</p>
       <div className="mb-6">{Main && <Main titleF={titleF} />}</div>
-
+      {stepLogin === 0 && (
+        <div className=" w-[540px] mb-6  ">
+          <NavLink to="/ForgotPass">
+            <Button
+              phoneStyle="!text-primaryBlue h-[40px] w-[220px] !bg-LightBlueCustom gap-4 float-left"
+              text={textB}
+              onClick={handleBack}
+              disabled={disableBack}
+              Icon={PiShieldStarBold}
+            />
+          </NavLink>
+          <div>
+            <input
+              className="justify-self-start float-start rounded-lg
+              appearance-none w-[24px] h-[24px] bg-primaryGray checked:bg-primaryBlue checked:border-transparent focus:outline-none
+                "
+              type="checkbox"
+            />
+            <span className=" float-start indent-1.5">مرا به خاطر بسپار </span>
+          </div>
+        </div>
+      )}
       <Button
         phoneStyle="h-[56px] w-[538px]"
         text={textN}
@@ -46,10 +71,11 @@ const LeftSection = ({
       {step === 1 && (
         <div className="flex flex-row-reverse gap-24 mt-6">
           <Button
-            phoneStyle="!text-primaryBlue h-[40px] w-[220px] bg-LightBlueCustom "
+            phoneStyle="!text-primaryBlue h-[40px] w-[220px] !bg-LightBlueCustom flex flex-row-reverse gap-4"
             text={textB}
             onClick={handleBack}
             disabled={disableBack}
+            Icon={PiArrowBendUpLeftLight}
           />
           <Timer />
         </div>

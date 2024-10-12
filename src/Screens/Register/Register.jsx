@@ -7,11 +7,14 @@ import { LuClipboardEdit } from "react-icons/lu";
 import PhoneInput from "../../components/AuthPage/PhoneInput";
 import { TbPasswordMobilePhone } from "react-icons/tb";
 import { ImProfile } from "react-icons/im";
+import VerificationCode from "../../components/AuthPage/VerificationCode";
+import RegisterInfoForm from "../../components/AuthPage/RegisterInfoForm";
+
 const stepperData = [
   {
     left: {
       title: "به آکادمی بحر خوش اومدی!😍",
-      titleF: "به آکادمی بحر خوش اومدی!😍",
+      titleF: "شماره همراه",
       descL:
         "لطفا برای ثبت نام شماره همراه خود را وارد کنید تا برای شما کد تایید ارسال شود",
       text: "ارسال کد تایید",
@@ -23,12 +26,22 @@ const stepperData = [
       destination: "/login",
     },
     right: [
-      { Icon: LuClipboardEdit, desc: "وارد کردن شماره همراه" },
+      {
+        Icon: LuClipboardEdit,
+        desc: "وارد کردن شماره همراه",
+      },
       {
         Icon: TbPasswordMobilePhone,
         desc: "تایید کد ارسال شده به شماره همراه",
+        classNameDesc: "notActiveDesc",
+        classNameButton: "notActiveButton",
       },
-      { Icon: ImProfile, desc: "وارد کردن اطلاعات حساب کاربری" },
+      {
+        Icon: ImProfile,
+        desc: "وارد کردن اطلاعات حساب کاربری",
+        classNameDesc: "notActiveDesc",
+        classNameButton: "notActiveButton",
+      },
     ],
   },
   {
@@ -40,13 +53,25 @@ const stepperData = [
       text: "تایید",
       RightData: "حساب کاربری دارید؟",
       LeftData: "ورود به حساب کاربری",
-      Main: PhoneInput,
+      Main: VerificationCode,
       destination: "/login",
     },
     right: [
-      { Icon: FaHouse, desc: "وارد کردن شماره همراه" },
-      { Icon: FaCocktail, desc: "تایید کد ارسال شده به شماره همراه" },
-      { Icon: FaCocktail, desc: "وارد کردن اطلاعات حساب کاربری" },
+      {
+        Icon: LuClipboardEdit,
+        desc: "وارد کردن شماره همراه",
+        classNameDesc: "notActiveDesc",
+      },
+      {
+        Icon: TbPasswordMobilePhone,
+        desc: "تایید کد ارسال شده به شماره همراه",
+      },
+      {
+        Icon: ImProfile,
+        desc: "وارد کردن اطلاعات حساب کاربری",
+        classNameDesc: "notActiveDesc",
+        classNameButton: "notActiveButton",
+      },
     ],
   },
   {
@@ -56,13 +81,24 @@ const stepperData = [
       textN: "ثبت اطلاعات",
       RightData: "حساب کاربری دارید؟",
       LeftData: "ورود به حساب کاربری",
-      Main: PhoneInput,
+      Main: RegisterInfoForm,
       destination: "/login",
     },
     right: [
-      { Icon: FaHouse, desc: "وارد کردن شماره همراه" },
-      { Icon: FaCocktail, desc: "تایید کد ارسال شده به شماره همراه" },
-      { Icon: FaCocktail, desc: "وارد کردن اطلاعات حساب کاربری" },
+      {
+        Icon: LuClipboardEdit,
+        desc: "وارد کردن شماره همراه",
+        classNameDesc: "notActiveDesc",
+      },
+      {
+        Icon: TbPasswordMobilePhone,
+        desc: "تایید کد ارسال شده به شماره همراه",
+        classNameDesc: "notActiveDesc",
+      },
+      {
+        Icon: ImProfile,
+        desc: "وارد کردن اطلاعات حساب کاربری",
+      },
     ],
   },
 ];
@@ -83,6 +119,7 @@ const Register = () => {
   };
   return (
     <div className="flex">
+      {/* <VerificationInput /> */}
       <RightSection rightSecData={stepperData[step].right} />
       <LeftSection
         title={stepperData[step].left.title}

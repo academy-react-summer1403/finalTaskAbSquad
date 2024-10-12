@@ -7,10 +7,13 @@ const PhoneInput = ({ titleF, PlaceholderF }) => {
   return (
     <div>
       <span className="text-xl">{titleF}</span>
-      <div className="flex flex-col w-[538px] bg-primaryGray rounded-3xl text-5xl ">
+      <div className="flex flex-col w-[538px] bg-primaryGray rounded-3xl text-5xl mt-2 ">
         <TextField
-          label={PlaceholderF}
+          label="شماره همراه خود را وارد کنید"
           InputProps={{
+            className: "hitest",
+          }}
+          InputLabelProps={{
             className: "hitest",
           }}
         />
