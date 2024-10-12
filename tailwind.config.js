@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         primaryBlue: "#3772FF",
+        secondaryBlue: "#3772FF3B",
         primaryWhite: "#FEFDFF",
         primaryViolet: "#DE59FF",
         primaryGray: "#E4E4E4",

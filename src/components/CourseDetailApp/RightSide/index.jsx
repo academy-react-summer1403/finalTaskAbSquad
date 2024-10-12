@@ -1,4 +1,4 @@
-﻿import React from "react";
+﻿import React, { useEffect, useState } from "react";
 import CourseStatus from "../../Common/MainCourseBox/CourseStatus";
 import Title from "../../Common/MainCourseBox/Info/Title";
 import RoundedDiv from "../../Common/MainCourseBox/Info/RoundedDiv";
@@ -11,7 +11,6 @@ import { MdOutlineBookmarkAdd } from "react-icons/md";
 import LikeDislikeCircle from "../../Common/LikeDislikeCircle";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
-
 const RightSide = ({ courseDetail }) => {
   return (
     // Right Side Container
