@@ -20,7 +20,10 @@ const AddCommentSection = () => {
               type="submit"
               className="group bg-primaryBlue p-4 rounded-full cursor-pointer hover:bg-primaryViolet  "
             >
-              <PiPaperPlaneTiltLight className=" w-full h-full" size="32px" />
+              <PiPaperPlaneTiltLight
+                className=" w-full h-full text-primaryWhite"
+                size="32px"
+              />
             </button>
 
             {/* Inputs Container */}

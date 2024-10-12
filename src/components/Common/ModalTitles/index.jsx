@@ -11,6 +11,7 @@ const ModalTitles = ({ modalTitle, onClickFunc, FuncStatus }) => {
         <CommentCloseButton
           title={"بستن"}
           onClickFunc={onClickFunc}
+          FuncStatus={FuncStatus}
           style={"basis-1/12"}
         />
       </div>

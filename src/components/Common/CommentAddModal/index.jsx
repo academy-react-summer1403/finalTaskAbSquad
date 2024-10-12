@@ -1,9 +1,7 @@
 ﻿import React from "react";
-import CommentCloseButton from "./CommentCloseButton";
 import CommentBox from "../CommentBox";
 import AddCommentSection from "./AddCommentSection";
 import ModalTitles from "../ModalTitles";
-
 const CommentAddModal = ({ onClickFunc, modalTitle }) => {
   return (
     <>

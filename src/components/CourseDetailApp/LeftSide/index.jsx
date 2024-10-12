@@ -1,6 +1,5 @@
 ﻿import React, { useEffect, useState } from "react";
 import ImageContainer from "./ImageContainer";
-import ProfileComp from "../../Common/ProfileComp";
 import FontGraySmallText from "../../Common/FontGraySmallText";
 import TeacherProfSection from "./TeacherProfSection";
 import DetailDesc from "./DetailDesc";
