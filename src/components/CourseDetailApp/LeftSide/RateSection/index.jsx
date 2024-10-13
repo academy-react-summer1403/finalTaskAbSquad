@@ -5,7 +5,7 @@ const RateSection = () => {
   return (
     <div className="w-full flex flex-row items-center">
       <MdOutlineStars size={"20px"} className="text-primaryBlue" />
-      <span className="ml-3 mr-2">امتیاز دهید</span>
+      <span className="sm:text-xl text-base ml-3 mr-2">امتیاز دهید</span>
       <RateStars />
     </div>
   );

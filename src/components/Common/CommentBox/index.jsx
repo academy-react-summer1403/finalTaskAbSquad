@@ -18,15 +18,17 @@ const CommentBox = ({ name, skill, style, reply = "no", repliedTo = "no" }) => {
           : ""
       }`}
     >
-      <ProfileComp name={name} skill={skill} style={style} />
+      <ProfileComp name={name} skill={skill} style={style} reply={reply} />
       <TitleSubCommentSection />
       {/* Reply And Like Section */}
-      <div className="flex flex-row items-center gap-14 my-5 pr-10">
+      <div className="flex flex-row items-center sm:gap-14 gap-5 my-5 pr-10">
         <Button
           text={"جواب دادن"}
           Icon={TbMessageReply}
-          iconStyle="ml-2"
-          phoneStyle={"bg-secondaryBlue !text-primaryBlue h-10"}
+          iconStyle="ml-2 hidden sm:flex"
+          phoneStyle={
+            "bg-secondaryBlue !text-primaryBlue h-10 sm:text-base text-sm !px-4"
+          }
         />
         <LikeDisLikeComment />
         <div
@@ -34,8 +36,13 @@ const CommentBox = ({ name, skill, style, reply = "no", repliedTo = "no" }) => {
             reply == "no" && repliedTo == "no" ? "flex" : "hidden"
           }`}
         >
-          <span className="text-base underline">مشاهده جواب ها(20)</span>
-          <MdOutlineKeyboardArrowDown size={"16px"} />
+          <span className="text-base underline hidden sm:flex">
+            مشاهده جواب ها(20)
+          </span>
+          <MdOutlineKeyboardArrowDown
+            className="hidden sm:block"
+            size={"16px"}
+          />
         </div>
       </div>
     </div>

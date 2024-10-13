@@ -8,6 +8,7 @@ import CourseImgCon from "../../components/Common/MainCourseBox/ImageContainer.j
 import CourseInfo from "../../components/Common/MainCourseBox/Info";
 import MainBox from "../Common/MainCourseBox";
 import { GetPopularCourse } from "../../core/Services/Api/course.api";
+import ReserveCourseModal from "./ReserveCourseModal";
 
 const CourseDetailApp = () => {
   const { CourseId } = useParams();
@@ -21,6 +22,7 @@ const CourseDetailApp = () => {
     fecthDetail();
   }, [CourseId]);
   const [commentModalOpen, setCommentModalOpen] = useState("close");
+  const [reserveModalOpen, setReserveModalOpen] = useState("close");
   const [otherCourses, setOtherCourses] = useState([]);
   const fetchOtherCourses = async () => {
     const res = await GetPopularCourse();
@@ -32,8 +34,11 @@ const CourseDetailApp = () => {
 
   return (
     <>
-      <div className="flex xl:flex-row xl:gap-16 my-10">
-        <RightSide courseDetail={courseDetail} />
+      <div className="flex xl:flex-row xl:gap-16 my-10 flex-col">
+        <RightSide
+          setReserveModalOpen={setReserveModalOpen}
+          courseDetail={courseDetail}
+        />
         <LeftSide
           setCommentModalOpen={setCommentModalOpen}
           courseDetail={courseDetail}
@@ -62,6 +67,9 @@ const CourseDetailApp = () => {
       {/* Add Comment Modal  */}
       {commentModalOpen == "open" && (
         <CommentAddModal onClickFunc={setCommentModalOpen} modalTitle="نظرات" />
+      )}
+      {reserveModalOpen == "open" && (
+        <ReserveCourseModal setReserveModalOpen={setReserveModalOpen} />
       )}
     </>
   );

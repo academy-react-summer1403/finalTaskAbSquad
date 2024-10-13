@@ -6,12 +6,12 @@ const CommentSection = ({ setCommentModalOpen }) => {
   return (
     <>
       <div className="flex flex-col my-20 w-full">
-        <h1 className="text-[48px] mb-9">نظرات</h1>
+        <h1 className="sm:text-[48px] text-3xl mb-9">نظرات</h1>
         {/* Comment Section */}
         <div className="flex flex-col items-center grayBox p-5 ">
           <Button
             text={"نظر شما"}
-            phoneStyle={"w-full text-xl h-10 gap-3 mb-10"}
+            phoneStyle={"w-full sm:text-xl text-base h-10 gap-3 mb-10"}
             Icon={BsChatLeftText}
             iconSize={"20px"}
             onClick={() => setCommentModalOpen("open")}

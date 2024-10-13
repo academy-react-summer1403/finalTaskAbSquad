@@ -12,10 +12,10 @@ const LeftSide = ({ courseDetail, setCommentModalOpen }) => {
       <div className="basis-3/5 flex flex-col items-start justify-start gap-5">
         <ImageContainer image={courseDetail.imageAddress} />
         <div className="flex flex-col gap-3 w-full ">
-          <FontGraySmallText text="مدرس" style="" />
+          <FontGraySmallText text="مدرس" />
           <TeacherProfSection courseDetail={courseDetail} />
         </div>
-        <FontGraySmallText text="توضیحات" style="" />
+        <FontGraySmallText text="توضیحات" />
         <div className="w-full">
           <DetailDesc
             title={courseDetail.miniDescribe}

@@ -4,7 +4,7 @@ import { AiOutlineDislike } from "react-icons/ai";
 const LikeDisLikeComment = () => {
   return (
     <>
-      <div className="flex flex-row items-center justify-start gap-9">
+      <div className="flex flex-row items-center justify-start sm:gap-9 gap-2">
         <div className="flex items-start justify-start gap-2">
           <AiOutlineLike size={"24px"} />
           <span className="text-lg">10</span>
