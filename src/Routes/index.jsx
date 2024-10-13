@@ -7,7 +7,9 @@
   CoursePage,
   CourseDetail,
   NewsPage,
+  NewsDetail,
 } from "../core/utilities/Routes/routes.utils.js";
+
 export const PageRoutes = [
   {
     path: "/",
@@ -28,6 +30,10 @@ export const PageRoutes = [
       {
         path: "/NewsPage",
         element: <NewsPage />,
+      },
+      {
+        path: "/NewsPageDetail/:Id?",
+        element: <NewsDetail />,
       },
     ],
   },

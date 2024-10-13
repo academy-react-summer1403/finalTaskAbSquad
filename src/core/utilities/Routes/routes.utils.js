@@ -6,6 +6,7 @@ import Login from "../../../Screens/Login/Login";
 import CoursePage from "../../../Screens/CoursePage";
 import CourseDetail from "../../../Screens/CourseDetail";
 import NewsPage from "../../../Screens/NewsPage";
+import NewsDetail from "../../../Screens/NewsDetail";
 export {
   Root,
   LandingPage,
@@ -15,4 +16,5 @@ export {
   CoursePage,
   CourseDetail,
   NewsPage,
+  NewsDetail,
 };

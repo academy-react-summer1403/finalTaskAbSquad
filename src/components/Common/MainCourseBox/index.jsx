@@ -18,7 +18,7 @@ const MainBox = ({
           if (type == "courseList") {
             navigate("/CourseDetail/CourseId=" + course.courseId);
           } else {
-            navigate("/News");
+            navigate("/NewsPageDetail/" + course.id);
           }
         }}
         className={`flex shadow-lg hover:shadow-2xl  dark:border dark:border-fontGray dark:hover:shadow-darkMainBoxShadow rounded-3xl  overflow-hidden bg-mainBoxGray dark:bg-primaryBlack ${style}`}
