@@ -21,7 +21,7 @@ const stepperData = [
       textN: "ورود به حساب کاربری",
       textB: "فراموشی رمزعبور",
       LeftData: "ایجاد حساب کاربری",
-      Main: PhoneInput,
+      Main: RegisterInfoForm,
       destination: "/register",
     },
     right: [
@@ -48,7 +48,7 @@ const stepperData = [
       textN: "ورود به حساب کاربری",
       textB: "",
       LeftData: "ایجاد حساب کاربری",
-      Main: PhoneInput,
+      Main: VerificationCode,
       destination: "/register",
     },
     right: [

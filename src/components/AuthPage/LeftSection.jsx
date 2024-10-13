@@ -79,15 +79,17 @@ const LeftSection = ({
           </NavLink>
         </div>
       )}
-      {step === 1 && (
+      {(step || stepLogin) === 1 && (
         <div className="flex flex-row-reverse md:gap-24 mt-6 gap-4 max-md:w-full  ">
-          <Button
-            phoneStyle="!text-primaryBlue h-[40px] w-[220px] !bg-LightBlueCustom flex flex-row-reverse gap-4  "
-            text={textB}
-            onClick={handleBack}
-            disabled={disableBack}
-            Icon={PiArrowBendUpLeftLight}
-          />
+          {step === 1 && (
+            <Button
+              phoneStyle="!text-primaryBlue h-[40px] w-[220px] !bg-LightBlueCustom flex flex-row-reverse gap-4  "
+              text={textB}
+              onClick={handleBack}
+              disabled={disableBack}
+              Icon={PiArrowBendUpLeftLight}
+            />
+          )}
           <Timer />
         </div>
       )}
