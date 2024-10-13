@@ -6,6 +6,8 @@ import CourseInfo from "../../components/Common/MainCourseBox/Info";
 import MainBox from "../Common/MainCourseBox";
 import RightSection from "./RightSection";
 import { GetNewsDetail } from "../../core/Services/Api/NewsDetail/news.detail.api.js";
+import LeftSection from "./LeftSection";
+
 const NewsDetailApp = () => {
   const { Id } = useParams();
   const [newsDetail, setNewsDetail] = useState({});
@@ -22,20 +24,17 @@ const NewsDetailApp = () => {
     <>
       <div className="flex xl:flex-row xl:gap-16 my-10 flex-col">
         <RightSection newsDetail={newsDetail} />
-        {/* <LeftSide
+        <LeftSection
           setCommentModalOpen={setCommentModalOpen}
           newsDetail={newsDetail}
-        /> */}
+        />
         {/* Other Courses */}
       </div>
 
       {/* Add Comment Modal  */}
-      {/* {commentModalOpen == "open" && (
+      {commentModalOpen == "open" && (
         <CommentAddModal onClickFunc={setCommentModalOpen} modalTitle="نظرات" />
       )}
-      {reserveModalOpen == "open" && (
-        <ReserveCourseModal setReserveModalOpen={setReserveModalOpen} />
-      )} */}
     </>
   );
 };

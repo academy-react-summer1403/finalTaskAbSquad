@@ -82,7 +82,7 @@ const NewsList = ({ showType }) => {
             style={`cursor-pointer ${
               widthBool == "true" || showType == "Grid"
                 ? "flex-col h-[528px]"
-                : "flex-row h-[288px]"
+                : "flex-row h-auto"
             }`}
           />
         );

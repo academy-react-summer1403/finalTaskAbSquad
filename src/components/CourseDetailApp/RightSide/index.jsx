@@ -11,10 +11,22 @@ import { MdOutlineBookmarkAdd } from "react-icons/md";
 import LikeDislikeCircle from "../../Common/LikeDislikeCircle";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
+import { handleDateFormat } from "../../../core/utilities/DateConverter/data.convert.utils";
+
 const RightSide = ({ courseDetail, setReserveModalOpen }) => {
   const handleReserveModalOpen = () => {
     setReserveModalOpen("open");
   };
+  // Converting Dates
+  const [formattedDateStart, setFormattedDateStart] = useState("");
+  const [formattedDateEnd, setFormattedDateEnd] = useState("");
+  useEffect(() => {
+    if (courseDetail.startTime !== undefined)
+      setFormattedDateStart(handleDateFormat(courseDetail.startTime));
+    if (courseDetail.endTime !== undefined)
+      setFormattedDateEnd(handleDateFormat(courseDetail.endTime));
+  }, [courseDetail.startTime && courseDetail.startTime]);
+
   return (
     // Right Side Container
     <div className="xl:basis-2/5">
@@ -33,20 +45,23 @@ const RightSide = ({ courseDetail, setReserveModalOpen }) => {
             Icon={PiStudentBold}
           />
           <LittleRect
-            title={courseDetail.startTime}
+            title={formattedDateStart}
             Icon={CgCalendarDates}
             iconSize="24px"
+            subText="(شروع)"
           />
           <LittleRect
-            title={courseDetail.endTime}
+            title={formattedDateEnd}
             Icon={CgCalendarDates}
             iconSize="24px"
+            subText="(پایان)"
           />
         </div>
         <PriceTag
           price={parseInt(courseDetail.cost)}
           showType={"Grid"}
           priceSize="text-2xl sm:text-3xl"
+          style="!order-none"
         />
         <div className="flex flex-row sm:gap-10 gap-2 sm:h-14 h-12">
           <Button
