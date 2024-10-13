@@ -17,9 +17,9 @@ const RightSide = ({ courseDetail, setReserveModalOpen }) => {
   };
   return (
     // Right Side Container
-    <div className=" xl:basis-2/5">
+    <div className="xl:basis-2/5">
       {/* Gray Box */}
-      <div className="grayBox flex flex-col gap-0 px-5 py-3 sticky top-0">
+      <div className="grayBox flex flex-col gap-0 px-5 py-3 top-0 ">
         <CourseStatus course={courseDetail} style="mr-0 !text-sm" />
         <Title title={courseDetail.title} style="text-[28px]" />
         <div className="flex flex-row items-center justify-start gap-2">
