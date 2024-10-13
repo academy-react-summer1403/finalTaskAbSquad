@@ -4,7 +4,7 @@ import RightSecRow from "./RightSecRow";
 
 const RightSection = ({ rightSecData }) => {
   return (
-    <div className="bg-primaryGray w-1/3 p-24 h-screen">
+    <div className="bg-primaryGray w-1/3 p-24 h-screen text-primaryWhite">
       <div className="flex flex-row justify-start items-center max-lg:grow mb-16">
         <BahrLogoComp />
       </div>

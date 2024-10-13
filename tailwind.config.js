@@ -22,6 +22,7 @@ export default {
         mainBoxGray: "#f6f5f7",
         starYel: "#E5EA19",
         primaryGreen: "#2CDA5D",
+        LightBlueCustom: "#3772FF3B",
       },
       fontFamily: {
         IRANYekan: ["IRANYekan"],
