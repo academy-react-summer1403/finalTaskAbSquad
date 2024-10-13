@@ -12,11 +12,11 @@ const ReserveCourseModal = ({ setReserveModalOpen }) => {
       {/* Black Div */}
       <div className=" absolute top-0 left-0 w-screen h-full z-40 bg-black bg-opacity-50">
         {/* Reserve Modal */}
-        <div className="flex flex-col items-center justify-start absolute top-0 rounded-3xl bg-primaryWhite right-[30%] p-6 gap-8">
+        <div className="flex flex-col items-center justify-start absolute top-0 rounded-3xl bg-primaryWhite right-[30%] p-6 gap-8 max-sm:w-full max-sm:right-0  ">
           {/* Success Bar */}
           <SuccessBar />
           <ReserveVisual />
-          <h3 className="text-xl text-fontGray text-center">
+          <h3 className="sm:text-xl text-base text-fontGray text-center">
             بعد از تایید ادمین مربوط دوره شما به{" "}
             <NavLink className="text-primaryBlack underline">دوره من </NavLink>
             <br />
@@ -25,12 +25,12 @@ const ReserveCourseModal = ({ setReserveModalOpen }) => {
           <div className="text-xl flex flex-row w-full justify-between items-center h-14 gap-5">
             <Button
               text={"لیست رزرو های من"}
-              phoneStyle={"basis-8/12 h-full  "}
+              phoneStyle={"basis-8/12 h-full max-sm:text-base"}
             />
             <Button
               text={"باشه"}
               phoneStyle={
-                "basis-4/12 h-full !bg-primaryWhite !text-primaryBlack border border-primaryGray"
+                "basis-4/12 h-full !bg-primaryWhite !text-primaryBlack border border-primaryGray max-sm:text-base"
               }
               onClick={handleReserveModalClose}
             />
