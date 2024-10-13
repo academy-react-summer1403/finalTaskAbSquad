@@ -6,6 +6,7 @@
   Login,
   CoursePage,
   CourseDetail,
+  NewsPage,
 } from "../core/utilities/Routes/routes.utils.js";
 export const PageRoutes = [
   {
@@ -23,6 +24,10 @@ export const PageRoutes = [
       {
         path: "/CourseDetail/:CourseId?",
         element: <CourseDetail />,
+      },
+      {
+        path: "/NewsPage",
+        element: <NewsPage />,
       },
     ],
   },
