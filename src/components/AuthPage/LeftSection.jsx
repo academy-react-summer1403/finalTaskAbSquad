@@ -4,7 +4,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Countdown from "react-countdown";
 import Timer from "./Timer";
-
+import BahrLogoComp from "../Common/BahrLogoComp";
 import { PiShieldStarBold } from "react-icons/pi";
 import { PiArrowBendUpLeftLight } from "react-icons/pi";
 const LeftSection = ({
@@ -23,17 +23,27 @@ const LeftSection = ({
   disableBack,
   step,
   titleF,
+  stepForgot,
 }) => {
   return (
-    <div className="flex justify-start flex-col items-center basis-2/3 mt-32">
-      <h2 className="text-4xl -indent-14 mb-10">{title}</h2>
-      <p className="text-xl w-[538px] mb-16">{descL}</p>
-      <div className="mb-6">{Main && <Main titleF={titleF} />}</div>
+    <div className="flex md:justify-start flex-col items-center md:basis-2/3 md:mt-32 max-md:items-center max-md:p-6 max-md:w-full">
+      <div className="flex flex-row justify-start items-start self-start md:hidden mb-16 ">
+        <BahrLogoComp />
+      </div>
+      <h2 className="md:text-4xl md:-indent-14 md:mb-10 text-2xl text-center">
+        {title}
+      </h2>
+      <p className="text-xs md:text-xl md:w-[538px] mb-16 w-[270px] ">
+        {descL}
+      </p>
+      <div className="mb-6 max-md:w-full">
+        {Main && <Main titleF={titleF} />}
+      </div>
       {stepLogin === 0 && (
-        <div className=" w-[540px] mb-6  ">
+        <div className=" md:w-[540px] mb-6 max-md:flex-row-reverse max-md:flex max-md:gap-8">
           <NavLink to="/ForgotPass">
             <Button
-              phoneStyle="!text-primaryBlue h-[40px] w-[220px] !bg-LightBlueCustom gap-4 float-left"
+              phoneStyle="!text-primaryBlue h-[40px] w-[220px] !bg-LightBlueCustom gap-4 float-left max-md:w-[160px] max-md:text-xs "
               text={textB}
               onClick={handleBack}
               disabled={disableBack}
@@ -42,8 +52,9 @@ const LeftSection = ({
           </NavLink>
           <div>
             <input
-              className="justify-self-start float-start rounded-lg
+              className="justify-self-start float-start rounded-lg 
               appearance-none w-[24px] h-[24px] bg-primaryGray checked:bg-primaryBlue checked:border-transparent focus:outline-none
+              
                 "
               type="checkbox"
             />
@@ -52,13 +63,13 @@ const LeftSection = ({
         </div>
       )}
       <Button
-        phoneStyle="h-[56px] w-[538px]"
+        phoneStyle="h-[56px] w-[538px] max-md:w-[345px] "
         text={textN}
         onClick={handleNext}
         disabled={disableNext}
       />
 
-      {step === 0 && (
+      {(step === 0 || stepLogin === 0 || stepForgot === 0) && (
         <div className="mt-6">
           <span>{RightData}</span>
           <NavLink to={destination}>
@@ -69,9 +80,9 @@ const LeftSection = ({
         </div>
       )}
       {step === 1 && (
-        <div className="flex flex-row-reverse gap-24 mt-6">
+        <div className="flex flex-row-reverse md:gap-24 mt-6 gap-4 max-md:w-full  ">
           <Button
-            phoneStyle="!text-primaryBlue h-[40px] w-[220px] !bg-LightBlueCustom flex flex-row-reverse gap-4"
+            phoneStyle="!text-primaryBlue h-[40px] w-[220px] !bg-LightBlueCustom flex flex-row-reverse gap-4  "
             text={textB}
             onClick={handleBack}
             disabled={disableBack}

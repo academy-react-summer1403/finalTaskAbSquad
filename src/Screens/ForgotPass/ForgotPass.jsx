@@ -77,7 +77,7 @@ const ForgotPass = () => {
     }
   };
   return (
-    <div className="flex">
+    <div className="flex flex-col-reverse md:flex-row">
       {/* <VerificationInput /> */}
       <RightSection rightSecData={stepperData[stepForgot].right} />
       <LeftSection

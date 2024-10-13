@@ -12,7 +12,7 @@ const Button = ({
     <>
       <button
         onClick={onClick}
-        className={`rounded-[64px] px-6  flex items-center justify-center bg-primaryBlue text-primaryWhite text-nowrap hover:shadow-buttonShadow  dark:hover:shadow-darkButtonShadow ${phoneStyle}`}
+        className={`rounded-[64px] px-6  flex items-center justify-center bg-primaryBlue text-primaryWhite text-nowrap hover:shadow-buttonShadow max-md:w-[345px] dark:hover:shadow-darkButtonShadow ${phoneStyle}`}
       >
         {Icon !== undefined ? (
           <Icon className={iconStyle} iconSize={iconSize} />

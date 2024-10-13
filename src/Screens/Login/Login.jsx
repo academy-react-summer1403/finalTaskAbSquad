@@ -12,10 +12,10 @@ import RegisterInfoForm from "../../components/AuthPage/RegisterInfoForm";
 const stepperData = [
   {
     left: {
-      title: "خوش برگشتی",
+      title: "خوش برگشتی👋",
       titleF: "شماره همراه",
       descL:
-        "👋لطفا برای ورود به پنل خود ایمیل یا شماره همراه و رمزعبور خود را وارد کنید",
+        "لطفا برای ورود به پنل خود ایمیل یا شماره همراه و رمزعبور خود را وارد کنید",
       text: "ارسال کد تایید",
       RightData: "حساب کاربری دارید؟",
       textN: "ورود به حساب کاربری",
@@ -82,7 +82,7 @@ const Login = (desc, Icon) => {
   };
   return (
     <>
-      <div className="flex">
+      <div className="flex flex-col-reverse md:flex-row ">
         <RightSection rightSecData={stepperData[stepLogin].right} />
         <LeftSection
           title={stepperData[stepLogin].left.title}
