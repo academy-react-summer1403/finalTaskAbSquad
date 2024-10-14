@@ -12,9 +12,9 @@ export {
   LandingPage,
   ErrorPage,
   Register,
-  Login,
   CoursePage,
   CourseDetail,
   NewsPage,
   NewsDetail,
+  Login,
 };
