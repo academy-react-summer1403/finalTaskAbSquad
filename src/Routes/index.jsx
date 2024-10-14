@@ -6,15 +6,10 @@
   Login,
   CoursePage,
   CourseDetail,
-<<<<<<< HEAD
-  ForgotPass,
-} from "../core/utilities/Routes/routes.utils.js";
-=======
   NewsPage,
   NewsDetail,
 } from "../core/utilities/Routes/routes.utils.js";
 
->>>>>>> 4c3f6f9410ee01083c33ee54c3ffa62b79a84eee
 export const PageRoutes = [
   {
     path: "/",
@@ -32,8 +27,6 @@ export const PageRoutes = [
         path: "/CourseDetail/:CourseId?",
         element: <CourseDetail />,
       },
-<<<<<<< HEAD
-=======
       {
         path: "/NewsPage",
         element: <NewsPage />,
@@ -42,7 +35,6 @@ export const PageRoutes = [
         path: "/NewsPageDetail/:Id?",
         element: <NewsDetail />,
       },
->>>>>>> 4c3f6f9410ee01083c33ee54c3ffa62b79a84eee
     ],
   },
   { path: "/Register", element: <Register /> },
