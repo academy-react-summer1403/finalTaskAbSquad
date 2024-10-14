@@ -42,6 +42,19 @@ const SelectField = ({ options, filterTitle, Icon, style = "" }) => {
       });
     }
   };
+  const handleTeacher = (val) => {
+    if (selectValue != "انتخاب کنید...") {
+      setSearchParams((op) => {
+        op.set("TeacherId", val);
+        return op;
+      });
+    } else {
+      setSearchParams((op) => {
+        op.delete("TeacherId");
+        return op;
+      });
+    }
+  };
   return (
     <>
       <div className={`flex flex-col justify-start items-center ${style}`}>
@@ -69,6 +82,9 @@ const SelectField = ({ options, filterTitle, Icon, style = "" }) => {
                   }
                   if (filterTitle == "سطح آموزشی") {
                     handleLevel(it.id);
+                  }
+                  if (filterTitle == "اساتید") {
+                    handleTeacher(it.id);
                   }
                 }}
               >
