@@ -1,17 +1,9 @@
-* > .CourseField {
+.CourseField {
+  width: 289px;
   height: 48px;
   border-radius: 16px;
   background: #e8e7e8;
   font-size: 14px;
   line-height: 20px;
   color: #787878;
-  float: left;
-  text-indent: 10px;
-  padding: 10px;
-}
-.CourseField:focus {
-  outline: none;
-}
-.CourseField-input {
-  padding-left: 10px;
 }
