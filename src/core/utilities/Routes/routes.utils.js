@@ -5,7 +5,8 @@ import Register from "../../../Screens/Register/Register";
 import Login from "../../../Screens/Login/Login";
 import CoursePage from "../../../Screens/CoursePage";
 import CourseDetail from "../../../Screens/CourseDetail";
-import ForgotPass from "../../../Screens/ForgotPass/ForgotPass";
+import NewsPage from "../../../Screens/NewsPage";
+import NewsDetail from "../../../Screens/NewsDetail";
 export {
   Root,
   LandingPage,
@@ -14,5 +15,6 @@ export {
   Login,
   CoursePage,
   CourseDetail,
-  ForgotPass,
+  NewsPage,
+  NewsDetail,
 };

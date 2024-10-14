@@ -9,7 +9,7 @@ const ArticlesSection = () => {
   const [popularArticles, setPopularArticles] = useState([]);
   const GetTeacher = async () => {
     const res = await GetNewsPagination();
-    setPopularArticles(res);
+    setPopularArticles(res.news);
   };
 
   // Get API AND SET SEARCH WHEN MOUNTED

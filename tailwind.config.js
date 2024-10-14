@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         primaryBlue: "#3772FF",
+        secondaryBlue: "#3772FF3B",
         primaryWhite: "#FEFDFF",
         primaryViolet: "#DE59FF",
         primaryGray: "#E4E4E4",
@@ -19,8 +20,9 @@ export default {
         fontGray: "#787878",
         primaryBlack: "#272727",
         mainBoxGray: "#f6f5f7",
-        LightBlueCustom: "#3772FF3B",
         starYel: "#E5EA19",
+        primaryGreen: "#2CDA5D",
+        LightBlueCustom: "#3772FF3B",
       },
       fontFamily: {
         IRANYekan: ["IRANYekan"],

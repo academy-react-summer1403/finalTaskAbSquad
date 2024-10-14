@@ -6,8 +6,10 @@
   Login,
   CoursePage,
   CourseDetail,
-  ForgotPass,
+  NewsPage,
+  NewsDetail,
 } from "../core/utilities/Routes/routes.utils.js";
+
 export const PageRoutes = [
   {
     path: "/",
@@ -25,11 +27,18 @@ export const PageRoutes = [
         path: "/CourseDetail/:CourseId?",
         element: <CourseDetail />,
       },
+      {
+        path: "/NewsPage",
+        element: <NewsPage />,
+      },
+      {
+        path: "/NewsPageDetail/:Id?",
+        element: <NewsDetail />,
+      },
     ],
   },
   { path: "/Register", element: <Register /> },
   { path: "/Login", element: <Login /> },
-  { path: "/ForgotPass", element: <ForgotPass /> },
   {
     path: "*",
     element: <ErrorPage />,

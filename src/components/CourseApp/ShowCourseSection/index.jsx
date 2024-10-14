@@ -6,7 +6,7 @@ const ShowCourseSection = () => {
   return (
     <>
       <div className="h-full">
-        <TextAboveCourse />
+        <TextAboveCourse title={"لیست دوره ها"} />
         <CourseSection />
       </div>
     </>

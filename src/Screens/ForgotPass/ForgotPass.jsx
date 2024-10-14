@@ -7,8 +7,7 @@ import { LuClipboardEdit } from "react-icons/lu";
 import PhoneInput from "../../components/AuthPage/PhoneInput";
 import { TbPasswordMobilePhone } from "react-icons/tb";
 import { ImProfile } from "react-icons/im";
-import VerificationCode from "../../components/AuthPage/VerificationCode";
-import RegisterInfoForm from "../../components/AuthPage/RegisterInfoForm";
+import NewPass from "../../components/AuthPage/NewPass";
 const stepperData = [
   {
     left: {
@@ -46,7 +45,7 @@ const stepperData = [
       text: "تایید",
       RightData: "حساب کاربری دارید؟",
       LeftData: "ورود به حساب کاربری",
-      Main: PhoneInput,
+      Main: NewPass,
       destination: "/login",
     },
     right: [
@@ -77,7 +76,7 @@ const ForgotPass = () => {
     }
   };
   return (
-    <div className="flex">
+    <div className="flex flex-col-reverse md:flex-row">
       {/* <VerificationInput /> */}
       <RightSection rightSecData={stepperData[stepForgot].right} />
       <LeftSection

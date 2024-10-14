@@ -19,7 +19,7 @@ const NavLinks = [
     img: CellIcon,
     title: "اخبار و مقالات",
     desc: "خبر های پژوهشگاه و مقالاتی مرتبط با برنامه نویسی و ...",
-    navRoute: "/",
+    navRoute: "/NewsPage",
   },
   { img: NewsIcon, title: "ارتباط با ما", desc: "", navRoute: "/" },
 ];
