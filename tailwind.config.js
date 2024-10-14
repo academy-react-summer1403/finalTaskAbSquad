@@ -23,6 +23,7 @@ export default {
         starYel: "#E5EA19",
         primaryGreen: "#2CDA5D",
         LightBlueCustom: "#3772FF3B",
+        starYel: "#E5EA19",
       },
       fontFamily: {
         IRANYekan: ["IRANYekan"],

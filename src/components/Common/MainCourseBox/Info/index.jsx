@@ -12,17 +12,7 @@ import Description from "./Description";
 import Button from "../../Button/Button";
 import { handleDateFormat } from "../../../../core/utilities/DateConverter/data.convert.utils";
 
-const Info = ({ course, type, tableInfoStyle, showType }) => {
-  const [formattedDates, setFormattedDates] = useState("");
-  useEffect(() => {
-    if (course.insertDate || course.lastUpdate !== undefined)
-      setFormattedDates(
-        handleDateFormat(
-          course.insertDate == undefined ? course.lastUpdate : course.insertDate
-        )
-      );
-  }, [course.insertDate && course.lastUpdate]);
-
+const Info = ({ course, type }) => {
   return (
     <>
       <div className={`flex flex-col grow gap-4 pr-4 pl-4 ${tableInfoStyle}`}>
@@ -88,21 +78,9 @@ const Info = ({ course, type, tableInfoStyle, showType }) => {
         {/* ******************************* END OF LANDING NEWS */}
         {/* Like And Price Div */}
 
-        <div
-          className={`h-10 w-full flex flex-row justify-between items-center ${
-            showType == "Table" ? "mb-4" : ""
-          }`}
-        >
-          {type !== "LandingNews" && (
-            <PriceTag
-              price={parseInt(course.cost)}
-              type={type}
-              showType={showType}
-              priceSize="text-xl sm:text-2xl"
-            />
-          )}
-          <LikeDisLike course={course} type={type} showType={showType} />
-
+        <div className="h-10 w-full flex flex-row justify-between items-center">
+          {type !== "LandingNews" && <PriceTag price={course.cost} />}
+          <LikeDisLike course={course} type={type} />
           {type == "LandingNews" && (
             <Button
               text="بیشتر بخوانید"

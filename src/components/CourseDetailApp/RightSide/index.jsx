@@ -8,7 +8,7 @@ import { CgCalendarDates } from "react-icons/cg";
 import PriceTag from "../../Common/MainCourseBox/Info/PriceTag";
 import Button from "../../Common/Button/Button";
 import { MdOutlineBookmarkAdd } from "react-icons/md";
-import LikeDislikeCircle from "../../Common/LikeDislikeCircle";
+// import LikeDislikeCircle from "../../Common/LikeDislikeCircle";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { handleDateFormat } from "../../../core/utilities/DateConverter/data.convert.utils";
