@@ -8,6 +8,7 @@
   CourseDetail,
   NewsPage,
   NewsDetail,
+  ForgotPass,
 } from "../core/utilities/Routes/routes.utils.js";
 
 export const PageRoutes = [
