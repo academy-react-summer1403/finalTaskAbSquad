@@ -2,12 +2,12 @@
 import TitleSpan from "./TitleSpan";
 import { useSearchParams } from "react-router-dom";
 
-const SelectField = ({ options, filterTitle, Icon, style = "" }) => {
+const SelectField = ({ type = "", options, filterTitle, Icon, style = "" }) => {
   const [deleteOption, setDeleteOption] = useState("keep");
   const [selectValue, setSelectValue] = useState("انتخاب کنید...");
   const [searchParams, setSearchParams] = useSearchParams(); // Use search Params
-  const handleTech = (val) => {
-    if (selectValue != "انتخاب کنید...") {
+  const handleTech = (val, type) => {
+    if (selectValue != "انتخاب کنید..." && type == "course") {
       setSearchParams((op) => {
         op.set("ListTech", val);
         return op;
@@ -23,6 +23,17 @@ const SelectField = ({ options, filterTitle, Icon, style = "" }) => {
       });
       setSearchParams((op) => {
         op.delete("TechCount");
+        return op;
+      });
+    }
+    if (selectValue != "انتخاب کنید..." && type == "news") {
+      setSearchParams((op) => {
+        op.set("NewsCategoryId", val);
+        return op;
+      });
+    } else {
+      setSearchParams((op) => {
+        op.delete("NewsCategoryId");
         return op;
       });
     }
@@ -55,6 +66,7 @@ const SelectField = ({ options, filterTitle, Icon, style = "" }) => {
       });
     }
   };
+
   return (
     <>
       <div className={`flex flex-col justify-start items-center ${style}`}>
@@ -77,8 +89,10 @@ const SelectField = ({ options, filterTitle, Icon, style = "" }) => {
                 key={index}
                 value={it.name}
                 onClick={() => {
-                  if (filterTitle == "دسته بندی") {
-                    handleTech(it.id);
+                  if (filterTitle == "دسته بندی" && type == "course") {
+                    handleTech(it.id, type);
+                  } else if (filterTitle == "دسته بندی" && type == "news") {
+                    handleTech(it.id, type);
                   }
                   if (filterTitle == "سطح آموزشی") {
                     handleLevel(it.id);
