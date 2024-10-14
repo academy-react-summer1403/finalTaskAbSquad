@@ -4,7 +4,7 @@ import LeftSection from "../../components/AuthPage/LeftSection";
 import { FaCocktail } from "react-icons/fa";
 import { FaHouse } from "react-icons/fa6";
 import { useState } from "react";
-import Test from "../../components/AuthPage/Test";
+// import Test from "../../components/AuthPage/Test";
 import PhoneInput from "../../components/AuthPage/PhoneInput";
 const Login = (desc, Icon) => {
   const initialRightSecData = [
