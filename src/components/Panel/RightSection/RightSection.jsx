@@ -14,10 +14,12 @@ import { MdOutlineExitToApp } from "react-icons/md";
 import { TbUserEdit } from "react-icons/tb";
 
 const RightSection = () => {
+  // State to track the currently active button
   const [activeButton, setActiveButton] = useState("");
 
+  // Function to handle click and set the active button
   const handleClick = (buttonName) => {
-    setActiveButton(buttonName);
+    setActiveButton(buttonName); // Set the clicked button as active
   };
 
   return (
@@ -26,24 +28,24 @@ const RightSection = () => {
         <BahrLogoComp />
       </div>
       <ul className="flex gap-3 flex-col">
-        <span>عمومی</span>
+        <span className="">عمومی</span>
         <li>
           <Button
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
               activeButton === "dashboard"
-                ? "!bg-blue-500 !text-white"
+                ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
             }`}
             Icon={RxDashboard}
             text="داشبورد"
-            onClick={() => handleClick("dashboard")}
+            onClick={() => handleClick("dashboard")} // Pass the button name
           />
         </li>
         <li>
           <Button
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
               activeButton === "courses"
-                ? "!bg-blue-500 !text-white"
+                ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
             }`}
             Icon={VscBook}
@@ -55,7 +57,7 @@ const RightSection = () => {
           <Button
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
               activeButton === "reservations"
-                ? "!bg-blue-500 !text-white"
+                ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
             }`}
             Icon={PiClockCountdownLight}
@@ -67,7 +69,7 @@ const RightSection = () => {
           <Button
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
               activeButton === "favoritesCourse"
-                ? "!bg-blue-500 !text-white"
+                ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
             }`}
             Icon={PiBookBookmarkLight}
@@ -79,7 +81,7 @@ const RightSection = () => {
           <Button
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
               activeButton === "favoritesBook"
-                ? "!bg-blue-500 !text-white"
+                ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
             }`}
             Icon={CiBookmark}
@@ -91,7 +93,7 @@ const RightSection = () => {
           <Button
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
               activeButton === "profile"
-                ? "!bg-blue-500 !text-white"
+                ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
             }`}
             Icon={PiMoneyWavy}
@@ -106,7 +108,7 @@ const RightSection = () => {
           <Button
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
               activeButton === "payments"
-                ? "!bg-blue-500 !text-white"
+                ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
             }`}
             Icon={CgProfile}
@@ -120,7 +122,7 @@ const RightSection = () => {
           <Button
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
               activeButton === "accountSettings"
-                ? " !bg-blue-500 !text-white"
+                ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
             }`}
             Icon={TbUserEdit}
