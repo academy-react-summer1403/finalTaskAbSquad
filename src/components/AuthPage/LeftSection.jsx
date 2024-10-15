@@ -50,16 +50,14 @@ const LeftSection = ({
   //   dispatch(handleToken(token));
   // };
   return (
-    <div className="flex md:justify-start flex-col items-center md:basis-2/3 md:mt-32 max-md:items-center max-md:p-6 max-md:w-full">
+    <div className="flex md:justify-start flex-col items-center md:basis-2/3 md:mt-20 max-md:items-center max-md:p-6 max-md:w-full">
       <div className="flex flex-row justify-start items-start self-start md:hidden mb-16 ">
         <BahrLogoComp />
       </div>
       <h2 className="md:text-4xl md:-indent-14 md:mb-10 text-2xl text-center">
         {title}
       </h2>
-      <p className="text-xs md:text-xl md:w-[538px] mb-16 w-[270px] ">
-        {descL}
-      </p>
+      <p className="text-xs md:text-xl md:w-[538px] mb-8 w-[270px] ">{descL}</p>
       <div className="mb-6 max-md:w-full">
         {Main && <Main titleF={titleF} />}
       </div>
