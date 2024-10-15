@@ -38,6 +38,7 @@ const SelectField = ({ type = "", options, filterTitle, Icon, style = "" }) => {
       });
     }
   };
+
   // Handle Level
   const handleLevel = (val) => {
     if (selectValue != "انتخاب کنید...") {
