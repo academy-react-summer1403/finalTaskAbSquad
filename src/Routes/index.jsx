@@ -1,4 +1,5 @@
-﻿import {
+﻿import { path } from "framer-motion/client";
+import {
   Root,
   LandingPage,
   ErrorPage,
@@ -8,8 +9,11 @@
   CourseDetail,
   NewsPage,
   NewsDetail,
+  ForgotPass,
+  PanelMain,
+  RootPanel,
 } from "../core/utilities/Routes/routes.utils.js";
-
+import Test from "./Test.jsx";
 export const PageRoutes = [
   {
     path: "/",
@@ -34,6 +38,16 @@ export const PageRoutes = [
       {
         path: "/NewsPageDetail/:Id?",
         element: <NewsDetail />,
+      },
+    ],
+  },
+  {
+    path: "/Panel",
+    element: <RootPanel />,
+    children: [
+      {
+        path: "/Panel/test",
+        element: <Test />,
       },
     ],
   },
