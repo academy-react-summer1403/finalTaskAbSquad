@@ -8,6 +8,8 @@ import CourseDetail from "../../../Screens/CourseDetail";
 import NewsPage from "../../../Screens/NewsPage";
 import NewsDetail from "../../../Screens/NewsDetail";
 import ForgotPass from "../../../Screens/ForgotPass/ForgotPass";
+import PanelMain from "../../../Screens/Panel/PanelMain";
+import RootPanel from "../../../components/Panel/Root/RootPanel";
 export {
   Root,
   LandingPage,
@@ -19,4 +21,6 @@ export {
   NewsDetail,
   Login,
   ForgotPass,
+  PanelMain,
+  RootPanel,
 };

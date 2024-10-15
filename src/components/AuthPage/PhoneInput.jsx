@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "../Common/Fields/TextField";
 import "./hitest.css";
 import { MdPhoneIphone } from "react-icons/md";
 import { div } from "framer-motion/client";
 import { FaHouse } from "react-icons/fa6";
-const PhoneInput = ({ titleF, PlaceholderF }) => {
+const PhoneInput = ({ titleF }) => {
+  const [PhoneNumber, SetPhoneNumber] = useState("");
+  console.log(PhoneNumber);
   return (
     <div className=" max-md:w-[345px] max-md:mx-auto">
       <span className="text-xl md:mx-12">{titleF}</span>
@@ -12,6 +14,7 @@ const PhoneInput = ({ titleF, PlaceholderF }) => {
         <TextField
           placeholder="شماره همراه خود را وارد کنید"
           icon={MdPhoneIphone}
+          onChange={(e) => SetPhoneNumber(e.target.value)}
         />
       </div>
     </div>

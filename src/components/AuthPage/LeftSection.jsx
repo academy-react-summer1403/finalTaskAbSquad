@@ -6,6 +6,7 @@ import Countdown from "react-countdown";
 import Timer from "./Timer";
 import BahrLogoComp from "../Common/BahrLogoComp";
 import { PiShieldStarBold } from "react-icons/pi";
+import { useState } from "react";
 import { PiArrowBendUpLeftLight } from "react-icons/pi";
 const LeftSection = ({
   stepLogin,
@@ -25,6 +26,29 @@ const LeftSection = ({
   titleF,
   stepForgot,
 }) => {
+  // const [loginData, setLoginData] = useState({
+  //   PhoneOrGmail: "",
+  //   Password: "",
+  // });
+
+  // const handleFormData = (PhoneOrGmail, Password) => {
+  //   setLoginData({ PhoneOrGmail, Password });
+  //   console.log("Received from child:", PhoneOrGmail, Password);
+  // };
+  // const OnClick = async (event) => {
+  //   event.preventDefault();
+  //   const user = { PhoneOrGmail, Password, rememberMe: true };
+
+  //   const res = await axios.post(
+  //     "https://classapi.sepehracademy.ir/api/Sign/Login",
+  //     user
+  //   );
+
+  //   const token = res.data.token;
+  //   console.log(token);
+  //   localStorage.setItem("token", token);
+  //   dispatch(handleToken(token));
+  // };
   return (
     <div className="flex md:justify-start flex-col items-center md:basis-2/3 md:mt-32 max-md:items-center max-md:p-6 max-md:w-full">
       <div className="flex flex-row justify-start items-start self-start md:hidden mb-16 ">
