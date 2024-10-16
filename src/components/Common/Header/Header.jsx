@@ -6,7 +6,7 @@ import { HandleDarkMode } from "../../../JS/DarkMode/DarkMode";
 import BahrLogoComp from "../BahrLogoComp";
 import { NavLink } from "react-router-dom";
 import DarkModeButton from "../DarkModeButton";
-DarkModeButton;
+
 const Header = () => {
   const [navOpen, setNavOpen] = useState("close");
   const [darkMode, setDarkMode] = useState("off");
