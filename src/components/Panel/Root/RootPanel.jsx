@@ -5,7 +5,7 @@ import LeftSection from "../LeftSection/LeftSection";
 const RootPanel = () => {
   return (
     <>
-      <div className="flex gap-20 bg-primaryGray">
+      <div className="flex gap-20 bg-primaryGray max-md:flex-col">
         <RightSection />
         <div className="">
           <LeftSection />

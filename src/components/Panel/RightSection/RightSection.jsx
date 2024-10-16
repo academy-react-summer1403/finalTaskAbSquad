@@ -23,11 +23,11 @@ const RightSection = () => {
   };
 
   return (
-    <div className="flex gap-3 flex-col my-10 mr-8 bg-primaryWhite rounded-2xl p-5 ">
+    <div className="flex gap-3 flex-col my-3 mr-8 bg-primaryWhite rounded-2xl p-5 max-md:hidden ">
       <div className="flex flex-row justify-start items-start self-start  mb-8">
         <BahrLogoComp />
       </div>
-      <ul className="flex gap-3 flex-col">
+      <ul className="flex gap-2 flex-col">
         <span className="">عمومی</span>
         <li>
           <Button
@@ -102,7 +102,7 @@ const RightSection = () => {
           />
         </li>
       </ul>
-      <ul className="flex gap-3 flex-col mb-10">
+      <ul className="flex gap-3 flex-col mb-3">
         <span>مالی</span>
         <li>
           <Button
