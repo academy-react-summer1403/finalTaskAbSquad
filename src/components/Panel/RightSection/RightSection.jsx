@@ -23,6 +23,7 @@ const RightSection = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="flex gap-3 flex-col my-3 mr-8 bg-primaryWhite rounded-2xl p-5 max-md:hidden ">
       <div className="flex flex-row justify-start items-start self-start  mb-8">
         <BahrLogoComp />
@@ -32,6 +33,17 @@ const RightSection = () => {
         <li>
           <Button
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
+=======
+    <div className="flex gap-3 flex-col my-3 mr-8 bg-primaryWhite rounded-2xl p-5 max-md:hidden dark:bg-primaryBlack dark:text-primaryWhite">
+      <div className="flex flex-row justify-start items-start self-start  mb-8 ">
+        <BahrLogoComp />
+      </div>
+      <ul className="flex gap-2 flex-col ">
+        <span className="">عمومی</span>
+        <li>
+          <Button
+            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl bg-primaryWhite text-black dark:bg-primaryBlack dark:text-primaryWhite  ${
+>>>>>>> c35d7997029756c8b09820d15d21d4efb8f246ac
               activeButton === "dashboard"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -43,7 +55,11 @@ const RightSection = () => {
         </li>
         <li>
           <Button
+<<<<<<< HEAD
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
+=======
+            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl bg-primaryWhite text-black dark:bg-primaryBlack dark:text-primaryWhite  ${
+>>>>>>> c35d7997029756c8b09820d15d21d4efb8f246ac
               activeButton === "courses"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -55,7 +71,11 @@ const RightSection = () => {
         </li>
         <li>
           <Button
+<<<<<<< HEAD
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
+=======
+            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl bg-primaryWhite text-black dark:bg-primaryBlack dark:text-primaryWhite  ${
+>>>>>>> c35d7997029756c8b09820d15d21d4efb8f246ac
               activeButton === "reservations"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -67,7 +87,11 @@ const RightSection = () => {
         </li>
         <li>
           <Button
+<<<<<<< HEAD
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
+=======
+            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl bg-primaryWhite text-black dark:bg-primaryBlack dark:text-primaryWhite  ${
+>>>>>>> c35d7997029756c8b09820d15d21d4efb8f246ac
               activeButton === "favoritesCourse"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -79,7 +103,11 @@ const RightSection = () => {
         </li>
         <li>
           <Button
+<<<<<<< HEAD
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
+=======
+            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl bg-primaryWhite text-black dark:bg-primaryBlack dark:text-primaryWhite   ${
+>>>>>>> c35d7997029756c8b09820d15d21d4efb8f246ac
               activeButton === "favoritesBook"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -91,7 +119,11 @@ const RightSection = () => {
         </li>
         <li>
           <Button
+<<<<<<< HEAD
             phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
+=======
+            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl bg-primaryWhite text-black dark:bg-primaryBlack dark:text-primaryWhite  ${
+>>>>>>> c35d7997029756c8b09820d15d21d4efb8f246ac
               activeButton === "profile"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -106,7 +138,7 @@ const RightSection = () => {
         <span>مالی</span>
         <li>
           <Button
-            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
+            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl bg-primaryWhite text-black dark:bg-primaryBlack dark:text-primaryWhite  ${
               activeButton === "payments"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -120,7 +152,7 @@ const RightSection = () => {
       <ul className="flex gap-3 flex-col">
         <li>
           <Button
-            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite !text-black ${
+            phoneStyle={`h-[53px] w-[228px] flex gap-3 text-xl bg-primaryWhite text-black dark:bg-primaryBlack dark:text-primaryWhite  ${
               activeButton === "accountSettings"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -132,7 +164,7 @@ const RightSection = () => {
         </li>
         <li>
           <Button
-            phoneStyle="h-[53px] w-[228px] flex gap-3 text-xl !bg-primaryWhite  text-red-500"
+            phoneStyle="h-[53px] w-[228px] flex gap-3 text-xl bg-primaryWhite text-black dark:bg-primaryBlack  text-red-500"
             Icon={MdOutlineExitToApp}
             text="خروج از حساب"
           />
