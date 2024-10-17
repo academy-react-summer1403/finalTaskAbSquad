@@ -5,7 +5,10 @@ const handleCategory = async (GetApi) => {
   const data = await GetApi();
   const array = [];
   data.map((it, index) => {
-    array.push({ id: it.id, name: it.categoryName });
+    array.push({
+      id: it.id,
+      name: it.categoryName,
+    });
   });
   return array;
 };
