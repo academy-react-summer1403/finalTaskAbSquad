@@ -20,6 +20,7 @@ const FieldsSection = ({ style = "", filterOpen }) => {
               options={it.label}
               filterTitle={it.filterTitle}
               Icon={it.icon}
+              type={"course"}
             />
           );
         })}
