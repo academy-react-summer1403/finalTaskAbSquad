@@ -27,7 +27,7 @@ const LeftSection = () => {
   };
   return (
     <div>
-      <div className="bg-primaryWhite flex flex-row gap-2 w-[1096px] h-[80px] py-3 rounded-2xl justify-normal mt-3 p-4 max-md:w-screen">
+      <div className="bg-primaryWhite flex flex-row gap-2 w-[1096px] h-[80px] py-3 rounded-2xl justify-normal mt-3 p-4 max-md:w-screen dark:bg-primaryBlack dark:text-primaryWhite ">
         <div className="rounded-full border border-primaryGray w-[56px] h-[56px] text-3xl flex flex-row-reverse items-center justify-center bg-red-500 relative mr-2 max-md:hidden">
           pic
           <div className="rounded-full border border-primaryGray w-[16px] h-[16px]  flex items-center justify-center absolute right-0 bottom-0.5 bg-primaryBlue text-primaryWhite text-xs">
@@ -51,7 +51,7 @@ const LeftSection = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col bg-primaryWhite rounded-t-2xl mt-3 max-md:w-screen">
+      <div className="flex flex-col bg-primaryWhite rounded-t-2xl mt-3 max-md:w-screen dark:bg-primaryBlack  ">
         <div className="bg-primaryBlue w-[1096px] h-[113px] rounded-t-2xl max-md:w-screen">
           <div className="bg-primaryWhite w-[136px] h-[136px] rounded-full relative top-16 right-10">
             <div className="bg-red-500 w-32 h-32 rounded-full absolute top-1 left-1">
@@ -61,7 +61,7 @@ const LeftSection = () => {
             </div>
           </div>
         </div>
-        <div className="mt-32 flex max-md:flex-col">
+        <div className="mt-32 flex max-md:flex-col dark:bg-primaryBlack dark:text-primaryWhite ">
           <div>
             {" "}
             <div className="mb-4">
@@ -100,9 +100,9 @@ const LeftSection = () => {
           </div>
         </div>
       </div>
-      <div className="bg-primaryWhite max-md:w-screen">
+      <div className="bg-primaryWhite max-md:w-screen dark:bg-primaryBlack dark:!text-primaryWhite ">
         <Tabs value={value} onChange={handleChange}>
-          <Tab label="اطلاعات شخصی" />
+          <Tab label="اطلاعات شخصی" className=" dark:text-primaryWhite " />
           <Tab label="عکس پروفایل" />
           <Tab label="آدرس سکونت" />
           <Tab label="لینک ها" />
