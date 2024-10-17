@@ -25,7 +25,7 @@ const handleTeacher = async (GetApi) => {
   const data = await GetApi();
   const array = [];
   data.map((it, index) => {
-    array.push({ id: it.id, name: it.fullName });
+    array.push({ id: it.teacherId, name: it.fullName });
   });
   return array;
 };
