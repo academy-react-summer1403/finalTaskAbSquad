@@ -44,16 +44,16 @@ export const PageRoutes = [
   {
     path: "/Panel",
     element: <RootPanel />,
-    children: [
-      {
-        path: "/Panel/test",
-        element: <Test />,
-      },
-    ],
+    // children: [
+    //   {
+    //     path: "/Panel/test",
+    //     element: <Test />,
+    //   },
+    // ],
   },
   { path: "/Register", element: <Register /> },
   { path: "/Login", element: <Login /> },
-  // { path: "/ForgotPass", element: <ForgotPass /> },
+  { path: "/ForgotPass", element: <ForgotPass /> },
   {
     path: "*",
     element: <ErrorPage />,
