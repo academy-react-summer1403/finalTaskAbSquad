@@ -7,6 +7,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { Provider } from "react-redux";
+import store from "../../redux/store";
+
 const router = createBrowserRouter(PageRoutes);
 // An Auxilary Way For Adding Animate Presence
 const Main = () => {
@@ -26,9 +29,12 @@ const Main = () => {
 function App() {
   return (
     <>
-      <RouterProvider router={router}>
-        <Main />
-      </RouterProvider>
+      {" "}
+      <Provider store={store}>
+        <RouterProvider router={router}>
+          <Main />
+        </RouterProvider>
+      </Provider>
     </>
   );
 }
