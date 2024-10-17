@@ -19,6 +19,7 @@ const NewsFieldsSection = ({ style = "", newsFilterOpen }) => {
               options={it.label}
               filterTitle={it.filterTitle}
               Icon={it.icon}
+              type={"news"}
             />
           );
         })}

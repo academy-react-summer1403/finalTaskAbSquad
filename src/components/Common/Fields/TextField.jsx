@@ -1,20 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Field, Formik } from "formik";
+import { Form } from "react-router-dom";
 import "./CourseField.css";
-
-const TextField = ({ name, placeholder, type, icon: Icon, ...rest }) => {
+const TextField = ({ name, placeholder, type, ...reset }) => {
   return (
     <Formik>
-      <div className="flex items-center CourseField">
-        {Icon && <Icon className="text-primaryBlack mr-2" />}
-        <Field
-          className="CourseField md:w-[538px]"
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          {...rest}
-        />
-      </div>
+      <Field
+        className="CourseField"
+        name={name}
+        type={type}
+        placeholder={placeholder}
+      />
     </Formik>
   );
 };
