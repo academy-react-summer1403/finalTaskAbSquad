@@ -2,21 +2,10 @@
 import { Slider, Box } from "@mui/material";
 import { LiaMoneyBillWaveSolid } from "react-icons/lia";
 import TitleSpan from "../NewFields/TitleSpan";
-import { useSearchParams } from "react-router-dom";
+
 const RangeSliderField = () => {
   const [value, setValue] = React.useState([10000, 1000000]);
-  const [searchParams, setSearchParams] = useSearchParams(); // Use search Params
-  const handlePrice = (val) => {
-    setSearchParams((op) => {
-      op.set("CostDown", val[0]);
-      return op;
-    });
-    setSearchParams((op) => {
-      op.set("CostUp", val[1]);
-      return op;
-    });
-  };
-
+  const priceSpan = () => {};
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -49,7 +38,6 @@ const RangeSliderField = () => {
             max={1000000}
             value={value}
             onChange={handleChange}
-            onChangeCommitted={() => handlePrice(value)}
           />
         </Box>
       </div>
