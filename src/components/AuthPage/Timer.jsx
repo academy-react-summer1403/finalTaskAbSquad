@@ -4,8 +4,6 @@ import toast, { Toaster } from "react-hot-toast";
 import { PiClockCountdown } from "react-icons/pi";
 const Timer = () => {
   const [isFinished, setIsFinished] = useState(false);
-
-  // Renderer function to format the time and apply styles
   const renderer = ({ minutes, seconds, completed }) => {
     if (completed) {
       setIsFinished(true);
@@ -20,6 +18,8 @@ const Timer = () => {
             rounded-[64px] px-3 flex items-center justify-center 
             text-nowrap bg-LightBlueCustom text-primaryBlue 
             font-semibold font-sans
+            max-md:w-24  max-md:h-12
+            
           "
         >
           <PiClockCountdown className="ml-2 text-primaryBlue" size="1.5em" />
@@ -29,7 +29,6 @@ const Timer = () => {
     }
   };
 
-  // Function to handle span click
   const handleClick = () => {
     if (!isFinished) {
       toast.error("The countdown isn’t finished yet!");
@@ -44,7 +43,7 @@ const Timer = () => {
 
       <span
         onClick={handleClick}
-        className="cursor-pointer text-primaryBlue underline font-IRANYekan ml-4 leading-10 mx-2"
+        className="cursor-pointer text-primaryBlue underline font-IRANYekan ml-4 leading-10 mx-2 max-md:text-xs"
       >
         ارسال مجدد کد
       </span>
