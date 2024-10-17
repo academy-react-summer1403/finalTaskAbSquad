@@ -1,6 +1,5 @@
 ﻿import React, { useEffect, useState } from "react";
 import { IoMoonOutline } from "react-icons/io5";
-import { useSelector } from " react-redux";
 const DarkModeButton = () => {
   return (
     <>
