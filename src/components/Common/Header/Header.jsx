@@ -1,16 +1,22 @@
 ﻿import React, { useEffect, useState } from "react";
 import Button from "../Button/Button";
+import MoonIcon from "../../../assets/Svgs/Header/moonDarkMode/moon.svg";
 import NavLinkComp from "./NavLinks/NavLinksComp";
 import HambMenu from "../HambMenu";
+import { HandleDarkMode } from "../../../JS/DarkMode/DarkMode";
 import BahrLogoComp from "../BahrLogoComp";
+import { IoMoonOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import DarkModeButton from "../DarkModeButton";
-
 const Header = () => {
   const [navOpen, setNavOpen] = useState("close");
+  const [darkMode, setDarkMode] = useState("off");
   const openNavModal = () => {
     setNavOpen("open");
   };
+  useEffect(() => {
+    HandleDarkMode(darkMode);
+  }, [darkMode]);
+
   return (
     <>
       {/* Header Container */}
@@ -24,7 +30,18 @@ const Header = () => {
         {/* Night Mode And Sign Up Button */}
         <div className=" flex justify-center items-center gap-8 box box-border max-lg:flex-end max-lg:gap-0">
           {/* Night Mode Button */}
-          <DarkModeButton />
+          <span
+            onClick={() => {
+              if (darkMode == "on") {
+                setDarkMode("off");
+              } else if (darkMode == "off") {
+                setDarkMode("on");
+              }
+            }}
+            className="border border-solid border-primaryGray w-[56px] h-full rounded-full flex justify-center items-center  cursor-pointer pl-1 pb-[1px] max-lg:ml-4"
+          >
+            <IoMoonOutline size="25px" />
+          </span>
           {/* SignUp/Login Button  */}
           <NavLink to="/Register" className="h-full">
             <Button
