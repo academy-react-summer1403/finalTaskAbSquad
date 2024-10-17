@@ -2,21 +2,15 @@
 import Button from "../Button/Button";
 import NavLinkComp from "./NavLinks/NavLinksComp";
 import HambMenu from "../HambMenu";
-import { HandleDarkMode } from "../../../JS/DarkMode/DarkMode";
 import BahrLogoComp from "../BahrLogoComp";
 import { NavLink } from "react-router-dom";
 import DarkModeButton from "../DarkModeButton";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState("close");
-  const [darkMode, setDarkMode] = useState("off");
   const openNavModal = () => {
     setNavOpen("open");
   };
-  useEffect(() => {
-    HandleDarkMode(darkMode);
-  }, [darkMode]);
-
   return (
     <>
       {/* Header Container */}

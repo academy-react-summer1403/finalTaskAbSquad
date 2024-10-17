@@ -1,6 +1,11 @@
 ﻿import React, { useEffect, useState } from "react";
 import { IoMoonOutline } from "react-icons/io5";
+import { HandleDarkMode } from "../../../JS/DarkMode/DarkMode";
 const DarkModeButton = () => {
+  const [darkMode, setDarkMode] = useState("off");
+  useEffect(() => {
+    HandleDarkMode(darkMode);
+  }, [darkMode]);
   return (
     <>
       <span
