@@ -20,11 +20,12 @@ const HamburgerMenu = () => {
     setActiveButton(buttonName); // Set the clicked button as active
   };
   return (
-    <div className=" w-[360px] rounded-[47px] h-[72px] bg-primaryWhite mx-auto mt-3 md:hidden dark:bg-primaryBlack dark:!text-primaryWhite">
-      <ul className="flex justify-evenly py-1 ">
+    <div className=" w-[360px] rounded-[47px] h-[72px] bg-primaryWhite mx-auto mt-3">
+      <ul className="flex justify-evenly py-1">
         <li>
+          {" "}
           <Button
-            phoneStyle={`h-16 w-16 flex gap-3 text-3xl bg-primaryWhite !text-black dark:bg-primaryBlack dark:!text-primaryWhite ${
+            phoneStyle={`h-16 w-16 flex gap-3 text-3xl bg-primaryWhite !text-black ${
               activeButton === "dashboard"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -34,8 +35,9 @@ const HamburgerMenu = () => {
           />
         </li>
         <li>
+          {" "}
           <Button
-            phoneStyle={`h-16 w-16 flex gap-3 text-3xl bg-primaryWhite !text-black dark:bg-primaryBlack dark:!text-primaryWhites ${
+            phoneStyle={`h-16 w-16 flex gap-3 text-3xl bg-primaryWhite !text-black ${
               activeButton === "courses"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -45,8 +47,9 @@ const HamburgerMenu = () => {
           />
         </li>
         <li>
+          {" "}
           <Button
-            phoneStyle={`h-16 w-16 flex gap-3 text-3xl bg-primaryWhite !text-black dark:bg-primaryBlack dark:!text-primaryWhite ${
+            phoneStyle={`h-16 w-16 flex gap-3 text-3xl bg-primaryWhite !text-black ${
               activeButton === "reservations"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
@@ -56,9 +59,10 @@ const HamburgerMenu = () => {
           />
         </li>
         <li>
+          {" "}
           <Button
             phoneStyle={
-              "h-16 w-16 flex gap-3 text-xl !bg-primaryWhite !text-black dark:bg-primaryBlack dark:!text-primaryWhite"
+              "h-16 w-16 flex gap-3 text-xl !bg-primaryWhite !text-black"
             }
             onClick={() => console.log("hi")}
             text="pic"
@@ -67,7 +71,7 @@ const HamburgerMenu = () => {
         <li className="relative">
           {RenderHamMenu === 1 && <MenuOptions />}
           <Button
-            phoneStyle={`h-16 w-16 flex gap-3 text-3xl bg-primaryWhite !text-black dark:bg-primaryBlack dark:!text-primaryWhite ${
+            phoneStyle={`h-16 w-16 flex gap-3 text-3xl bg-primaryWhite !text-black ${
               activeButton === "rest"
                 ? "!bg-primaryBlue !text-white"
                 : "!justify-start"
