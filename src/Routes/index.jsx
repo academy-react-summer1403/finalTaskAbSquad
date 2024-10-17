@@ -10,7 +10,6 @@ import {
   NewsPage,
   NewsDetail,
   ForgotPass,
-  PanelMain,
   RootPanel,
 } from "../core/utilities/Routes/routes.utils.js";
 // import Test from "./Test.jsx";
